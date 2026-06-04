@@ -4,7 +4,7 @@
 
 const PODCASTS = [
   {
-    id: 'vid-qjmk3z4',
+    id: 'vid-5h56ywx',
     title: '3ABN Praise Him Music Network',
     author: 'Музичні канали',
     type: 'video',
@@ -14,7 +14,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8q9kckj',
+    id: 'vid-j9rtuk3',
     title: '4 Fun TV (576i) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -24,7 +24,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-r046f6q',
+    id: 'vid-ng5txxv',
     title: '4 Kurd',
     author: 'Музичні канали',
     type: 'video',
@@ -34,7 +34,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-c3p200l',
+    id: 'vid-e1fi9fr',
     title: '7 RadioVisione (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -44,7 +44,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nfe4ncn',
+    id: 'vid-lvilt5k',
     title: '7S Music (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -54,7 +54,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dwzf0ln',
+    id: 'vid-dxadgv7',
     title: '7 YOU & ME (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -64,17 +64,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-c33bp80',
-    title: '8XM (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://115.42.65.142:9981/stream/channelid/582886861',
-    cover: 'https://i.imgur.com/KLrfKRn.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-my31fd5',
+    id: 'vid-ctn11r2',
     title: '9X Jalwa (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -84,7 +74,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5m4wfja',
+    id: 'vid-fewo6fw',
     title: '9X Jhakaas (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -94,7 +84,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7kvj0b8',
+    id: 'vid-dtpldug',
     title: '9X Tashan (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -104,7 +94,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a7bf6sp',
+    id: 'vid-7vyt4jh',
     title: '9XM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -114,7 +104,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ye16z4u',
+    id: 'vid-8sinxxt',
     title: '13 Festival (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -124,7 +114,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-h8qlpg7',
+    id: 'vid-dkb3nkd',
     title: '15+ Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -134,7 +124,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-3se4vve',
+    id: 'vid-vcrx9hg',
     title: '30A Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -144,17 +134,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-k3ui1ym',
-    title: '51 Radio TV (480p) [Geo-blocked]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://wms.shared.streamshow.it/canale51/canale51/playlist.m3u8',
-    cover: 'https://www.51news.it/images/loghi/logo_tv_radio_51news.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-qpg207a',
+    id: 'vid-yhii5n4',
     title: '70-80 TV (1080P)',
     author: 'Музичні канали',
     type: 'video',
@@ -164,17 +144,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-13jg8l3',
-    title: '88 Stereo (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://k3.usastreams.com/CableLatino/88stereo/playlist.m3u8',
-    cover: 'https://i.imgur.com/i3YwORV.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-xqwxqqk',
+    id: 'vid-5n7dq26',
     title: '98.1 Pearl FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -184,7 +154,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5e0vrt1',
+    id: 'vid-37vq3pj',
     title: 'A2i Music (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -194,7 +164,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-jte88sh',
+    id: 'vid-3fckxly',
     title: 'Aaryaa TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -204,7 +174,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-sj582yw',
+    id: 'vid-nrw2ese',
     title: 'Abdulmajeed Abdullah (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -214,7 +184,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ro8ax5c',
+    id: 'vid-zh2x7f0',
     title: 'Activa TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -224,7 +194,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ze82yms',
+    id: 'vid-q85ao8v',
     title: 'ACW UG TV (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -234,7 +204,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8nu8fdw',
+    id: 'vid-p12b3ri',
     title: 'AE Radio TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -244,7 +214,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ebk9c9q',
+    id: 'vid-cqoabk4',
     title: 'AFN TV',
     author: 'Музичні канали',
     type: 'video',
@@ -254,7 +224,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-smvxzqr',
+    id: 'vid-k8kxgsr',
     title: 'Afrobeats (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -264,7 +234,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-72v6o0r',
+    id: 'vid-d0ere98',
     title: 'Aghani Aghani TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -274,7 +244,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mqy8r43',
+    id: 'vid-a4202e4',
     title: 'AlbKanale Music TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -284,7 +254,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-699mmo5',
+    id: 'vid-f8gvt0d',
     title: 'Alcance FM PLAY TV',
     author: 'Музичні канали',
     type: 'video',
@@ -294,7 +264,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-df7lhkd',
+    id: 'vid-k3ecjho',
     title: 'Alterna TV (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -304,7 +274,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-2qbssxq',
+    id: 'vid-ntngpoc',
     title: 'AMC (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -314,17 +284,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2p7tza4',
-    title: 'Amedia 1 (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/A1/index.m3u8',
-    cover: 'https://i.imgur.com/2pAHdAi.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-n61oofn',
+    id: 'vid-gp7wgih',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Music",AMusic Channel (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -334,7 +294,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9nfd8ev',
+    id: 'vid-hboam9j',
     title: 'Andy Haryana (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -344,7 +304,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-p71lpu7',
+    id: 'vid-c0urdun',
     title: 'Antenne Kaernten (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -354,7 +314,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-3ozd647',
+    id: 'vid-4h0al76',
     title: 'Antenne Steiermark (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -364,7 +324,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-c68ll3q',
+    id: 'vid-jalo9sv',
     title: 'Antenne Vorarlberg (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -374,17 +334,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-n259u2u',
-    title: 'Arabica TV (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8',
-    cover: 'https://i.imgur.com/sTOoDy1.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-r4h1s46',
+    id: 'vid-2v4scs0',
     title: 'ARY Musik (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -394,7 +344,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-exz3zbh',
+    id: 'vid-9tswbqe',
     title: 'ATN Music (360p)',
     author: 'Музичні канали',
     type: 'video',
@@ -404,7 +354,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tckzxld',
+    id: 'vid-mdhbct7',
     title: 'Atomic Academy TV (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -414,7 +364,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-x33nbwa',
+    id: 'vid-roucxr7',
     title: 'Atomic TV (360p)',
     author: 'Музичні канали',
     type: 'video',
@@ -424,7 +374,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-x37g6mk',
+    id: 'vid-viod4wa',
     title: 'Avang TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -434,7 +384,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ywj4au9',
+    id: 'vid-tnvlxu9',
     title: 'Azahares Radio Multimedia (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -444,17 +394,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ub6prst',
-    title: 'B4U Hitz (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://115.42.65.142:9981/stream/channelid/1099703605',
-    cover: 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-wrx32qz',
+    id: 'vid-v6sgpj2',
     title: 'B4U Music (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -464,7 +404,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kt0uek1',
+    id: 'vid-92k0pwz',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Music",Balle Balle (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -474,7 +414,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2cxrfsw',
+    id: 'vid-l1xuwrm',
     title: 'Baraza TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -484,7 +424,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bjvenm0',
+    id: 'vid-tng4xbk',
     title: 'Baraza TV Deep House (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -494,7 +434,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-yastoj9',
+    id: 'vid-m52waa3',
     title: 'Baraza TV Relaxing (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -504,7 +444,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xmqufy5',
+    id: 'vid-5nxero3',
     title: 'Barbud Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -514,7 +454,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a3n5f2g',
+    id: 'vid-wv3ugb9',
     title: 'BE@TTV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -524,7 +464,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-f5d8qcy',
+    id: 'vid-z9deiux',
     title: 'Beats Radio (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -534,7 +474,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ti9my0u',
+    id: 'vid-9nj8gw5',
     title: 'Bel RTL (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -544,7 +484,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-39vy1ys',
+    id: 'vid-7f5zu03',
     title: 'Best of Dance TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -554,7 +494,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0fsfu25',
+    id: 'vid-4ezivre',
     title: 'Bibel TV Musik (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -564,7 +504,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fr5qieo',
+    id: 'vid-h87wgeq',
     title: 'BIZ Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -574,7 +514,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-b63blhn',
+    id: 'vid-vywz8cl',
     title: 'BOKTV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -584,7 +524,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mxg4aw7',
+    id: 'vid-lne299q',
     title: 'BPX TV Radio',
     author: 'Музичні канали',
     type: 'video',
@@ -594,7 +534,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lauceu8',
+    id: 'vid-1mtta1w',
     title: 'Bravo! TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -604,47 +544,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4atgc2x',
-    title: 'BRIDGE (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/Bridge_TV/index.m3u8',
-    cover: 'https://i.imgur.com/qYObfrG.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-ns519pi',
-    title: 'BRIDGE Classic (576p)',
-    author: 'Ретро / Класика',
-    type: 'video',
-    url: 'http://31.148.48.15/Bridge_TV_Classic/index.m3u8',
-    cover: 'https://i.imgur.com/JJTQq81.png',
-    description: '24/7 Ретро / Класика Stream',
-    category: 'Ретро / Класика'
-  },
-  {
-    id: 'vid-y1rwlrs',
-    title: 'BRIDGE Deluxe (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/Bridge_TV_HD/index.m3u8',
-    cover: 'https://i.imgur.com/EazL8w7.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-azt26g6',
-    title: 'BRIDGE Hits (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/Bridge_TV_Dance/index.m3u8',
-    cover: 'https://i.imgur.com/sIW9oR4.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-38ykh4h',
+    id: 'vid-1zzrvub',
     title: 'BTA TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -654,7 +554,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-d1crki2',
+    id: 'vid-qkk5le8',
     title: 'Busuioc TV (540p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -664,7 +564,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ah88t29',
+    id: 'vid-pxaw1jr',
     title: 'Cadena Elite (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -674,7 +574,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lgj0xs1',
+    id: 'vid-4pdxtso',
     title: 'Canal 3 KMK TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -684,7 +584,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gqvd5v9',
+    id: 'vid-nt3iojr',
     title: 'Canal Clave (480p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -694,17 +594,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-g62lcr3',
-    title: 'CCTV-11 (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://74.91.26.218:82/live/cctv11hd.m3u8',
-    cover: 'https://i.imgur.com/CjOWx7L.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-agclzfi',
+    id: 'vid-hbju43k',
     title: 'CCTV-15 (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -714,17 +604,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-abxhjsn',
-    title: 'CCTV-Storm Music (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8?auth=testpub',
-    cover: 'https://i.imgur.com/IiiRmrf.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-1gxt6u9',
+    id: 'vid-kfi6cpd',
     title: 'CEACOM TV [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -734,7 +614,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-pkmboti',
+    id: 'vid-imy5wfn',
     title: 'Channel C (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -744,7 +624,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qw2bg45',
+    id: 'vid-vzi5dn9',
     title: 'City TV (576p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -754,7 +634,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nf65f68',
+    id: 'vid-2toginm',
     title: 'Clubbing TV France',
     author: 'Музичні канали',
     type: 'video',
@@ -764,7 +644,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hky6a13',
+    id: 'vid-yqrpop6',
     title: 'CMC (California Music Channel) (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -774,7 +654,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gsqkwca',
+    id: 'vid-dgoaerm',
     title: 'CMC TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -784,7 +664,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hszi8m1',
+    id: 'vid-rs0j19j',
     title: 'Company TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -794,7 +674,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6bwqrqu',
+    id: 'vid-gw1t6io',
     title: 'Conecta TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -804,7 +684,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-74vzrzk',
+    id: 'vid-0d0pzbd',
     title: 'Cool FM 98.9 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -814,7 +694,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-j9su2dy',
+    id: 'vid-wnov1z9',
     title: 'Couleur 3 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -824,7 +704,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5cmdom7',
+    id: 'vid-uteghdd',
     title: 'Cumbia Mix (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -834,7 +714,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-omz5iog',
+    id: 'vid-uly0q71',
     title: 'D3 TV (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -844,17 +724,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5jl22pe',
-    title: 'D Music (1280p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://43.252.18.195:5080/live/streams/WCVNews.playlist.m3u8',
-    cover: 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-r144op0',
+    id: 'vid-rxzzpkj',
     title: 'Dance FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -864,7 +734,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hts411z',
+    id: 'vid-g1vofk3',
     title: 'Dance Television (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -874,7 +744,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-yz9yrx6',
+    id: 'vid-2r89rzl',
     title: 'like Gecko Chrome/144.0.0.0 Safari/537.36" group-title="Music",Dance TV [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -884,17 +754,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-12c957k',
-    title: 'DanceHits80',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://dancehits80.denvs.ru:8080/index.m3u8',
-    cover: 'https://i.imgur.com/uMw3kks.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-nrpbh16',
+    id: 'vid-vxrrvu5',
     title: 'DanceTV Algorhythm (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -904,7 +764,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9z20f98',
+    id: 'vid-jwy7qc2',
     title: 'DanceTV Deep House District (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -914,7 +774,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bzxnx1c',
+    id: 'vid-g6qqfn7',
     title: 'DanceTV EDM Mainstage (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -924,7 +784,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zeoy1b8',
+    id: 'vid-e8kw6as',
     title: 'DanceTV House Floor (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -934,7 +794,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oxrwxfj',
+    id: 'vid-0ybxso8',
     title: 'DanceTV Minimal Tech (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -944,7 +804,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vxwp6pd',
+    id: 'vid-pf6bpfn',
     title: 'DanceTV Techno Warehouse (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -954,7 +814,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vu880fs',
+    id: 'vid-u2dt156',
     title: 'DASDING 90.8 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -964,7 +824,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fx7rz2b',
+    id: 'vid-ygsw8cv',
     title: 'DBM TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -974,7 +834,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xxfh2pl',
+    id: 'vid-6mh5stg',
     title: 'DeepHouse District (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -984,7 +844,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dkp0bbs',
+    id: 'vid-mg12rvy',
     title: 'Dega TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -994,7 +854,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-piihn9a',
+    id: 'vid-bro32e9',
     title: 'Deluxe Dance (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1004,7 +864,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gxr083a',
+    id: 'vid-i2shqnc',
     title: 'Deluxe Lounge (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1014,7 +874,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5d4phl3',
+    id: 'vid-foc2uon',
     title: 'Deluxe Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1024,7 +884,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8vds4kh',
+    id: 'vid-zk4kt9w',
     title: 'Deluxe Rap (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1034,7 +894,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ebubbgt',
+    id: 'vid-xm11fih',
     title: 'Dhamaal (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1044,7 +904,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9gtt0n7',
+    id: 'vid-a76izo0',
     title: 'Dhoom Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1054,7 +914,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-l0kdu1v',
+    id: 'vid-gq8ph73',
     title: 'Dismar Radio TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1064,7 +924,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bsau489',
+    id: 'vid-gyeb39h',
     title: 'DM Sat (576p) [Geo-Blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -1074,7 +934,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oimg1d0',
+    id: 'vid-fk4vfw0',
     title: 'DMF (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1084,7 +944,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-73g5k4o',
+    id: 'vid-zeeftaq',
     title: 'Dream Türk (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1094,17 +954,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-23sj3p7',
-    title: 'DSTV (614p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://46.249.95.140:8081/hls/data.m3u8',
-    cover: 'https://i.imgur.com/YMgzzkf.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-g1f0os8',
+    id: 'vid-s2o99o4',
     title: 'DTR Music 1 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1114,7 +964,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2rbroc3',
+    id: 'vid-l4re75o',
     title: 'E40 (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1124,7 +974,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hxei87g',
+    id: 'vid-nj51ojc',
     title: 'EBS Musika (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1134,7 +984,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-k4kgi07',
+    id: 'vid-az9c271',
     title: 'EcuaMundo Radio TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1144,7 +994,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-o6ibx3q',
+    id: 'vid-fqnpt16',
     title: 'El Radio 9090 FM (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1154,7 +1004,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-31ttdld',
+    id: 'vid-r3y3587',
     title: 'El Sol Network TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1164,7 +1014,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-y61g8t9',
+    id: 'vid-22yoi3a',
     title: 'Ellinikos FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1174,7 +1024,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tg46n72',
+    id: 'vid-g4ddoyc',
     title: 'EnerGeek Radio (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1184,17 +1034,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-x63kszt',
-    title: 'Epic Music (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://103.213.31.109:90/ShowBox/playlist.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SHOWBOX/images/LOGO_HD/image.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-fl9ha3i',
+    id: 'vid-pwjg7g6',
     title: 'ETV Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1204,7 +1044,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-uyyzutj',
+    id: 'vid-v5l8lzs',
     title: 'EU Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1214,27 +1054,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-yo15c4v',
-    title: 'Euro Indie Music Chart TV (360p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://178.33.224.197:1935/euroindiemusic/euroindiemusic/playlist.m3u8',
-    cover: 'https://i.imgur.com/lF0iofX.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-3cd2zip',
-    title: 'Europa Plus TV (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/Europa_Plus_HD/index.m3u8',
-    cover: 'https://i.imgur.com/GLc4qrc.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-5arot19',
+    id: 'vid-7fm60bl',
     title: 'Exclusiv TV',
     author: 'Музичні канали',
     type: 'video',
@@ -1244,7 +1064,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-d8bry1j',
+    id: 'vid-s3nez0i',
     title: 'Extra TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1254,7 +1074,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-aa7d6eu',
+    id: 'vid-9yliwxn',
     title: 'Fabulosa Estéreo 100.5 FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1264,7 +1084,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wb995lr',
+    id: 'vid-ria6ryr',
     title: 'Fairuz (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1274,7 +1094,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dnrqsni',
+    id: 'vid-3umbqy7',
     title: 'Falastini TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1284,7 +1104,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-091ts3k',
+    id: 'vid-3ouw7nq',
     title: 'Famatv (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1294,7 +1114,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-l3q2ji1',
+    id: 'vid-xhqbpwr',
     title: 'Fame95 FM (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1304,17 +1124,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-l2o9dka',
-    title: 'Farra Play (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://159.203.148.226/live/farra.m3u8',
-    cover: 'https://i.imgur.com/bXWzstH.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-alr12mb',
+    id: 'vid-md208f3',
     title: 'Finest TV (288p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1324,7 +1134,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ffez7gm',
+    id: 'vid-vfbez7e',
     title: 'Flex Studio Radio TV [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1334,7 +1144,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ap0poeh',
+    id: 'vid-87dbn9l',
     title: 'FM ITALIA (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1344,7 +1154,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-14k9xas',
+    id: 'vid-dsotj3t',
     title: 'FM Mundo (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1354,17 +1164,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xcgsvzh',
-    title: 'Folk Klub (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://tv1.intv.mk:1935/live2/folkklub/index.m3u8',
-    cover: 'https://i.imgur.com/Seq7Od7.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-gafn4j6',
+    id: 'vid-pxtinih',
     title: 'Folk TV (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1374,7 +1174,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lovu8t5',
+    id: 'vid-hhq4y9k',
     title: 'FOLX Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1384,7 +1184,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-39lpwij',
+    id: 'vid-9d06ijc',
     title: 'Folx Slovenija (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1394,7 +1194,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wtujtiy',
+    id: 'vid-p6yemtc',
     title: 'FomixTV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1404,7 +1204,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-x9lckj9',
+    id: 'vid-bg4cj8h',
     title: 'FON Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1414,7 +1214,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ipaggvb',
+    id: 'vid-48v31il',
     title: 'Frecuencia Musical TV [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1424,7 +1224,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kmkbmg8',
+    id: 'vid-n2p48ks',
     title: 'FTV (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1434,7 +1234,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-l3sgwot',
+    id: 'vid-qd7up7e',
     title: 'Fuego TV [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1444,7 +1244,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-p3pgx0s',
+    id: 'vid-loxft5o',
     title: 'Fun Radio',
     author: 'Музичні канали',
     type: 'video',
@@ -1454,7 +1254,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nw2caif',
+    id: 'vid-20ytw8s',
     title: 'FUSION TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1464,7 +1264,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-x5mpr2z',
+    id: 'vid-20ajlct',
     title: 'Galaxy TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1474,7 +1274,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-veoz38v',
+    id: 'vid-loh6rl7',
     title: 'GEM 24B',
     author: 'Музичні канали',
     type: 'video',
@@ -1484,7 +1284,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kodhsyz',
+    id: 'vid-7cj9eix',
     title: 'GEM Mifa',
     author: 'Музичні канали',
     type: 'video',
@@ -1494,7 +1294,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-d3de8c0',
+    id: 'vid-mu0qkw0',
     title: 'GEM Mifa Plus',
     author: 'Музичні канали',
     type: 'video',
@@ -1504,7 +1304,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-w76j1i8',
+    id: 'vid-wmyprz8',
     title: 'Gex TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1514,7 +1314,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ngutkoi',
+    id: 'vid-pe6u3gy',
     title: 'Gigant FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1524,7 +1324,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wd71bsj',
+    id: 'vid-lmzl0uq',
     title: 'GMTV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1534,7 +1334,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0ioj5r9',
+    id: 'vid-9w3wtfw',
     title: 'GO TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1544,7 +1344,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-1su7cxo',
+    id: 'vid-gpj5epl',
     title: 'GugakTV 국악방송 (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1554,67 +1354,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-krw8qqm',
-    title: 'H!T Music Channel (480p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://hitmusic.hu/hitmusic.m3u8',
-    cover: 'https://i.imgur.com/sqC2hqV.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-8wdbf30',
-    title: 'Hayat (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://158.180.39.89:5033/hayat.m3u8',
-    cover: 'https://i.imgur.com/JugiLHM.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-bmtst77',
-    title: 'Hayat Folk (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://158.180.39.89:5033/folk.m3u8',
-    cover: 'https://i.imgur.com/LteJva4.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-9zllgyd',
-    title: 'Hayat Music (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://158.180.39.89:5033/music.m3u8',
-    cover: 'https://i.imgur.com/9p8q1yX.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-4f24pjw',
-    title: 'Hayat Plus (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://158.180.39.89:5033/hayatplus.m3u8',
-    cover: 'https://i.imgur.com/NThsVzJ.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-qkkcf0e',
-    title: 'Hayatovci (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://158.180.39.89:5033/hayatovci.m3u8',
-    cover: 'https://i.imgur.com/eqd3kvW.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-ypwfvs2',
+    id: 'vid-1f6yfdi',
     title: 'HEi Now (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1624,7 +1364,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a8ro1hx',
+    id: 'vid-rjf6wqq',
     title: 'High Vision (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1634,7 +1374,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6y210ya',
+    id: 'vid-lmsbu5g',
     title: 'Hitradio O3 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1644,17 +1384,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-12ek8h7',
-    title: 'Hits 360 TV (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://cm.hostlagarto.com:8081/hits360tv/hits360HD.myStream/playlist.m3u8',
-    cover: 'https://i.imgur.com/Cx5V233.jpg',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-hhs9u03',
+    id: 'vid-7k022yr',
     title: 'Hitz TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1664,7 +1394,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5v5fpjr',
+    id: 'vid-x7v4u28',
     title: 'HMI PROMZ NEWS (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1674,7 +1404,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-iy3gejx',
+    id: 'vid-p7w8s3b',
     title: 'Hype Visual Radio (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1684,7 +1414,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ncu3oiv',
+    id: 'vid-n5hkxhq',
     title: 'Identité Télé Caraïbes (548p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1694,7 +1424,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4eksnb3',
+    id: 'vid-fylgs7q',
     title: 'Impact TV Dance (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1704,7 +1434,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a1oyp28',
+    id: 'vid-m19dsen',
     title: 'Impact TV Manele (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1714,7 +1444,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-n1en5wv',
+    id: 'vid-h0v0jwl',
     title: 'Infinita TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1724,7 +1454,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vb1dgw2',
+    id: 'vid-kf2frdh',
     title: 'Insync (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1734,17 +1464,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-n5kdtfo',
-    title: 'INTV Australia (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://tv1.intv.mk:1935/live/intv/index.m3u8',
-    cover: 'https://i.imgur.com/1nJl0Pv.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-40hohj5',
+    id: 'vid-9fiyv70',
     title: 'IQ Channel (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1754,27 +1474,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-etharm8',
-    title: 'Isai Aruvi (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://ptuf.ridsys.in/riptv/live/KALAIGNAR_ISAI_ARUVI/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ISAI_ARUVI/images/LOGO_HD/image.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-13kkqct',
-    title: 'Isango TV (480p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://80.241.215.175:1935/isangostar/isangostar/playlist.m3u8',
-    cover: 'https://i.imgur.com/EfsHaMQ.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-ip3l2l2',
+    id: 'vid-6pnxsd0',
     title: 'Italianissimo (360p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1784,7 +1484,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cawa5s5',
+    id: 'vid-zexek79',
     title: 'iTV Afrobeats Music',
     author: 'Музичні канали',
     type: 'video',
@@ -1794,7 +1494,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e1nsvkq',
+    id: 'vid-1y4n2v1',
     title: 'iTV Arabic Music',
     author: 'Музичні канали',
     type: 'video',
@@ -1804,7 +1504,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wylcnfq',
+    id: 'vid-2q7fqat',
     title: 'iTV Indian Music',
     author: 'Музичні канали',
     type: 'video',
@@ -1814,7 +1514,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vdlgfhl',
+    id: 'vid-o33f76q',
     title: 'iTV Latin Music',
     author: 'Музичні канали',
     type: 'video',
@@ -1824,7 +1524,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-65vdc84',
+    id: 'vid-085e9ae',
     title: 'ITV Persian Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1834,7 +1534,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9z7zto6',
+    id: 'vid-ly4he1s',
     title: 'iTV Turkish Music',
     author: 'Музичні канали',
     type: 'video',
@@ -1844,7 +1544,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-befnlad',
+    id: 'vid-snj4op9',
     title: 'iTV Urban Music',
     author: 'Музичні канали',
     type: 'video',
@@ -1854,7 +1554,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a2i8qz2',
+    id: 'vid-i6j1iei',
     title: 'Ivoire Channel (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1864,27 +1564,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-u4y2g3x',
-    title: 'J Music TV (480p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://maxotts.maxdigitaltv.com/x-media/C180/master.m3u8',
-    cover: 'https://i.imgur.com/57dVOP5.jpg',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-r6trfwi',
-    title: 'Jawhara TV (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://streaming.toutech.net:1935/live/mp4:jawharafm.sdp/playlist.m3u8',
-    cover: 'https://i.imgur.com/mRSQ5bP.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-walpzzz',
+    id: 'vid-cjaye48',
     title: 'Jazz TV (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1894,7 +1574,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hpfe0k0',
+    id: 'vid-wf029oh',
     title: 'Jeddah Radio (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1904,7 +1584,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bndjklt',
+    id: 'vid-bm4jde6',
     title: 'Joe FM (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1914,7 +1594,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-sk8x73p',
+    id: 'vid-e0nq8r3',
     title: 'JooMusic (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1924,7 +1604,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rcdm9yh',
+    id: 'vid-svbgjqy',
     title: 'Jordan Songs (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1934,7 +1614,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-y4lkcfa',
+    id: 'vid-jl4q1me',
     title: 'JRTV Järviradio (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1944,7 +1624,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vfkz94q',
+    id: 'vid-gx4tmxq',
     title: 'Juice TV (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1954,17 +1634,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-idq67a8',
-    title: 'Kalika TV (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://server.applelive.in/kalikatv/kalikatv.m3u8',
-    cover: 'https://i.imgur.com/XWXFoJA.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-6xitmaq',
+    id: 'vid-rzwn6dp',
     title: 'KandelaTV (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1974,7 +1644,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-q411vil',
+    id: 'vid-zpzrd1q',
     title: 'Karibena [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -1984,7 +1654,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ambjeg8',
+    id: 'vid-0wi1yhj',
     title: 'Kayhan TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -1994,17 +1664,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-x1jg7cn',
-    title: 'Kayo Pops (544p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs13',
-    cover: 'https://yt3.googleusercontent.com/ytc/AIdro_m1AFOxZHFBvf-eLgADxBaFKa54T5oDOvxEaQfz9VMCU_c=s512-c-k-c0x00ffffff-no-rj',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-ecip60c',
+    id: 'vid-3e8vl9w',
     title: 'Kiss Kiss Napoli TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2014,7 +1674,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-l3ltk4d',
+    id: 'vid-fdgt8g0',
     title: 'Kiss Kiss TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2024,7 +1684,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-jp29ydc',
+    id: 'vid-lnukij4',
     title: 'Kiss TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2034,7 +1694,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dcc8zb5',
+    id: 'vid-dtgiv6w',
     title: 'Klape i Tambure TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2044,7 +1704,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-q43hner',
+    id: 'vid-qx3ht8q',
     title: 'KpopTV Play (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2054,7 +1714,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-w57tc8n',
+    id: 'vid-0pwun97',
     title: 'KRAL Pop TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2064,7 +1724,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-j07ppeo',
+    id: 'vid-eshmx5a',
     title: 'Kronehit (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2074,7 +1734,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-eyl0vd3',
+    id: 'vid-4inhm2o',
     title: 'KurdMax Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2084,17 +1744,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-au4ll3j',
-    title: 'Kuriakos Music (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://195.23.211.179:1935/kmusic/smil:kmusic.smil/playlist.m3u8',
-    cover: 'https://i.imgur.com/Zl40NYi.jpg',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-jfkcpk1',
+    id: 'vid-esvl1fl',
     title: 'La 98.1 TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2104,7 +1754,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6goi3kr',
+    id: 'vid-ff1jhr8',
     title: 'La Cantina Memorias (480p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2114,7 +1764,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-brwi7zl',
+    id: 'vid-4p2nda6',
     title: 'La Fabulosa Radio y TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2124,7 +1774,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gmykiuk',
+    id: 'vid-9yl0yko',
     title: 'La Hermandad Salsera (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2134,7 +1784,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tsl10on',
+    id: 'vid-gv0b3ec',
     title: 'La Kalle (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2144,7 +1794,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-3t2fi5p',
+    id: 'vid-05j64hi',
     title: 'La Mega Mundial',
     author: 'Музичні канали',
     type: 'video',
@@ -2154,7 +1804,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-msjhhpk',
+    id: 'vid-0uej4om',
     title: 'LA MIA TV (720p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2164,7 +1814,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-q20tc1l',
+    id: 'vid-9wtaeyp',
     title: 'La Morada Radio TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2174,7 +1824,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vkq2z94',
+    id: 'vid-p71v94o',
     title: 'La Perla Radio TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2184,7 +1834,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ml9rz67',
+    id: 'vid-bwhxvho',
     title: 'La Que Buena Atlanta',
     author: 'Музичні канали',
     type: 'video',
@@ -2194,7 +1844,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zixx0ha',
+    id: 'vid-3jy911x',
     title: 'La Top 102.9 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2204,7 +1854,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-murfuqg',
+    id: 'vid-vvfuzeh',
     title: 'La Top 107.7 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2214,7 +1864,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xa17jes',
+    id: 'vid-ho8m43o',
     title: 'La Urban TV (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2224,7 +1874,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qdc59jv',
+    id: 'vid-c4m3kg8',
     title: 'La Voz del Tropico (480p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2234,7 +1884,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cig41li',
+    id: 'vid-m52t95z',
     title: 'La-X (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2244,7 +1894,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tvgxosj',
+    id: 'vid-iii63t5',
     title: 'Latin Zone TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2254,7 +1904,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oz9pjag',
+    id: 'vid-i6llddw',
     title: 'Lausitzwelle (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2264,7 +1914,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xmswknc',
+    id: 'vid-wtxnuoc',
     title: 'LaXitosa Panamá (360p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2274,7 +1924,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nrthkgq',
+    id: 'vid-6gtsl2h',
     title: 'Lingkar TV',
     author: 'Музичні канали',
     type: 'video',
@@ -2284,7 +1934,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9asye9d',
+    id: 'vid-15033e2',
     title: 'LiraTV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2294,7 +1944,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hpg6p1z',
+    id: 'vid-kgsnc3t',
     title: 'Littoral FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2304,7 +1954,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-47i32y9',
+    id: 'vid-dxsqosi',
     title: 'Live99FM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2314,7 +1964,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-3ftkac1',
+    id: 'vid-fw81qkr',
     title: 'LiveXLive (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2324,7 +1974,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e5tg3ac',
+    id: 'vid-i3l1r5p',
     title: 'Lobo TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2334,7 +1984,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e7b40h9',
+    id: 'vid-blgvjxx',
     title: 'Look Thoong TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2344,7 +1994,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8sq5m81',
+    id: 'vid-bscwlil',
     title: 'Love TV (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2354,7 +2004,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2ryh62l',
+    id: 'vid-clbybf2',
     title: 'LRT Klasika (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2364,7 +2014,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ehq0vi4',
+    id: 'vid-zdynz60',
     title: 'LRT Opus (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2374,7 +2024,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-y19gb11',
+    id: 'vid-3tqgh4h',
     title: 'Luna Estéreo 106.4 FM (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2384,7 +2034,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qjn0imz',
+    id: 'vid-8e43zaa',
     title: 'M2 (540p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2394,7 +2044,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-i22gdug',
+    id: 'vid-wgdo7io',
     title: 'm2o TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2404,7 +2054,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-va8yuid',
+    id: 'vid-lu17tm9',
     title: 'M6 Music',
     author: 'Музичні канали',
     type: 'video',
@@ -2414,7 +2064,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6kdzto3',
+    id: 'vid-g3dcam9',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Music",M+ (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2424,7 +2074,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7b23o7i',
+    id: 'vid-ckcbxty',
     title: 'M-1 (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2434,7 +2084,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ms5gl6m',
+    id: 'vid-p0fpiiq',
     title: 'Madras FM TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2444,7 +2094,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-c2vff3j',
+    id: 'vid-5aeyhut',
     title: 'Magenta Musik 360 (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2454,7 +2104,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6b2zpdt',
+    id: 'vid-pi09i46',
     title: 'Magic TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2464,7 +2114,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0fh4pt7',
+    id: 'vid-l56uux3',
     title: 'Magic TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2474,7 +2124,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-afntlf4',
+    id: 'vid-69fuce7',
     title: 'Maimon TV Canal 3 (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2484,7 +2134,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-sm36esq',
+    id: 'vid-oag4f7w',
     title: 'Majid Al Mohandis (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2494,7 +2144,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-te1c860',
+    id: 'vid-00543vq',
     title: 'Makao TV (360p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2504,7 +2154,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ljahd7v',
+    id: 'vid-iku6ows',
     title: 'Marina TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2514,7 +2164,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kdrx5eq',
+    id: 'vid-mq87nn6',
     title: 'Más FM 95.9 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2524,7 +2174,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2ww9jwg',
+    id: 'vid-jfunbv9',
     title: 'MasMusica FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2534,7 +2184,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4214rzo',
+    id: 'vid-4gysxi1',
     title: 'Mastiii (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2544,7 +2194,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hvfh7o9',
+    id: 'vid-pbdaef9',
     title: 'Max Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2554,7 +2204,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qz4l3gy',
+    id: 'vid-mybsh1j',
     title: 'Max TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2564,7 +2214,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-juf7tgs',
+    id: 'vid-5ndhelp',
     title: 'MBC America (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2574,7 +2224,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qhxk32c',
+    id: 'vid-1u8lbpt',
     title: 'MBC FM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2584,7 +2234,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0d5mgyx',
+    id: 'vid-zmf94gz',
     title: 'MBC Mood (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2594,7 +2244,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mzn7tcg',
+    id: 'vid-ygejqkh',
     title: 'MBC Mood (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2604,7 +2254,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8qyfazr',
+    id: 'vid-nhoioy7',
     title: 'MCN6 Music Channel (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2614,17 +2264,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-doa4s1m',
-    title: 'Med Muzik (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://54.36.110.140/live3/live3.m3u8',
-    cover: 'https://i.imgur.com/gtUFmCD.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-eqcfv4q',
+    id: 'vid-euuhjcr',
     title: 'MegaBox (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2634,7 +2274,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-76b8ttv',
+    id: 'vid-n35f91d',
     title: 'Melody (288p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2644,7 +2284,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-63fimwz',
+    id: 'vid-y7dolbj',
     title: 'Melody FM Jordan (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2654,7 +2294,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rhlfagi',
+    id: 'vid-oouen63',
     title: 'Memorias del Corazon (480p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2664,7 +2304,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ai613sc',
+    id: 'vid-a1zor5h',
     title: 'Memorias FM Pop Latino (480p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2674,7 +2314,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-orkma5z',
+    id: 'vid-waqvmp4',
     title: 'Memorias TV Classic (480p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2684,7 +2324,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-75i1cpq',
+    id: 'vid-whzqnyt',
     title: 'Memorias TV Tropical (480p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2694,7 +2334,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-es95lft',
+    id: 'vid-kwsr3rb',
     title: 'Metaleitor TV',
     author: 'Музичні канали',
     type: 'video',
@@ -2704,7 +2344,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4rzjw77',
+    id: 'vid-d6mx859',
     title: 'Metropoli Medios TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2714,7 +2354,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wn1wj7q',
+    id: 'vid-qd8b7gy',
     title: 'Mezzo (1080p) [Geo-Blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2724,7 +2364,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-blszn0g',
+    id: 'vid-jdwz918',
     title: 'Mezzo Live',
     author: 'Музичні канали',
     type: 'video',
@@ -2734,7 +2374,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5k3smer',
+    id: 'vid-73iead0',
     title: 'mfm (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2744,7 +2384,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8pml3f6',
+    id: 'vid-n5u52fx',
     title: 'Mh 1 Music (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2754,7 +2394,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-70gguwe',
+    id: 'vid-h5f231s',
     title: 'Mi Gente TV (720p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2764,7 +2404,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e9d934s',
+    id: 'vid-sg6gw25',
     title: 'Miel TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2774,7 +2414,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gs1xe1s',
+    id: 'vid-cnpdp6n',
     title: 'MNM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2784,7 +2424,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fcxgxkb',
+    id: 'vid-9t1277n',
     title: 'Mohammed Abdo (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2794,17 +2434,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-113dn6l',
-    title: 'Molahits TV (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://ventdelnord.tv:8080/mola/directe.m3u8',
-    cover: 'https://i.imgur.com/FYcLtqT.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-v8kr5zh',
+    id: 'vid-tmf3u6l',
     title: 'Mooz Dance',
     author: 'Музичні канали',
     type: 'video',
@@ -2814,7 +2444,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lx40iod',
+    id: 'vid-iasbc6l',
     title: 'Mooz Hits',
     author: 'Музичні канали',
     type: 'video',
@@ -2824,7 +2454,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zsyr9hx',
+    id: 'vid-tw00x9g',
     title: 'Mooz Ro!',
     author: 'Музичні канали',
     type: 'video',
@@ -2834,7 +2464,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kjf2tm9',
+    id: 'vid-lmxyd5m',
     title: 'Mosaique FM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2844,7 +2474,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-h2r9miq',
+    id: 'vid-6vzzemd',
     title: 'Mouv\' TV (288p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2854,7 +2484,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fvpi7cg',
+    id: 'vid-60gzxct',
     title: 'Music Box Polska [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -2864,7 +2494,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oihqhuf',
+    id: 'vid-xvgfwbs',
     title: 'Music India (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2874,7 +2504,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zcgkmcv',
+    id: 'vid-wx4s6hb',
     title: 'Music Information Channel (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2884,17 +2514,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-unht4b1',
-    title: 'Music Japan TV (544p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs06',
-    cover: 'https://i.imgur.com/DkF8YZq.jpeg',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-vcedt6p',
+    id: 'vid-oad1vd3',
     title: 'Music TV Granada (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -2904,7 +2524,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mncmju6',
+    id: 'vid-cloufe7',
     title: 'MusicTop (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2914,7 +2534,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5nvi2tp',
+    id: 'vid-y15514w',
     title: 'Muzangala TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2924,7 +2544,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tv5yvfm',
+    id: 'vid-d7h004x',
     title: 'Muzvar (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2934,7 +2554,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nawcifa',
+    id: 'vid-0ctioah',
     title: 'MuzzOne',
     author: 'Музичні канали',
     type: 'video',
@@ -2944,7 +2564,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mg7byku',
+    id: 'vid-ndv76au',
     title: 'My Gospel TV',
     author: 'Музичні канали',
     type: 'video',
@@ -2954,7 +2574,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-b4ordz8',
+    id: 'vid-sl5c80b',
     title: 'Nande Portetepe TV',
     author: 'Музичні канали',
     type: 'video',
@@ -2964,7 +2584,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2iz2xir',
+    id: 'vid-xsdjxno',
     title: 'Navahang TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2974,7 +2594,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0wlq4k8',
+    id: 'vid-49dfthr',
     title: 'NEW KPOP (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -2984,7 +2604,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ix2sv3u',
+    id: 'vid-uqw6maw',
     title: 'Next HD (480p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -2994,7 +2614,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-v2d27q5',
+    id: 'vid-c1auhd9',
     title: 'Nidae AlIslam Radio (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3004,7 +2624,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tgbc78o',
+    id: 'vid-j8ts4qd',
     title: 'NogoumFMTV (672p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3014,7 +2634,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-epniacx',
+    id: 'vid-u4q5zg3',
     title: 'Noroc TV (576p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3024,7 +2644,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-1mvgea7',
+    id: 'vid-yks62fx',
     title: 'NOW 70s (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3034,7 +2654,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0e80nzi',
+    id: 'vid-y3towr1',
     title: 'Now 70s (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3044,7 +2664,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-n59j54x',
+    id: 'vid-u9z7tby',
     title: 'NOW 80s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3054,7 +2674,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-u920sji',
+    id: 'vid-kl49uvm',
     title: 'Now 80s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3064,7 +2684,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-56yrrf1',
+    id: 'vid-8kpr5il',
     title: 'NOW 90s00s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3074,7 +2694,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bcratkd',
+    id: 'vid-pphv1jr',
     title: 'NOW Rock (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3084,7 +2704,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-t7zj2d7',
+    id: 'vid-9urjxhi',
     title: 'NOW Rock (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3094,7 +2714,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cv50xqy',
+    id: 'vid-l18c59b',
     title: 'Now TV 102.3FM Edmonton (CKNO-FM) (616p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3104,7 +2724,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7dvjypv',
+    id: 'vid-20wx5k9',
     title: 'NPC Rádio e TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3114,17 +2734,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-d2ujw4z',
-    title: 'NRG 91 (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://tv.nrg91.gr:1935/onweb/live/master.m3u8',
-    cover: 'https://i.imgur.com/1Zl1OJ5.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-jan4jy2',
+    id: 'vid-z3ft8nh',
     title: 'NRJ Hits',
     author: 'Музичні канали',
     type: 'video',
@@ -3134,7 +2744,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-q1nk2x8',
+    id: 'vid-rg40bq8',
     title: 'Nueva Vida TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3144,7 +2754,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rcady9o',
+    id: 'vid-b01dshy',
     title: 'Number 1 Ask (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3154,7 +2764,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xwa0mfz',
+    id: 'vid-dgsp089',
     title: 'Number 1 Damar (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3164,7 +2774,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bc4hn8p',
+    id: 'vid-ja8liad',
     title: 'Number 1 Dance (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3174,7 +2784,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nufesm9',
+    id: 'vid-lpzfpia',
     title: 'Number 1 Türk (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3184,7 +2794,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-avshu0k',
+    id: 'vid-lxgzasp',
     title: 'Number 1 TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3194,17 +2804,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e7kr358',
-    title: 'Nuta TV',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://78.130.250.2:8023/play/a03r/index.m3u8',
-    cover: 'https://i.imgur.com/JHFUxDu.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-b3wctam',
+    id: 'vid-69bxk1t',
     title: 'Óčko (540p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3214,7 +2814,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-whgmwk7',
+    id: 'vid-99zl3b1',
     title: 'Óčko Expres (540p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3224,7 +2824,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ot5udpe',
+    id: 'vid-h50din0',
     title: 'Óčko Gold (540p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3234,7 +2834,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dv1gi50',
+    id: 'vid-rfj7i2k',
     title: 'ON FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3244,7 +2844,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-i0flaq0',
+    id: 'vid-mmfw41v',
     title: 'Onda 15 TV (224p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3254,7 +2854,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-k8zm2ih',
+    id: 'vid-gnfd0km',
     title: 'Onda Valencia (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3264,7 +2864,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tk5g2n8',
+    id: 'vid-3e3982x',
     title: 'Ondambiental TV (360p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3274,7 +2874,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4dohxs3',
+    id: 'vid-9e82mkh',
     title: 'ONE1 Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3284,7 +2884,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-z5u7ct7',
+    id: 'vid-2sp18vh',
     title: 'One Adria (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3294,7 +2894,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-sdpghrm',
+    id: 'vid-hsehqc5',
     title: 'One TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3304,7 +2904,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9blog4l',
+    id: 'vid-ui1arsw',
     title: 'OneFM (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3314,7 +2914,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-drgkt7z',
+    id: 'vid-sqsz351',
     title: 'Online TV Nusantara (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3324,7 +2924,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ejzh6e7',
+    id: 'vid-517rqc2',
     title: 'Orange Bangla TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3334,7 +2934,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-l8jrod1',
+    id: 'vid-7q7jmx4',
     title: 'Orbita Chile TV (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -3344,7 +2944,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-fe0aj6h',
+    id: 'vid-d22dd6s',
     title: 'Oxigeno TV (360p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3354,7 +2954,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5lvvh37',
+    id: 'vid-7xtpnvq',
     title: 'P2M TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3364,17 +2964,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xvhnic3',
-    title: 'Pamir TV (1080p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://live.stream.cdn.pamirtv.com/ptv/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8',
-    cover: 'https://i.imgur.com/sCBbBOj.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-5b9grib',
+    id: 'vid-2orsql6',
     title: 'Panik TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3384,7 +2974,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-pqk823l',
+    id: 'vid-5l8m8y7',
     title: 'Panorama FM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3394,7 +2984,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lla3ky2',
+    id: 'vid-xneuq75',
     title: 'Parranda Vallenata (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3404,7 +2994,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wo63zux',
+    id: 'vid-5u8mw0p',
     title: 'Peppers TV (751p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3414,7 +3004,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-yytsyzk',
+    id: 'vid-rh6sbuv',
     title: 'Pequeradio (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3424,7 +3014,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-79iiw2k',
+    id: 'vid-9wi9ngs',
     title: 'Persiana Folk',
     author: 'Музичні канали',
     type: 'video',
@@ -3434,7 +3024,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7hr4pdx',
+    id: 'vid-ra6sjr0',
     title: 'Persiana Music',
     author: 'Музичні канали',
     type: 'video',
@@ -3444,7 +3034,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nhjwhtn',
+    id: 'vid-tooezhd',
     title: 'Persiana Nostalgia',
     author: 'Ретро / Класика',
     type: 'video',
@@ -3454,7 +3044,7 @@ const PODCASTS = [
     category: 'Ретро / Класика'
   },
   {
-    id: 'vid-abx3m6z',
+    id: 'vid-giltmq1',
     title: 'Persiana Vibe',
     author: 'Музичні канали',
     type: 'video',
@@ -3464,7 +3054,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xpmpllp',
+    id: 'vid-i9r3vxp',
     title: 'PJ Digital Radio TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3474,7 +3064,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ec4lla4',
+    id: 'vid-7ao5pjn',
     title: 'Planet 100.9 FM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3484,27 +3074,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-h5qjya8',
-    title: 'Play TV (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://connectiktv.ddns.net:5000/playtv/@playtv/playlist.m3u8',
-    cover: 'https://i.imgur.com/1dmBqpf.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-qekdeb2',
-    title: 'Play TV (480p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://web.onair-radio.eu:1935/Alpha-Host/Alpha-Host/playlist.m3u8',
-    cover: 'https://i.imgur.com/JWFOYuD.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-2m71gbo',
+    id: 'vid-0671dby',
     title: 'PMC',
     author: 'Музичні канали',
     type: 'video',
@@ -3514,7 +3084,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wz07byp',
+    id: 'vid-m8gtatb',
     title: 'PMC Royale (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3524,7 +3094,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-m5yka35',
+    id: 'vid-4jds65f',
     title: 'POP World TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3534,7 +3104,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-o2w4j7r',
+    id: 'vid-gdh37jy',
     title: 'Power 101.7 FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3544,7 +3114,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-55hvk5d',
+    id: 'vid-dpigmfv',
     title: 'Power Dance (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3554,7 +3124,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hlsh7x3',
+    id: 'vid-r9pyrxx',
     title: 'Power Hit Radio (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3564,7 +3134,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6vf0jeb',
+    id: 'vid-eibd8mt',
     title: 'Power Love (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3574,7 +3144,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rrlnupg',
+    id: 'vid-hdhtod7',
     title: 'Power Türk Akustik (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3584,7 +3154,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-akpq90j',
+    id: 'vid-o5ytss3',
     title: 'Power Türk Slow (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3594,7 +3164,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-o03nb64',
+    id: 'vid-3i5qyul',
     title: 'Power Türk Taptaze (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3604,7 +3174,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-12enx5e',
+    id: 'vid-8pgsiio',
     title: 'Prambors',
     author: 'Музичні канали',
     type: 'video',
@@ -3614,7 +3184,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ehesx5b',
+    id: 'vid-p0pf3qt',
     title: 'Prattel TV',
     author: 'Музичні канали',
     type: 'video',
@@ -3624,7 +3194,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-59g1yza',
+    id: 'vid-5gxje6q',
     title: 'PRIDEtv LATAM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3634,7 +3204,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xy3vq9f',
+    id: 'vid-kq7g5l8',
     title: 'PTC Chakde (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3644,7 +3214,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-y8l6xv5',
+    id: 'vid-wog54da',
     title: 'PTC Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3654,7 +3224,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-r4gn9wm',
+    id: 'vid-ie8czyh',
     title: 'Public Music (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3664,7 +3234,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-q9jh14l',
+    id: 'vid-cxnght6',
     title: 'Punjabi Hits (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3674,7 +3244,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wc1y206',
+    id: 'vid-u7ylwzm',
     title: 'Q-Music (Belgium) (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3684,7 +3254,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-02u57zy',
+    id: 'vid-cz83bhs',
     title: 'Qello Concerts by Stingray (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3694,7 +3264,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2dhvkbp',
+    id: 'vid-fdoyxif',
     title: 'Qello Concerts by Stingray (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3704,7 +3274,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-i3p7pzw',
+    id: 'vid-0ddnspm',
     title: 'Qmusic (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3714,7 +3284,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-m1c1ne6',
+    id: 'vid-1b9wzfd',
     title: 'Qwest TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3724,7 +3294,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kqvemx7',
+    id: 'vid-dy8ymsw',
     title: 'Qwest TV Jazz & Beyond (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3734,7 +3304,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0aac1p8',
+    id: 'vid-0ev005y',
     title: 'Rabeh Saqer (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3744,7 +3314,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9rtfmm3',
+    id: 'vid-e21gp1n',
     title: 'Radio 21 TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3754,7 +3324,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rxhh1q8',
+    id: 'vid-g5edv3d',
     title: 'Radio Alegria 98.5 FM (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3764,7 +3334,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-c4h5dkj',
+    id: 'vid-q3z5bky',
     title: 'Radio Bonita 106.7 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3774,7 +3344,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0ypb8sb',
+    id: 'vid-78w7r2j',
     title: 'Radio Capital TiVu (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3784,7 +3354,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-g7zyobt',
+    id: 'vid-m2c149r',
     title: 'Radio Carnaval TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3794,7 +3364,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-b4butgs',
+    id: 'vid-c0tj9el',
     title: 'Radio Ciudad 98.9 FM TV',
     author: 'Музичні канали',
     type: 'video',
@@ -3804,7 +3374,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7v9cuw9',
+    id: 'vid-agmb0o8',
     title: 'Radio Conexion Web TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3814,7 +3384,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-npel7jk',
+    id: 'vid-6le0u65',
     title: 'Radio Contact (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3824,7 +3394,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e3q15dr',
+    id: 'vid-6alphl3',
     title: 'Radio Cuenca Estéreo (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3834,7 +3404,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-alacuf0',
+    id: 'vid-nce8cvx',
     title: 'RADIO DISCOunt TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3844,17 +3414,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-n8pnyou',
-    title: 'Radio Fantástica 98.9 FM (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://190.107.232.9:8082/livestream/stream.m3u8',
-    cover: 'https://i.imgur.com/mpcIbrH.jpg',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-4em5saj',
+    id: 'vid-61eflhh',
     title: 'Radio Freccia TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3864,7 +3424,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5dy884a',
+    id: 'vid-95lsrdj',
     title: 'Radio Fx Net (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3874,7 +3434,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zxgkfxi',
+    id: 'vid-zedcao6',
     title: 'Radio Hit FM TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3884,7 +3444,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6jy4ood',
+    id: 'vid-v2c9zo1',
     title: 'Radio Ideal 104.7 FM (La Esperanza) (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3894,7 +3454,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-r43sews',
+    id: 'vid-w2uz8ti',
     title: 'Radio Imagen 105.1 FM (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3904,7 +3464,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-alv8ikm',
+    id: 'vid-5ak2d6e',
     title: 'Radio Italia Trend (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3914,7 +3474,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-z3t6fq3',
+    id: 'vid-gghd6tm',
     title: 'Radio Javan TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3924,7 +3484,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-eqzmxls',
+    id: 'vid-5tmn45y',
     title: 'Radio JND (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3934,7 +3494,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dvvcgrq',
+    id: 'vid-js5njk4',
     title: 'Radio Karaoke (288p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3944,7 +3504,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0yivob0',
+    id: 'vid-dulw6oq',
     title: 'Radio Karolina TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3954,7 +3514,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cxe3ixd',
+    id: 'vid-iikz8y0',
     title: 'Radio Lola (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3964,7 +3524,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kzwka7o',
+    id: 'vid-5m8v6md',
     title: 'Radio Master (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -3974,7 +3534,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gwi5ery',
+    id: 'vid-1jgmemr',
     title: 'Radio Monumental TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3984,7 +3544,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-o1zw3v7',
+    id: 'vid-98u9094',
     title: 'Radio Piter Pan TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -3994,7 +3554,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-p59tjf4',
+    id: 'vid-qumaq62',
     title: 'Radio RAM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4004,7 +3564,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-00hvy2k',
+    id: 'vid-63347l5',
     title: 'Radio Realpolitik (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4014,7 +3574,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wrtvgnc',
+    id: 'vid-w8vxe0t',
     title: 'Radio San Cristobal 88.7 FM',
     author: 'Музичні канали',
     type: 'video',
@@ -4024,7 +3584,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ya81x5d',
+    id: 'vid-1752m5k',
     title: 'Radio Stad den Haag (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4034,7 +3594,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-131g37k',
+    id: 'vid-5zttmza',
     title: 'Radio Suyai TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4044,7 +3604,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-jzp03d5',
+    id: 'vid-w12ofl9',
     title: 'Radio SWH TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4054,7 +3614,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-b85qq5c',
+    id: 'vid-xz62l1z',
     title: 'Radio Télé Hit (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4064,7 +3624,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-z1rum4m',
+    id: 'vid-4li9ytb',
     title: 'Radio Télé Kajou (480p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4074,7 +3634,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rrvjmyg',
+    id: 'vid-wz9zx9p',
     title: 'Radio Tropical Tarapoto (480p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4084,7 +3644,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-uprawcu',
+    id: 'vid-dd0v8r4',
     title: 'Radio TV Sal One (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4094,7 +3654,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-v3zuojv',
+    id: 'vid-fmift6v',
     title: 'Radio TV Tendencias (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4104,7 +3664,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bs305sj',
+    id: 'vid-leuii1s',
     title: 'Radio U TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4114,7 +3674,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-eoat7mg',
+    id: 'vid-06fl71i',
     title: 'Radio Weser TV Bremen (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4124,7 +3684,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nyovc0i',
+    id: 'vid-hg6ceh0',
     title: 'Radio Zeta TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4134,7 +3694,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-w6p9c5b',
+    id: 'vid-hswi88s',
     title: 'RadioNL TV (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4144,7 +3704,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ywbxcvq',
+    id: 'vid-kjukddb',
     title: 'Raj Musix Kannada (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4154,7 +3714,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-68i6sxj',
+    id: 'vid-l8j1fhl',
     title: 'Raj Musix Malayalam (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4164,7 +3724,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lxake7t',
+    id: 'vid-5pyjaio',
     title: 'Raj Musix Tamil (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4174,7 +3734,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ulexnle',
+    id: 'vid-r1ixqat',
     title: 'Raj Musix Telugu (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4184,7 +3744,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7z8hctu',
+    id: 'vid-ssj65o1',
     title: 'Rararadio (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4194,7 +3754,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-td3dmfh',
+    id: 'vid-66lit3a',
     title: 'Rashid AlMajed (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4204,7 +3764,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4ssaxa8',
+    id: 'vid-5h53pvv',
     title: 'RC Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4214,7 +3774,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ql4uj7b',
+    id: 'vid-c55bnv0',
     title: 'RedMusic (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4224,7 +3784,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fz6ojuv',
+    id: 'vid-t3455a3',
     title: 'Retro Music Television (360p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4234,7 +3794,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4uhi1db',
+    id: 'vid-wy6pz0a',
     title: 'Retro Plus 2 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4244,7 +3804,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-k2k55po',
+    id: 'vid-05ncaa9',
     title: 'Reyali (614p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4254,7 +3814,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ohrbp00',
+    id: 'vid-yzz8ynm',
     title: 'RFPtv (360p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4264,7 +3824,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-avj5ed8',
+    id: 'vid-bcwjfsg',
     title: 'RHT Guadeloupe (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4274,7 +3834,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wg4iab2',
+    id: 'vid-pf0bils',
     title: 'Rock TV (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4284,7 +3844,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vbei1qp',
+    id: 'vid-8p8emrj',
     title: 'Rock TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4294,7 +3854,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4lut55k',
+    id: 'vid-brezps0',
     title: 'Rotana Khalijia (1080p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -4304,7 +3864,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mdatvyn',
+    id: 'vid-gjv5xma',
     title: 'Rotana Music (1080p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -4314,7 +3874,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bww3pgh',
+    id: 'vid-efio8ue',
     title: 'RQP Paraguay (1080i)',
     author: 'Музичні канали',
     type: 'video',
@@ -4324,17 +3884,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5otmz2c',
-    title: 'RTI La 3 (1080p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://69.64.57.208/la3/index.m3u8',
-    cover: 'https://i.imgur.com/HdNshgF.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-62g3dn4',
+    id: 'vid-bd8ns5u',
     title: 'RTL2',
     author: 'Музичні канали',
     type: 'video',
@@ -4344,7 +3894,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-r10ug5j',
+    id: 'vid-0qe9392',
     title: 'RTL 102.5 Best (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4354,7 +3904,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-1o1mcfa',
+    id: 'vid-de0v72z',
     title: 'RTL 102.5 Bro&Sis (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4364,7 +3914,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-sgusv0w',
+    id: 'vid-rkkle6y',
     title: 'RTL 102.5 Caliente (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4374,7 +3924,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5xxpp8z',
+    id: 'vid-ph8p6zm',
     title: 'RTL 102.5 Disco (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4384,7 +3934,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-d8i42eh',
+    id: 'vid-wchqhn7',
     title: 'RTL 102.5 Napulè (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4394,7 +3944,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ggdk3eu',
+    id: 'vid-u221z8e',
     title: 'RTL 102.5 Traffic (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4404,7 +3954,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2kblsm5',
+    id: 'vid-qhpye5v',
     title: 'RTL 102.5 TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4414,7 +3964,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-54nkd87',
+    id: 'vid-fhgrvbc',
     title: 'RTL Gold (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4424,7 +3974,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9cnf6kl',
+    id: 'vid-gxkccni',
     title: 'RTL Today Radio (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4434,17 +3984,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7mhfa7r',
-    title: 'RTV Glas Drine (404p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://glasdrine.cutuk.net:8081/433ssdsw/GlasDrineSD/playlist.m3u8',
-    cover: 'https://i.imgur.com/9NgxOdb.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-owhcd7n',
+    id: 'vid-udt9qpw',
     title: 'RTV Vida (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4454,7 +3994,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wzvz97b',
+    id: 'vid-vhpsy12',
     title: 'RU.TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4464,7 +4004,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zrgpnhs',
+    id: 'vid-3lcg3bf',
     title: 'Salsa Gorda Television (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4474,7 +4014,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5bgu7m2',
+    id: 'vid-0ys6tik',
     title: 'Salto Brasa Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4484,7 +4024,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2ukfp9n',
+    id: 'vid-pxobrh7',
     title: 'Sana Plus (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4494,7 +4034,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dvoeuwt',
+    id: 'vid-afwg21s',
     title: 'Sangeet Bangla (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4504,17 +4044,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7hdq0jj',
-    title: 'Sangeet Bhojpuri (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://103.213.31.109:90/SangeetBhojpuri/playlist.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/s143757_ld_h15_aa.png?lock=720x540',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-wbua5q4',
+    id: 'vid-qrhs3sg',
     title: 'Sangeet Marathi (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4524,17 +4054,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-f2148yj',
-    title: 'Shemaroo Filmi Gaane (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.213.31.109:90/ShemarooFilmiGaane/playlist.m3u8',
-    cover: 'https://jiotvimages.cdn.jio.com/dare_images/images/channel/0d5b07555b2d4415aa9f145273095ed7.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-l732fx9',
+    id: 'vid-mxfihsj',
     title: 'Siembra TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4544,7 +4064,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zdoodxp',
+    id: 'vid-q2vnq8p',
     title: 'Sky Folk TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4554,17 +4074,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gykd3j6',
-    title: 'SL48 TV (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://media.velcom.it:1935/sl48/sl48/playlist.m3u8',
-    cover: 'https://i.imgur.com/0iPU3JE.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-ccvend3',
+    id: 'vid-hkwnqp1',
     title: 'Slager Muzika',
     author: 'Музичні канали',
     type: 'video',
@@ -4574,7 +4084,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-17sp1tl',
+    id: 'vid-gwbor9p',
     title: 'Slager Original',
     author: 'Музичні канали',
     type: 'video',
@@ -4584,7 +4094,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0tdasty',
+    id: 'vid-iv3a5dd',
     title: 'Sol Música (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4594,7 +4104,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-s8k3aay',
+    id: 'vid-fqbhbgl',
     title: 'SoloBáilalo (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4604,17 +4114,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9bpemet',
-    title: 'Songdew TV (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1411.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/s142920_ld_h9_aa.png?lock=720x540',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-p8bdyga',
+    id: 'vid-z4169q7',
     title: 'SONGTV Russia',
     author: 'Музичні канали',
     type: 'video',
@@ -4624,7 +4124,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-m1ihsc6',
+    id: 'vid-9cbhdbt',
     title: 'SOY Plancha TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4634,17 +4134,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a6b2x8r',
-    title: 'Space Shower TV (544p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs26',
-    cover: 'https://static.wikia.nocookie.net/logopedia/images/2/24/Space_Shower_-_1999.svg/revision/latest/scale-to-width-down/512',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-i9amgbp',
+    id: 'vid-bxjw927',
     title: 'SpektraTV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4654,7 +4144,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-safjgyg',
+    id: 'vid-ye9ii0x',
     title: 'Spirit TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4664,7 +4154,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-n50tmyq',
+    id: 'vid-r6lw4v4',
     title: 'Star 101 FM (KNUT Guam) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4674,7 +4164,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6zkq09a',
+    id: 'vid-r95ts6l',
     title: 'Star Plus Music (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4684,7 +4174,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-3znaoht',
+    id: 'vid-33vvd37',
     title: 'Steelbird Music (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -4694,7 +4184,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-l4zkpdc',
+    id: 'vid-e6iirua',
     title: 'Stingray Classic Rock (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4704,7 +4194,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-m8a0ekr',
+    id: 'vid-iyct7jn',
     title: 'Stingray Classica (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4714,7 +4204,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dijww1k',
+    id: 'vid-q9mvj4x',
     title: 'Stingray CMusic (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4724,7 +4214,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-47ft52o',
+    id: 'vid-xx7y1x4',
     title: 'Stingray DJAZZ (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4734,7 +4224,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4uae8ju',
+    id: 'vid-6j7pp5i',
     title: 'Stingray Easy Listening (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4744,7 +4234,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-76t0ppg',
+    id: 'vid-zstkj74',
     title: 'Stingray Euro Hits (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4754,7 +4244,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-42dndkt',
+    id: 'vid-tx2fdsq',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Music",Stingray Éxitos del Momento (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4764,7 +4254,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2phqjzo',
+    id: 'vid-mbaic3g',
     title: 'Stingray Flashback 70s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4774,7 +4264,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9xncfwv',
+    id: 'vid-i3srpmc',
     title: 'Stingray Greatest Hits (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4784,7 +4274,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-o0omj68',
+    id: 'vid-i4qzv7l',
     title: 'Stingray Greatest Hits (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4794,7 +4284,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gisqcpc',
+    id: 'vid-sokboru',
     title: 'Stingray Greatest Holiday Hits',
     author: 'Музичні канали',
     type: 'video',
@@ -4804,7 +4294,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qqqnxwe',
+    id: 'vid-pnkq0j1',
     title: 'Stingray Hit List (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4814,7 +4304,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-x2lxz17',
+    id: 'vid-70sze46',
     title: 'Stingray Hitlist (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4824,7 +4314,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rujwdhm',
+    id: 'vid-9wmatyo',
     title: 'Stingray Holidayscapes (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4834,7 +4324,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-03lhw66',
+    id: 'vid-sikepk2',
     title: 'Stingray Hot Country (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4844,7 +4334,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-iuz2xd3',
+    id: 'vid-r4195o8',
     title: 'Stingray Jukebox Oldies (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4854,7 +4344,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0p5s2vb',
+    id: 'vid-s8gy5mo',
     title: 'Stingray Karaoke (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4864,7 +4354,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2m2x17s',
+    id: 'vid-6pmm84t',
     title: 'Stingray Naturescape (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4874,7 +4364,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ddcxo9h',
+    id: 'vid-w4wi2wq',
     title: 'Stingray Naturescape (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4884,7 +4374,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-59bh7q7',
+    id: 'vid-60pcqm5',
     title: 'Stingray Nothin\' But 90s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4894,7 +4384,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-evjscgk',
+    id: 'vid-6ryjj39',
     title: 'Stingray Remember the 80s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4904,7 +4394,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wzgietb',
+    id: 'vid-mci1s45',
     title: 'Stingray Remember the 80s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4914,7 +4404,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vpuqcut',
+    id: 'vid-nwgkrjk',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Music",Stingray Remember the 80s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4924,7 +4414,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lhxr7a0',
+    id: 'vid-3z9gn87',
     title: 'Stingray Rock Alternative (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4934,7 +4424,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zhilaas',
+    id: 'vid-9l3nfli',
     title: 'Stingray Romance Latino (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4944,7 +4434,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zl9vzud',
+    id: 'vid-zzaswop',
     title: 'Stingray Smooth Jazz (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4954,7 +4444,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-22p8lrv',
+    id: 'vid-fm6apon',
     title: 'Stingray Soul Storm (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4964,7 +4454,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-afyuwpf',
+    id: 'vid-eti7u3h',
     title: 'Stingray The Spa (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4974,7 +4464,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gsx9vit',
+    id: 'vid-x80s8pl',
     title: 'Stingray Today\'s KPOP (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4984,7 +4474,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9tj0988',
+    id: 'vid-hnp6tbq',
     title: 'Stingray Today\'s Latin Pop (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -4994,7 +4484,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-25f07l3',
+    id: 'vid-qg5t1bw',
     title: 'Stingray Urban Beat (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5004,7 +4494,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-xf0m7ql',
+    id: 'vid-pglgwm6',
     title: 'Stryk TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5014,7 +4504,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-sj0suxa',
+    id: 'vid-fp627ay',
     title: 'STZ Telebista (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5024,7 +4514,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-nyy6wp9',
+    id: 'vid-zud6e5e',
     title: 'Súper Q Panamá (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5034,7 +4524,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-h066g45',
+    id: 'vid-jzccb3l',
     title: 'Super TV (1080i) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5044,7 +4534,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dudj10m',
+    id: 'vid-le52495',
     title: 'Supermúsica TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5054,7 +4544,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-wjd10eq',
+    id: 'vid-y5ccjlj',
     title: 'T2 TV',
     author: 'Музичні канали',
     type: 'video',
@@ -5064,7 +4554,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fhoxz96',
+    id: 'vid-r5n2s2t',
     title: 'Tabbar Hits (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5074,7 +4564,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7ypb0r0',
+    id: 'vid-98cfacv',
     title: 'Tarab (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5084,7 +4574,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4ipdq1d',
+    id: 'vid-moevlmw',
     title: 'Tarang Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5094,7 +4584,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2aolgtn',
+    id: 'vid-i1vr0yc',
     title: 'TDI Radio TV',
     author: 'Музичні канали',
     type: 'video',
@@ -5104,7 +4594,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-h9ku720',
+    id: 'vid-1iaiury',
     title: 'Tele7music',
     author: 'Музичні канали',
     type: 'video',
@@ -5114,7 +4604,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6xpsvbx',
+    id: 'vid-dc30nfa',
     title: 'Tele Dominicana TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5124,7 +4614,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-slks29g',
+    id: 'vid-aob4doc',
     title: 'Tele Zoukla',
     author: 'Музичні канали',
     type: 'video',
@@ -5134,17 +4624,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-3cdpy7l',
-    title: 'Telehit Musica',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://190.61.55.34:2401/play/a06t/index.m3u8',
-    cover: 'https://i.imgur.com/CofYjWh.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-vhp55tr',
+    id: 'vid-7sljcuo',
     title: 'TeleMusik Senegal (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5154,7 +4634,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-w4i8qee',
+    id: 'vid-a4cprvy',
     title: 'Telerumba TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5164,7 +4644,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cb7wy94',
+    id: 'vid-tbidsn3',
     title: 'Tezaur TV (576i)',
     author: 'Музичні канали',
     type: 'video',
@@ -5174,17 +4654,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-06r0en3',
-    title: 'That\'s 70s (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://92.114.85.72:8000/play/a0lc',
-    cover: 'https://i.imgur.com/j2q53JQ.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-6mb3u5d',
+    id: 'vid-0m0e2v3',
     title: 'The Country Network (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5194,7 +4664,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-kds5xtl',
+    id: 'vid-lv7in7z',
     title: 'The Voice TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5204,7 +4674,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cjq9337',
+    id: 'vid-vlg1jax',
     title: 'Tiankov Folk (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5214,7 +4684,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cihplz1',
+    id: 'vid-mrl7scl',
     title: 'Tiankov Orient Folk (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5224,7 +4694,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ta30jqf',
+    id: 'vid-ll9mq1h',
     title: 'TikTok Radio Brasil (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5234,37 +4704,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a72iwnk',
-    title: 'TMA (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://hls.tmacaraibes.com/live/index.m3u8',
-    cover: 'https://i.imgur.com/1iOAl2j.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-zk9rabv',
-    title: 'Top TV (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://82.165.71.58:8081/TopTV/live/playlist.m3u8',
-    cover: 'https://i.imgur.com/UJqbKEC.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-owocaug',
-    title: 'TopEstrada TV (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://live.topestrada.com/live/topestrada/playlist.m3u8',
-    cover: 'https://i.imgur.com/0Dh1FJZ.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-an0wheo',
+    id: 'vid-wtp580a',
     title: 'Topical Moon RD (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5274,7 +4714,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-h57p3nn',
+    id: 'vid-jzltsss',
     title: 'Totalmusic (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5284,7 +4724,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vquwbax',
+    id: 'vid-62xphgt',
     title: 'Totalmusic 80s (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5294,7 +4734,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ct42rw8',
+    id: 'vid-aluucuv',
     title: 'Totalmusic 2000s (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5304,7 +4744,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ggh0e9d',
+    id: 'vid-v5ausar',
     title: 'Totalmusic Concerts (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5314,7 +4754,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hqxwtlo',
+    id: 'vid-ymxk5gd',
     title: 'Totalmusic Dance (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5324,7 +4764,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gysvben',
+    id: 'vid-qxcz22g',
     title: 'Trace Brasil (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5334,7 +4774,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vj71xf5',
+    id: 'vid-8lul7fx',
     title: 'TRACE Brazuca (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5344,7 +4784,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-1c8cm5j',
+    id: 'vid-jeexauv',
     title: 'Trace Gospel (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5354,7 +4794,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hg5caru',
+    id: 'vid-7xk6x7d',
     title: 'Trace Latina (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5364,7 +4804,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-3lk92i9',
+    id: 'vid-d7ynpr7',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Music",TRACE Latina (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5374,7 +4814,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mi095xd',
+    id: 'vid-a665ofm',
     title: 'Trace UK (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5384,7 +4824,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mg3tgm0',
+    id: 'vid-qt0tj6w',
     title: 'Trace Urban (Australia) (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5394,17 +4834,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7idh806',
-    title: 'Traditional TV (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://83.103.149.75:8085/udp/239.30.0.9:4000',
-    cover: 'https://i.ibb.co/G5bNH48/Traditional-TV-HD.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-ja61igm',
+    id: 'vid-mxoshdq',
     title: 'Tropi Q 99.7 FM (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5414,7 +4844,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-krvjtv2',
+    id: 'vid-1x44bef',
     title: 'Tropical Moon Cumbia TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5424,7 +4854,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dxx15u1',
+    id: 'vid-tw2et9t',
     title: 'Tropical Music TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5434,17 +4864,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-jup4lbx',
-    title: 'Tropicalia 93.9 FM (1280p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://45.184.109.10/live/69393EAE6ADBC65A68F942022362A202/67.m3u8',
-    cover: 'https://i.imgur.com/oMML5Ue.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-7yhlxqc',
+    id: 'vid-am0jm9k',
     title: 'TRT Müzik (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5454,7 +4874,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-yznxqy0',
+    id: 'vid-c44lm8e',
     title: 'Tu Musica HD (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5464,7 +4884,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7d89hfm',
+    id: 'vid-yx1tug8',
     title: 'Tunes 6 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5474,7 +4894,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oy2wg4v',
+    id: 'vid-ji0ez8p',
     title: 'Turbo Mix Radio TV (360p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5484,7 +4904,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-se5ak7l',
+    id: 'vid-j06d9tk',
     title: 'Türkmen Owazy (406p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5494,7 +4914,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ck00j0k',
+    id: 'vid-9li1hid',
     title: 'TV Arbëria 4 Muzikë (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5504,7 +4924,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ftyaagt',
+    id: 'vid-34vg5no',
     title: 'TV Arbëria Retro Hits (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5514,17 +4934,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-k8xa7wh',
-    title: 'TV Duga Plus (480p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://109.92.29.10:1935/tvduga/tvduga/playlist.m3u8',
-    cover: 'https://i.imgur.com/qZV3JW5.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-d7r85iw',
+    id: 'vid-3zndwuo',
     title: 'TV Éxitos (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5534,7 +4944,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-08eu9f9',
+    id: 'vid-5zw5ov9',
     title: 'TVOMIX (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5544,7 +4954,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7ygu7sy',
+    id: 'vid-213eadr',
     title: 'TVONE Nicaragua (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5554,7 +4964,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dc6tdya',
+    id: 'vid-rqaytrg',
     title: 'TVR Folclor',
     author: 'Музичні канали',
     type: 'video',
@@ -5564,7 +4974,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7nojfmy',
+    id: 'vid-xvidftn',
     title: 'TVS Music Network (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5574,7 +4984,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-rox7yql',
+    id: 'vid-vkcm034',
     title: 'TVUNO (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5584,7 +4994,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-s6rs600',
+    id: 'vid-qhyo64f',
     title: 'TZiK [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5594,7 +5004,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fjat0sr',
+    id: 'vid-lrkdbd9',
     title: 'Ultimate TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5604,7 +5014,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-47wt73b',
+    id: 'vid-jp7kt19',
     title: 'Urbano TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5614,7 +5024,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lnqocp7',
+    id: 'vid-w8vlh7r',
     title: 'V2BEAT (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5624,7 +5034,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bkqjbnu',
+    id: 'vid-i4on12t',
     title: 'V Classic TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5634,7 +5044,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-th7z8kd',
+    id: 'vid-er17my1',
     title: 'Vaanavil TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5644,7 +5054,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-i66k1ef',
+    id: 'vid-bfi28y2',
     title: 'Vallenato Internacional (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5654,7 +5064,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8ognf52',
+    id: 'vid-yepzfnq',
     title: 'VAM Vid\'s & More (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5664,7 +5074,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-mmak3ip',
+    id: 'vid-r9c4ixz',
     title: 'Vantage Dance (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5674,7 +5084,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bod80v7',
+    id: 'vid-r4lzxjv',
     title: 'Vantage Music (720p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -5684,7 +5094,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-2l9zq0r',
+    id: 'vid-f6q8gaa',
     title: 'Vantage Music UK (1080p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -5694,7 +5104,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oou6ts7',
+    id: 'vid-ghnkc2q',
     title: 'Vantage Rock (720p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -5704,7 +5114,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zz5nmb1',
+    id: 'vid-nv38wdt',
     title: 'Venus Media (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5714,7 +5124,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-y048gc0',
+    id: 'vid-j35d3h3',
     title: 'Vevo 2K (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5724,7 +5134,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9re8i4q',
+    id: 'vid-p9y5md2',
     title: 'Vevo 70s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5734,7 +5144,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-tc3m0d4',
+    id: 'vid-bw8bfl2',
     title: 'Vevo 80s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5744,7 +5154,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-1to3sa0',
+    id: 'vid-dp7j7h0',
     title: 'Vevo 90s (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5754,7 +5164,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7kdzrv0',
+    id: 'vid-4jxje8k',
     title: 'Vevo Country (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5764,7 +5174,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9fh8irk',
+    id: 'vid-xzpnvgk',
     title: 'Vevo Hip Hop (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5774,7 +5184,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-y49zieq',
+    id: 'vid-jojtkuc',
     title: 'Vevo Latino (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5784,7 +5194,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-8vmfwwm',
+    id: 'vid-pwwaldg',
     title: 'Vevo Pop (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5794,7 +5204,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-lj1zdwg',
+    id: 'vid-0eml7x1',
     title: 'Vevo R&B (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5804,7 +5214,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qbio1ck',
+    id: 'vid-ez1l3kj',
     title: 'Vevo Retro Rock (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5814,7 +5224,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e49tt8d',
+    id: 'vid-x9zamie',
     title: 'Video Rola (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5824,17 +5234,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fes2vl4',
-    title: 'Video Tour Channel (480p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://k4.usastreams.com/videotour/videotour/playlist.m3u8',
-    cover: 'https://i.imgur.com/zEi8eMC.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-krzp2wy',
+    id: 'vid-i8yjttx',
     title: 'Vijay Takkar APAC (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5844,7 +5244,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-fdhl5xk',
+    id: 'vid-6jemdry',
     title: 'Vĩnh Long TV5 (1080p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -5854,7 +5254,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-0wuxfbj',
+    id: 'vid-qb0uwoi',
     title: 'Vintage Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5864,7 +5264,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6ojsgzr',
+    id: 'vid-oqpzn0l',
     title: 'VIP TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5874,7 +5274,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6hguo8d',
+    id: 'vid-ugidcyk',
     title: 'Visión Televisión (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5884,7 +5284,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-uh8z1sv',
+    id: 'vid-zgcaknb',
     title: 'VIVA Russia (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5894,7 +5294,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oe2ysfg',
+    id: 'vid-r2w6t40',
     title: 'VM Latino (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5904,7 +5304,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-yivwgn1',
+    id: 'vid-y6q0jlj',
     title: 'VoiceOver Radio TV (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5914,7 +5314,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-w643lf3',
+    id: 'vid-yuakl8o',
     title: 'Volksmusik TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5924,7 +5324,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cs1lbh5',
+    id: 'vid-i59o7ev',
     title: 'Vos y TV (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5934,7 +5334,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-sljutdz',
+    id: 'vid-2uxuqxb',
     title: 'VRT Radio Klara (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5944,7 +5344,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-7ti17h5',
+    id: 'vid-5ov076a',
     title: 'VRT Radio StuBru (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5954,7 +5354,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9kwlpau',
+    id: 'vid-lktw8sk',
     title: 'WAVE TV (480p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5964,7 +5364,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-djdun14',
+    id: 'vid-zczhf10',
     title: 'Wavez FM',
     author: 'Музичні канали',
     type: 'video',
@@ -5974,7 +5374,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-yzdb88p',
+    id: 'vid-gfu8q6n',
     title: 'WVCU-LP Concord University Radio The Cure 97.7 (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -5984,7 +5384,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-bzc3uuz',
+    id: 'vid-ujvisca',
     title: 'WZNT (Zeta 93) (1080p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -5994,7 +5394,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-521wtms',
+    id: 'vid-37ksw1b',
     title: 'X 102.7 FM (720p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6004,7 +5404,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-a6ok1e2',
+    id: 'vid-fgcryst',
     title: 'X Level Media (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6014,7 +5414,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hgo65yc',
+    id: 'vid-ja1wpf7',
     title: 'XITE (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6024,7 +5424,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-o4eti8t',
+    id: 'vid-a5v74rs',
     title: 'XITE 90\'s Throwback (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6034,7 +5434,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-dp89idk',
+    id: 'vid-oxucafn',
     title: 'XITE Classic Country (1080p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -6044,7 +5444,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-e1mw18g',
+    id: 'vid-x1weiw9',
     title: 'XITE Hits (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6054,7 +5454,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ezsybtv',
+    id: 'vid-k20ejtj',
     title: 'XITE Hits Germany (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6064,7 +5464,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-5uld983',
+    id: 'vid-jck8ywi',
     title: 'XITE Hits UK (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6074,7 +5474,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-62kidco',
+    id: 'vid-d2ttoz0',
     title: 'XITE Just Chill (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6084,7 +5484,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-b7fprw6',
+    id: 'vid-bswplui',
     title: 'XITE Nuevo Latino (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6094,7 +5494,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-v1u2456',
+    id: 'vid-7vtmpqx',
     title: 'XITE Reggae Vibes (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6104,7 +5504,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-z6xv06t',
+    id: 'vid-ayah6cb',
     title: 'XITE Rock x Metal (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6114,7 +5514,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-in85h6p',
+    id: 'vid-ua3ocyy',
     title: 'XITE Siempre Latino (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6124,7 +5524,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-47sfybk',
+    id: 'vid-4mkpflg',
     title: 'XPTV1 (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6134,7 +5534,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zcfs1aj',
+    id: 'vid-ybl7aqm',
     title: 'YleX Studio Live (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6144,7 +5544,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-id951v9',
+    id: 'vid-sbzvkx2',
     title: 'YRF Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6154,7 +5554,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9tnv07p',
+    id: 'vid-30qhkn8',
     title: 'ZB Music (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6164,7 +5564,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gfoqfc9',
+    id: 'vid-fmz7glb',
     title: 'ZFM Zoetermeer (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6174,17 +5574,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-krmpk62',
-    title: 'Zing! (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/585.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/GNLZZGG0025L26R.png?lock=720x540',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-ojezrtb',
+    id: 'vid-jud76ws',
     title: 'Zo\'r TV (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6194,7 +5584,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-hzr034m',
+    id: 'vid-a9hm96e',
     title: 'Zona Music TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6204,7 +5594,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-6ouh1ug',
+    id: 'vid-3uh46r0',
     title: 'Zoom (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6214,7 +5604,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-agth0yw',
+    id: 'vid-u3nnx0l',
     title: 'Zoom Global (720p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6224,7 +5614,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-qprklxn',
+    id: 'vid-fq7j65r',
     title: 'ZU TV (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6234,7 +5624,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-oj0r7gg',
+    id: 'vid-spsvtw3',
     title: 'ZWEI2 Music (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6244,17 +5634,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-etys0c6',
-    title: 'Жара TV (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/Zhara/index.m3u8',
-    cover: 'https://i.imgur.com/41K9Y2s.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-8576z75',
+    id: 'vid-w1jilgw',
     title: 'Матур ТВ (1080p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6264,7 +5644,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-vmv9gci',
+    id: 'vid-hdgmd8w',
     title: 'Муз союз (576p)',
     author: 'Музичні канали',
     type: 'video',
@@ -6274,7 +5654,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-cpws1kd',
+    id: 'vid-kywzajd',
     title: 'Муз ТВ (450p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -6284,7 +5664,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-v5t425x',
+    id: 'vid-7mpjx50',
     title: 'Музыка 1 International [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6294,17 +5674,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gb3ysb2',
-    title: 'Музыка Live (576p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/La-Minor_TV/index.m3u8',
-    cover: 'https://i.imgur.com/RH6hTWG.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-tzsmnw1',
+    id: 'vid-btilgtb',
     title: 'Музыка Кино International [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6314,67 +5684,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-zyuc6f1',
-    title: 'Музыка Первого (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/Muzika_Pervogo/index.m3u8',
-    cover: 'https://i.imgur.com/U0vKj3P.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-khyp8yw',
-    title: 'о2тв (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://31.148.48.15/O2_HD/index.m3u8',
-    cover: 'https://i.imgur.com/CM6z7fA.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-stutshn',
-    title: 'Первый Музыкальный Канал HD (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://rtmp.one.by:1300',
-    cover: 'https://i.imgur.com/YdyFJrl.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-vqmnymx',
-    title: 'Первый Музыкальный Канал Россия HD (1080p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://rtmp.one.by:2300',
-    cover: 'https://i.imgur.com/rEo7nR1.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-qwu5w5r',
-    title: 'Радио Хит (Орск) (720p)',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://lova.me/hls/hithd.m3u8',
-    cover: 'https://i.imgur.com/5xKqV1s.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-efd5tcr',
-    title: 'Радио Шансон (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://chanson-video.hostingradio.ru:8080/hls/chansonabr/live.m3u8',
-    cover: 'https://i.imgur.com/lbqM3K2.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-1bzlicd',
+    id: 'vid-5z1l6p7',
     title: 'Сити Эдем Meditation Music [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6384,7 +5694,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-y8x4b4w',
+    id: 'vid-gz1b1zp',
     title: 'Сити Эдем Play Христианский Музыкальный [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6394,7 +5704,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-4fw3kmg',
+    id: 'vid-lw9dn7f',
     title: 'Сити Эдем Бирма Play [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6404,7 +5714,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-gg4u24g',
+    id: 'vid-7grxn7i',
     title: 'Сити Эдем Классическая Музыка [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6414,7 +5724,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-9163xyz',
+    id: 'vid-ay8t20r',
     title: 'Сити Эдем Сиртаки ТВ [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6424,17 +5734,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ict2v3l',
-    title: 'Страна FM (720p) [Not 24/7]',
-    author: 'Музичні канали',
-    type: 'video',
-    url: 'http://live.stranafm.cdnvideo.ru/stranafm/stranafm_hd.sdp/playlist.m3u8',
-    cover: 'https://i.imgur.com/WsPlKJJ.png',
-    description: '24/7 Музичні канали Stream',
-    category: 'Музичні канали'
-  },
-  {
-    id: 'vid-yh5mvkt',
+    id: 'vid-z4k85oo',
     title: 'УТРК Музыка (480p) [Not 24/7]',
     author: 'Музичні канали',
     type: 'video',
@@ -6444,7 +5744,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ri9m8q6',
+    id: 'vid-2nr5bur',
     title: 'Шансон ТВ (576p) [Geo-blocked]',
     author: 'Музичні канали',
     type: 'video',
@@ -6454,7 +5754,7 @@ const PODCASTS = [
     category: 'Музичні канали'
   },
   {
-    id: 'vid-ivol90c',
+    id: 'vid-c1n1m2d',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Movies",24 Hour Free Movies (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6464,7 +5764,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-oj3p1g9',
+    id: 'vid-4chflvd',
     title: '27 TwentySeven [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6474,7 +5774,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-pjguqhq',
+    id: 'vid-uqot6y3',
     title: '30A TV Classic Movies (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6484,47 +5784,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-8bvjd2f',
-    title: '312 Кино (406p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://176.126.166.43:1935/live/312kino/playlist.m3u8',
-    cover: 'https://i.ibb.co/3m9LrLj/k7gIibH.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-wh3dz9i',
-    title: '&flix HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1322.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDFLIX/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-69ylhd0',
-    title: '&pictures HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/185.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/GNLZZGG0022J67R.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-g6yanvo',
-    title: '&TV (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.229.254.25:7001/play/a09v/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDTV/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-csyn06k',
+    id: 'vid-fbhm8yb',
     title: '&TV International (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6534,17 +5794,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-u0k6omq',
-    title: '&xplor HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a001/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDXPLOR_HD/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-xv8qp89',
+    id: 'vid-a3cepmw',
     title: 'ABN Bible Movies (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6554,17 +5804,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-bue2yg2',
-    title: 'Action 24 (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://actionlive.siliconweb.com/actionabr/actiontv/playlist.m3u8',
-    cover: 'https://upload.wikimedia.org/wikipedia/commons/8/88/Action24-logo-small.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-sd2zmqg',
+    id: 'vid-xel3ch8',
     title: 'Afghan Nobel Movies (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6574,7 +5814,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-if7e1sm',
+    id: 'vid-wxs0uv7',
     title: 'Aflam (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6584,7 +5824,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-1u6fzp8',
+    id: 'vid-ehmkyb2',
     title: 'Afra Film',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6594,7 +5834,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-626wnze',
+    id: 'vid-ema3nuw',
     title: 'Afriwood Blockbuster (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6604,7 +5844,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-wa7jdxx',
+    id: 'vid-makf24h',
     title: 'Alankar TV (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6614,7 +5854,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-4j5g2hv',
+    id: 'vid-u8lbv29',
     title: 'Alien Nation by DUST (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6624,7 +5864,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-mw8rp8m',
+    id: 'vid-kl9doyn',
     title: 'All Time Movies (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6634,7 +5874,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-8kb7m6e',
+    id: 'vid-2jgjk2b',
     title: 'alpha Cinema (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6644,7 +5884,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-7ury9wj',
+    id: 'vid-90aw6xq',
     title: 'alpha Moretime (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6654,7 +5894,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-q0l0yy5',
+    id: 'vid-2qxr9rl',
     title: 'Alterna TV (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6664,57 +5904,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-anilcms',
-    title: 'Amedia Hit (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Amedia_HIT_HD/index.m3u8',
-    cover: 'https://i.imgur.com/a8ZBGBw.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-b8x0trq',
-    title: 'Amedia Premium (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Amedia_Premium_HD/index.m3u8',
-    cover: 'https://i.imgur.com/UUjehw9.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-paknr6y',
-    title: 'American Horrors (480p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://107.167.7.162:8081/playlist/amhor/playlist.m3u8',
-    cover: 'https://image.roku.com/developer_channels/prod/16f5571a82819e8992a748c70b256cbe63105f4b546b73d129668dc2cb701d91.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-x5ux46j',
-    title: 'like Gecko) Chrome/147.0.0.0 Safari/537.36" group-title="Movies",Anmol Cinema (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.175.73.12:8080/live/271/271_0.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/GNLZZGG00260YG8.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-ir22x9m',
-    title: 'like Gecko) Chrome/147.0.0.0 Safari/537.36" group-title="Movies",Anmol Cinema 2 (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.175.73.12:8080/live/257/257_0.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_ANMOL_CINEMA_2/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-9yx72tf',
+    id: 'vid-9qi5nn2',
     title: 'Artflix Movie Classics (720p)',
     author: 'Ретро / Класика',
     type: 'video',
@@ -6724,7 +5914,7 @@ const PODCASTS = [
     category: 'Ретро / Класика'
   },
   {
-    id: 'vid-9gazc0s',
+    id: 'vid-ykbk9je',
     title: 'Asianet Movies (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6734,27 +5924,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tw9vl19',
-    title: 'Asianet Movies HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a06e/index.m3u8',
-    cover: 'https://i.imgur.com/cps67hs.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-jsxuqvo',
-    title: 'Atrescine (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://181.114.57.246:4000/play/KgkA9tT2SpLYm86J/index.m3u8',
-    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Atrescine_logo.svg/960px-Atrescine_logo.svg.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-31qbuwe',
+    id: 'vid-7758ygt',
     title: 'Aurora Media Films (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6764,7 +5934,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-hd5g6es',
+    id: 'vid-wzyeqyb',
     title: 'AXN Asia Indonesia (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6774,7 +5944,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-axhhsp8',
+    id: 'vid-uc2dpqu',
     title: 'B4U Bhojpuri (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6784,7 +5954,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-u69ut8z',
+    id: 'vid-yyexm52',
     title: 'B4U Kadak (1080p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6794,7 +5964,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-otjqcwy',
+    id: 'vid-6cmgzkl',
     title: 'B4U Movies (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6804,7 +5974,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ek42wuq',
+    id: 'vid-huz9e7k',
     title: 'Bhojpuri Cinema (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6814,7 +5984,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-m7qknpi',
+    id: 'vid-yjwylil',
     title: 'BIZ Cinema (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6824,27 +5994,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-cd9ddva',
-    title: 'Bollywood Classic (1080p)',
-    author: 'Ретро / Класика',
-    type: 'video',
-    url: 'http://103.213.31.109:90/BollywoodClassic/playlist.m3u8',
-    cover: 'https://i.imgur.com/ugPo6ca.png',
-    description: '24/7 Ретро / Класика Stream',
-    category: 'Ретро / Класика'
-  },
-  {
-    id: 'vid-qp0btt2',
-    title: 'Bollywood HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.213.31.109:90/BollywoodHD/playlist.m3u8',
-    cover: 'https://i.imgur.com/scDKOLS.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-p4ie7v8',
+    id: 'vid-u5ylpiw',
     title: 'Bollywood HD Russia (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6854,17 +6004,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ubijo1y',
-    title: 'Bom Cine (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://92.176.119.180:2095/play/a17f',
-    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Logo-bom.svg/960px-Logo-bom.svg.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-5e5y2hy',
+    id: 'vid-blpa1wi',
     title: 'Boreal (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6874,7 +6014,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3mm0asa',
+    id: 'vid-5cyps8e',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Movies",Box Cinema (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6884,7 +6024,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-a6auxdj',
+    id: 'vid-prhtwd7',
     title: 'Bravo Farsi TV (360p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6894,7 +6034,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-zcbbwty',
+    id: 'vid-ll8xxky',
     title: 'Cafe Film',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6904,47 +6044,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-awjnslw',
-    title: 'CCTV-6 (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://198.204.240.250:82/live/cctv6.m3u8',
-    cover: 'https://i.imgur.com/rFiaef7.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-q9mluzg',
-    title: 'CCTV-Storm Theater (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://38.75.136.137:98/gslb/dsdqpub/fyjc.m3u8?auth=testpub',
-    cover: 'https://i.imgur.com/rEttkKm.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-ez9863o',
-    title: 'CCTV-The First Theater (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub',
-    cover: 'https://i.imgur.com/eFxD3hq.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-71nr5pk',
-    title: 'Celestial Movies (576i)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8',
-    cover: 'https://i.imgur.com/Mb5ssnu.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-wu3quq1',
+    id: 'vid-ff9er4r',
     title: 'Charge! (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6954,7 +6054,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-j4c5muv',
+    id: 'vid-0cuhszy',
     title: 'CINDIE TV (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6964,7 +6064,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-nzjh7sc',
+    id: 'vid-ld6f4gx',
     title: 'Cine 34 [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6974,7 +6074,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-svjxbir',
+    id: 'vid-qczhsn8',
     title: 'Cine Romantico (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6984,7 +6084,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-aou7rj6',
+    id: 'vid-ljwo3w3',
     title: 'Cine Sony (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -6994,7 +6094,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tipjgei',
+    id: 'vid-rx6naa6',
     title: 'like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Movies",Cinema (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7004,17 +6104,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-vcd0err',
-    title: 'Cinema',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://catchup.videoline.ru/cinema/playlist.m3u8',
-    cover: 'https://i.imgur.com/b5e9qUA.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-60o9qxt',
+    id: 'vid-m3q3bz6',
     title: 'Cinema Hausa (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7024,17 +6114,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ib9egzw',
-    title: 'CinemaWorld (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.58.160.157:8278/720-CINEMAWORLD/playlist.m3u8',
-    cover: 'https://i.imgur.com/D2qNVZ7.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-w1u8bd4',
+    id: 'vid-punxqcq',
     title: 'Cinevault 80s (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7044,7 +6124,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-41zkait',
+    id: 'vid-q07zwrd',
     title: 'Classic Cinema (240p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7054,7 +6134,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-y0hevgz',
+    id: 'vid-js0qa6v',
     title: 'Classique TV (360p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7064,77 +6144,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-o1mw6id',
-    title: 'Colors Bangla Cinema (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1657.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_BANGLA_CINEMA/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-zgthoyo',
-    title: 'Colors Cineplex (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.122.249.134:8000/play/a058',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-7xk7hzf',
-    title: 'Colors Cineplex Bollywood (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1763.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_BOLLYWOOD/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-jetnjuz',
-    title: 'Colors Cineplex HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a00b/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_HD/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-6gdlsq9',
-    title: 'Colors Cineplex Superhits (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1450.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_CINEPLEX_SUPERHITS/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-5uyohcz',
-    title: 'Colors Gujarati Cinema (360p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1324.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_GUJARATI_CINEMA/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-wyb91wc',
-    title: 'Colors Kannada Cinema (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1632.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_KANNADA_CINEMA/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-znncztb',
+    id: 'vid-0q50jit',
     title: 'CTB Perth Movies (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7144,17 +6154,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-saoceh4',
-    title: 'De Pelicula Latin America',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://181.119.93.83:8000/play/a1jw/index.m3u8',
-    cover: 'https://i.imgur.com/aksM8pa.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-qvk0m2q',
+    id: 'vid-jeud79o',
     title: 'Dhamaka Movies B4U (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7164,7 +6164,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-obibbrq',
+    id: 'vid-a2sr5ac',
     title: 'DiscoverFilm (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7174,7 +6174,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-4eyqz22',
+    id: 'vid-lulhgif',
     title: 'Dunia Sinema (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7184,7 +6184,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jmd9d1q',
+    id: 'vid-2x0futc',
     title: 'Ebony TV by Lionsgate (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7194,7 +6194,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-csbvmzb',
+    id: 'vid-3oha60h',
     title: 'EBS Cinema (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7204,17 +6204,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-wc0m48p',
-    title: 'Eisei Gekijo (544p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs22',
-    cover: 'https://yt3.googleusercontent.com/d5yMuTHpdKEjTqXDEnS-iYo_AaKwuwYtHRs3gbLB9Hg8j_XtXyUXOeKxetptLhz85SciuA5i=s512-c-k-c0x00ffffff-no-rj',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-7uqqee4',
+    id: 'vid-hwq8rxv',
     title: 'Ekran Movies',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7224,17 +6214,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-0iq74zk',
-    title: 'Epic Bhojpuri (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/3384.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/GNLZZGG0032BVJ8.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-itx9vob',
+    id: 'vid-z78d50a',
     title: 'ETV Cinema HD (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7244,27 +6224,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-o2xm99f',
-    title: 'FAN (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Fan/index.m3u8',
-    cover: 'https://i.imgur.com/mDeTbaF.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-aptlfzw',
-    title: 'Film4 (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://80.194.62.172:50002/stream/channelid/1764271106',
-    cover: 'https://i.imgur.com/MTSgoGI.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-k184pvh',
+    id: 'vid-icydne2',
     title: 'Film4 HD (1080p) [Geo-Blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7274,7 +6234,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ewkg91a',
+    id: 'vid-mzvalg6',
     title: 'Filmax (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7284,17 +6244,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-pefkx0x',
-    title: 'Filmazia (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.250.28.74:8000/play/a02k/index.m3u8',
-    cover: 'https://i.imgur.com/hpTCANa.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-aaexd0l',
+    id: 'vid-2nwl3h0',
     title: 'Filmex (Xumo) (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7304,7 +6254,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-c9cc212',
+    id: 'vid-9w7u6h1',
     title: 'Filmex Clásico (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7314,7 +6264,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-pinrd5h',
+    id: 'vid-ngkh4ay',
     title: 'FilmRise Westerns (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7324,7 +6274,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-927nczj',
+    id: 'vid-7sffvnz',
     title: 'Forensic Files (720p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7334,7 +6284,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-cvo1w5n',
+    id: 'vid-hpj9358',
     title: 'FX Movie Channel (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7344,7 +6294,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-uq7947z',
+    id: 'vid-3lw2xhy',
     title: 'GEM Bollywood',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7354,7 +6304,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-lxf0j8m',
+    id: 'vid-znw0tg3',
     title: 'GEM Drama',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7364,7 +6314,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jbhrz98',
+    id: 'vid-7tqpsnb',
     title: 'GEM Drama Plus',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7374,7 +6324,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ir3542a',
+    id: 'vid-fbavzgb',
     title: 'GEM Film',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7384,7 +6334,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-b1mvoqq',
+    id: 'vid-xbntq1d',
     title: 'GEM Onyx',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7394,7 +6344,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-l6i8904',
+    id: 'vid-83bos66',
     title: 'GEM Pixel',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7404,7 +6354,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-8iboqpn',
+    id: 'vid-j1ppsio',
     title: 'GEM Rubix',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7414,7 +6364,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-a0ssdk0',
+    id: 'vid-7rfacmd',
     title: 'GEM Rubix Plus',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7424,7 +6374,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-j9yvdsv',
+    id: 'vid-e9rbjj5',
     title: 'GEM TV',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7434,7 +6384,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-plkql5y',
+    id: 'vid-okjk5r0',
     title: 'GEM TV Plus',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7444,7 +6394,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tn1vixx',
+    id: 'vid-yaauuva',
     title: 'Ghost TV (712p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7454,7 +6404,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-xmltab5',
+    id: 'vid-ih9astd',
     title: 'Gold Star',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7464,7 +6414,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-xok573g',
+    id: 'vid-fjh9mpn',
     title: 'Goldmines (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7474,7 +6424,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-q8oz8bs',
+    id: 'vid-f8y7pty',
     title: 'Goldmines 2 (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7484,17 +6434,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-nj13pul',
-    title: 'Goldmines Movies (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.213.31.109:90/GoldminesMovies/playlist.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/s142881_ld_h15_aa.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-ar67lry',
+    id: 'vid-200pemv',
     title: 'Grand Cinema',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7504,7 +6444,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-25wvnzq',
+    id: 'vid-cx4mewv',
     title: 'Gravitas Movies (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7514,7 +6454,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-rzqqqze',
+    id: 'vid-7cc025w',
     title: 'GREAT! movies (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7524,7 +6464,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-5vg622h',
+    id: 'vid-hym5ses',
     title: 'GREAT! romance (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7534,7 +6474,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-axa6eem',
+    id: 'vid-f8imm4l',
     title: 'Grjngo Western Movies (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7544,17 +6484,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-2dw1fsv',
-    title: 'Groovy TV (360p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://web.onair-radio.eu:1935/groovytv/groovytv/playlist.m3u8',
-    cover: 'https://i.imgur.com/ZYNQuf1.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-414re8i',
+    id: 'vid-pjwqoxn',
     title: 'Hallmark Movies & More (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7564,7 +6494,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-7z34vuk',
+    id: 'vid-tuiodce',
     title: 'Hallmark Movies & Mysteries East (1080p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7574,7 +6504,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-n67tp70',
+    id: 'vid-3afm7l1',
     title: 'Harbin Movie Channel',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7584,7 +6514,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-r58g4hk',
+    id: 'vid-dqg3vht',
     title: 'Hero (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7594,7 +6524,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-xcyv731',
+    id: 'vid-hyj9gs1',
     title: 'HITS Movies HD (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7604,17 +6534,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-952hp0v',
-    title: 'Hollywood HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/MGM_HD/index.m3u8',
-    cover: 'https://i.imgur.com/1j7cT2I.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-f3jev1u',
+    id: 'vid-v6l6e1z',
     title: 'Home Plus',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7624,7 +6544,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-qupa67c',
+    id: 'vid-kwo14sj',
     title: 'ICC Plus (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7634,7 +6554,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-bcee2n5',
+    id: 'vid-mfo4yng',
     title: 'IFC East (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7644,7 +6564,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-sjj1sp5',
+    id: 'vid-xh4xrfv',
     title: 'iFilm 2',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7654,7 +6574,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-nwyk4l2',
+    id: 'vid-z03jtut',
     title: 'iFilm Arabic',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7664,7 +6584,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-xj3433d',
+    id: 'vid-db0n0q1',
     title: 'iFilm English',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7674,7 +6594,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-zeq6vmd',
+    id: 'vid-x4xdqnm',
     title: 'iFilm Persian',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7684,7 +6604,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-vzyx9cm',
+    id: 'vid-3ktvnd6',
     title: 'Indywood TV (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7694,7 +6614,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-93tafyx',
+    id: 'vid-trlw0xs',
     title: 'Itage TV (480p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7704,27 +6624,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-by5z6gj',
-    title: 'J Movie (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/417.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_J_MOVIES/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-tkl6w79',
-    title: 'Jalsha Movies HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.229.254.25:7001/play/a0dt/index.m3u8',
-    cover: 'https://i.imgur.com/25eWjX2.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-3e04uyy',
+    id: 'vid-zp7rvu1',
     title: 'Jiangxi Movie Channel',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7734,7 +6634,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-5a1o6m0',
+    id: 'vid-vzns3fe',
     title: 'Jilin Movie Channel',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7744,7 +6644,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-odjyuy6',
+    id: 'vid-kbrx621',
     title: 'Kairali We (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7754,7 +6654,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-feen65y',
+    id: 'vid-7igyerq',
     title: 'KCM (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7764,7 +6664,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-yum157v',
+    id: 'vid-t2m6coh',
     title: 'KidsFlix (1080p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7774,27 +6674,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-nwhb89p',
-    title: 'Kino 24 (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://sirius.greenhosting.ru/Kino24Ru/video.m3u8',
-    cover: 'https://i.imgur.com/QAdDARF.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-fhxnl4j',
-    title: 'Kino Barrandov (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://83.167.253.107/hdmi1_ext',
-    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Kino_Barrandov_logo.png/960px-Kino_Barrandov_logo.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-7d4vcgi',
+    id: 'vid-yvgc7ss',
     title: 'Kinoteatr (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7804,7 +6684,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-2gq3r1q',
+    id: 'vid-j3rw1kp',
     title: 'Klasik TV (576p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7814,17 +6694,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-pv333wu',
-    title: 'Komsan TV [Not 24/7]',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://tv.cootel.com.kh:8077/streams/d/Komsan/playlist.m3u8',
-    cover: 'https://i.imgur.com/SNTf2r3.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-hn7topk',
+    id: 'vid-sayulgt',
     title: 'Kuriakos Cine (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7834,7 +6704,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-t8ad5vm',
+    id: 'vid-my26l8n',
     title: 'Lifetime Movies East (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7844,7 +6714,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-meswyo5',
+    id: 'vid-kq9v8sz',
     title: 'Maah TV (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7854,7 +6724,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-wbuwl4c',
+    id: 'vid-shgec01',
     title: 'Made in Hollywood',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7864,7 +6734,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3trnnm5',
+    id: 'vid-5rkmawy',
     title: 'Maha Movie (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7874,7 +6744,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-rom787u',
+    id: 'vid-hnx4grw',
     title: 'Manoranjan Grand (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7884,17 +6754,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-2y0mq6v',
-    title: 'Manoranjan Movies (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.213.31.109:90/ManoranjanMovies/playlist.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/s143303_ld_h15_aa.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-dsfll8g',
+    id: 'vid-f15rs0g',
     title: 'Maverick Black Cinema (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7904,17 +6764,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-a21fn4s',
-    title: 'MAX4 (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://146.59.85.40:89/max4/index.m3u8',
-    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Max4_logo.png/960px-Max4_logo.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-tazjwb1',
+    id: 'vid-nh6ssd4',
     title: 'Max Movies (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7924,7 +6774,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-lvlp9re',
+    id: 'vid-whdcd2f',
     title: 'MAX Reels',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7934,7 +6784,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-f7nfcip',
+    id: 'vid-2z2rl0l',
     title: 'MBC Bollywood (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7944,7 +6794,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ickxa5x',
+    id: 'vid-43j4fqo',
     title: 'MBC+ Drama (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7954,7 +6804,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-g8719a5',
+    id: 'vid-8af51sa',
     title: 'MCI Televisión (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7964,7 +6814,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-27wvt6t',
+    id: 'vid-8weccrp',
     title: 'Mega Cine TV (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7974,7 +6824,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-p9lijo6',
+    id: 'vid-6gzjlji',
     title: 'Memorias TV Film (720p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7984,7 +6834,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-yw84bas',
+    id: 'vid-p8dj4il',
     title: 'Meta Film TV',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -7994,7 +6844,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-c7rrndb',
+    id: 'vid-6613hoa',
     title: 'MH One Movies (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8004,7 +6854,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-1eby3o8',
+    id: 'vid-x2yz616',
     title: 'Mix Hollywood (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8014,7 +6864,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-yunu3v0',
+    id: 'vid-c6yurpe',
     title: 'like Gecko) Chrome/146.0.0.0 Safari/537.36" group-title="Movies",MN+',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8024,27 +6874,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-xbh8q6d',
-    title: 'MNX HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a05u/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNX_HD/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-953hiqu',
-    title: 'Movie Bangla',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://alvetv.com/moviebanglatv/8080/index.m3u8',
-    cover: 'https://www.jagobd.com/wp-content/uploads/2016/02/moviebangla.jpg?x50681',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-8j9d8sy',
+    id: 'vid-ynqlkhe',
     title: 'like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="Movies",MovieBox (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8054,7 +6884,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-f0jpcnu',
+    id: 'vid-l2d297h',
     title: 'Movieplex (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8064,7 +6894,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-hkopnd4',
+    id: 'vid-zs2mqia',
     title: 'Movies Action (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8074,27 +6904,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-9hxkogq',
-    title: 'Movies Now + (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a05t/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MNSYMPLUS/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-ogzzw9i',
-    title: 'Movies Now HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.161.153.165:8000/play/mnh/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_MOVIES_NOW/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-29gcv1j',
+    id: 'vid-rijdjit',
     title: 'Movies Thriller (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8104,7 +6914,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-1fplq84',
+    id: 'vid-2vrys94',
     title: 'Movies! (480p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8114,17 +6924,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-4stjuzs',
-    title: 'MovieSmart Turk (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://playhdnewjj.xyz:8080/recc121412/KVqfhtdJ2nQ7/174',
-    cover: 'https://i.imgur.com/DWN9ulT.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-9414koo',
+    id: 'vid-93yq0wg',
     title: 'MovieSphere (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8134,7 +6934,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jrwbdy0',
+    id: 'vid-2a9e9ps',
     title: 'MovieSphere AU (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8144,7 +6944,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-m400ee7',
+    id: 'vid-qa9ccv3',
     title: 'MovieSphere UK (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8154,7 +6954,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-43350eu',
+    id: 'vid-0uz50hn',
     title: 'Movify Kino (576p)',
     author: 'Ретро / Класика',
     type: 'video',
@@ -8164,7 +6964,7 @@ const PODCASTS = [
     category: 'Ретро / Класика'
   },
   {
-    id: 'vid-1i5j9l4',
+    id: 'vid-9w75275',
     title: 'like Gecko Chrome/144.0.0.0 Safari/537.36" group-title="Movies",My Cinema [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8174,7 +6974,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-cj3g1gx',
+    id: 'vid-zb5s1cy',
     title: 'like Gecko Chrome/144.0.0.0 Safari/537.36" group-title="Movies",My Cinema Europe [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8184,7 +6984,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-nz1r4yu',
+    id: 'vid-fcwq5yu',
     title: 'MyTime Movie Network (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8194,7 +6994,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-0dl0g05',
+    id: 'vid-rq5fafx',
     title: 'MyTime Movie Network (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8204,7 +7004,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-sttl3cs',
+    id: 'vid-dhak5s5',
     title: 'MyTime Movie Network Brazil (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8214,7 +7014,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-gsq2vxz',
+    id: 'vid-shodxab',
     title: 'MyTime Movie Network Mexico (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8224,7 +7024,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-wc6l6zf',
+    id: 'vid-4xb3x3i',
     title: 'MyTime movie network Spain (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8234,7 +7034,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-20py7xz',
+    id: 'vid-ti0hf3b',
     title: 'NETV Toronto (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8244,7 +7044,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-gj0725m',
+    id: 'vid-j2otg0u',
     title: 'NEW KMOVIES (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8254,7 +7054,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-elwhqye',
+    id: 'vid-87mu0rq',
     title: 'Newflix',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8264,7 +7064,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tjsl4m6',
+    id: 'vid-369wkmo',
     title: 'Next HD (480p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8274,17 +7074,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-vjycq1n',
-    title: 'Nihon Eiga Senmon (544p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs23',
-    cover: 'https://i.imgur.com/B2wzA67.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-hu7v7iq',
+    id: 'vid-8dqpgdl',
     title: 'Nolly Africa HD (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8294,17 +7084,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-y3h7ivq',
-    title: 'One TV Cinema 2 (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://43.252.18.195:5080/live/streams/ChineseDrama.playlist.m3u8',
-    cover: 'https://i.imgur.com/H8PiAbA.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-vf2w25v',
+    id: 'vid-osdu8jr',
     title: 'Orbita Chile TV (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8314,7 +7094,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ibwkhbv',
+    id: 'vid-noy8e6l',
     title: 'Oscar Movies Bhojpuri (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8324,17 +7104,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ukgook0',
-    title: 'OSN Movies Action (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://116.90.120.151:8000/play/a0ax/index.m3u8',
-    cover: 'https://i.imgur.com/uOzyKup.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-bppc816',
+    id: 'vid-7o6otkr',
     title: 'OuterSphere (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8344,7 +7114,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3t4pymo',
+    id: 'vid-kmq877r',
     title: 'Pantalla Clásica EC (512p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8354,7 +7124,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ou34i8c',
+    id: 'vid-o1veok4',
     title: 'Persiana Cinema',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8364,7 +7134,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-yzd5ijo',
+    id: 'vid-jevfpbe',
     title: 'Persiana Family',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8374,7 +7144,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-wzzkud8',
+    id: 'vid-g4b4bhu',
     title: 'Persiana Iranian',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8384,7 +7154,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-78ukim7',
+    id: 'vid-o3ckhsu',
     title: 'Persiana Korea',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8394,7 +7164,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-bfij89e',
+    id: 'vid-wtwqo2e',
     title: 'Persiana Latino',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8404,7 +7174,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ekumskn',
+    id: 'vid-4ojvnl5',
     title: 'Persiana Plus',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8414,7 +7184,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-qs3cqys',
+    id: 'vid-7z0q4sy',
     title: 'Pitaara (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8424,17 +7194,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-dzjylt0',
-    title: 'Pravah Picture HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a06f/index.m3u8',
-    cover: 'https://i.imgur.com/T76S4x3.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-q15tcqk',
+    id: 'vid-z61s60o',
     title: 'Pro100TV (576p)',
     author: 'Ретро / Класика',
     type: 'video',
@@ -8444,7 +7204,7 @@ const PODCASTS = [
     category: 'Ретро / Класика'
   },
   {
-    id: 'vid-ktxu2i5',
+    id: 'vid-2ht4la7',
     title: 'Public Movies (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8454,17 +7214,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jl79jkf',
-    title: 'QTV-3',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://video10.qtv.com.cn/drm/qtv3at/manifest.m3u8',
-    cover: 'https://www.tvchinese.net/uploads/tv/qdtv3.jpg',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-gln19p9',
+    id: 'vid-v0vhlj6',
     title: 'Rai Movie (576p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8474,7 +7224,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-uciu06y',
+    id: 'vid-8wj9cc1',
     title: 'Raj Digital Plus (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8484,7 +7234,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-muawdwh',
+    id: 'vid-s1jswzz',
     title: 'Rakuten Top Movies UK (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8494,7 +7244,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-vsywcp2',
+    id: 'vid-6c67oy0',
     title: 'Rakuten TV Action Movies Austria (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8504,7 +7254,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-bdiq7xk',
+    id: 'vid-a680n7q',
     title: 'Rakuten TV Action Movies Finland (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8514,7 +7264,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-6mje79y',
+    id: 'vid-f0yq5ll',
     title: 'Rakuten TV Action Movies Germany (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8524,7 +7274,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-uheftzl',
+    id: 'vid-2zf92fs',
     title: 'Rakuten TV Action Movies Italy (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8534,7 +7284,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-szt60fw',
+    id: 'vid-8c0slra',
     title: 'Rakuten TV Action Movies Spain (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8544,7 +7294,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tah5ihc',
+    id: 'vid-2ul9szy',
     title: 'Rakuten TV Action Movies UK (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8554,7 +7304,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-wgnyv6q',
+    id: 'vid-690r4ec',
     title: 'Rakuten TV Comedy Movies Austria (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8564,7 +7314,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-rrs0lev',
+    id: 'vid-5eh8ar1',
     title: 'Rakuten TV Comedy Movies Finland (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8574,7 +7324,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-fe37e0h',
+    id: 'vid-yjp9yd0',
     title: 'Rakuten TV Comedy Movies Germany (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8584,7 +7334,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-wpjqb0g',
+    id: 'vid-66sknw6',
     title: 'Rakuten TV Comedy Movies Italy (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8594,7 +7344,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-r3gzj1m',
+    id: 'vid-l67u7tg',
     title: 'Rakuten TV Comedy Movies Spain (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8604,7 +7354,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-rlxnuiq',
+    id: 'vid-7lbc0v9',
     title: 'Rakuten TV Comedy Movies UK (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8614,7 +7364,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-s2zvr6q',
+    id: 'vid-sgcbe46',
     title: 'Rakuten TV Drama Movies Austria (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8624,7 +7374,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-da7ea2d',
+    id: 'vid-7x5jkns',
     title: 'Rakuten TV Drama Movies Finland (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8634,7 +7384,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-1hbsv66',
+    id: 'vid-ee9xw7s',
     title: 'Rakuten TV Drama Movies Germany (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8644,7 +7394,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-n61342u',
+    id: 'vid-8wfjuzg',
     title: 'Rakuten TV Drama Movies Italy (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8654,7 +7404,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-rugcead',
+    id: 'vid-s43i4vi',
     title: 'Rakuten TV Drama Movies Spain (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8664,7 +7414,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tj1jtj4',
+    id: 'vid-9szxc1y',
     title: 'Rakuten TV Drama Movies UK (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8674,7 +7424,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-98q10ne',
+    id: 'vid-htpg75c',
     title: 'Rakuten TV Family Movies Austria (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8684,7 +7434,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-c3fc121',
+    id: 'vid-wsvuwaw',
     title: 'Rakuten TV Family Movies Finland (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8694,7 +7444,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-09xkjaq',
+    id: 'vid-f0omqbt',
     title: 'Rakuten TV Family Movies Germany (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8704,7 +7454,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-4uy4f1r',
+    id: 'vid-ehqc0ao',
     title: 'Rakuten TV Family Movies Italy (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8714,7 +7464,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3m3fer4',
+    id: 'vid-syd37ai',
     title: 'Rakuten TV Family Movies Spain (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8724,7 +7474,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-rttu00q',
+    id: 'vid-cmg12cx',
     title: 'Rakuten TV Family Movies UK (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8734,7 +7484,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-c6vt8jg',
+    id: 'vid-55eo5iy',
     title: 'Rakuten TV Family Switzerland (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8744,7 +7494,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-89yi9lx',
+    id: 'vid-bjw5cy8',
     title: 'Rakuten TV Nordic Films (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8754,7 +7504,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ju7xz0q',
+    id: 'vid-dzomnzp',
     title: 'Rakuten TV Top Movies Finland (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8764,7 +7514,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-c1goze0',
+    id: 'vid-hq7vrj2',
     title: 'Rakuten TV Top Movies Germany (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8774,7 +7524,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-5fcfc8s',
+    id: 'vid-z6tvjid',
     title: 'Rakuten TV Top Movies Italy (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8784,7 +7534,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-lku7ie9',
+    id: 'vid-5tbw4b0',
     title: 'Rakuten TV Top Movies Spain (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8794,7 +7544,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-uy77jaz',
+    id: 'vid-ghbbztl',
     title: 'like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" group-title="Movies",Revry Her (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8804,7 +7554,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-p37910h',
+    id: 'vid-acbn93s',
     title: 'Roja Movies (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8814,17 +7564,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-diia5j0',
-    title: 'Romedy Now (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.157.248.140:8000/play/a015/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ROMEDY_NOW/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-8hkr97u',
+    id: 'vid-gharcan',
     title: 'Rotana Cinema Egypt (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8834,7 +7574,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-b3fj9wd',
+    id: 'vid-4gv7djo',
     title: 'Rotana Cinema KSA (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8844,17 +7584,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3z99w20',
-    title: 'RTSH Shqip (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://178.33.11.6:8696/live/rtshshqip/playlist.m3u8',
-    cover: 'https://i.imgur.com/88kRsW3.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-soqj3mj',
+    id: 'vid-ejebttr',
     title: 'Runtime Espanol (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8864,7 +7594,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-cg74ut9',
+    id: 'vid-kj8m1fy',
     title: 'ServusTV (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8874,17 +7604,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-nxf1lqk',
-    title: 'Shemaroo Filmi Gaane (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.213.31.109:90/ShemarooFilmiGaane/playlist.m3u8',
-    cover: 'https://jiotvimages.cdn.jio.com/dare_images/images/channel/0d5b07555b2d4415aa9f145273095ed7.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-rg6qweu',
+    id: 'vid-vlp4zj0',
     title: 'Shemaroo Josh (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8894,7 +7614,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-hc0xyym',
+    id: 'vid-4d6fu3n',
     title: 'Shubh Cinema TV (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8904,7 +7624,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-x2purs1',
+    id: 'vid-jbvovpi',
     title: 'SL 1',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8914,7 +7634,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-hii90ji',
+    id: 'vid-0idyzu5',
     title: 'SL 2',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8924,7 +7644,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-dwrhz09',
+    id: 'vid-spkluvg',
     title: 'Sony Canal Novelas',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8934,17 +7654,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-s8ch6up',
-    title: 'Sony Max 2 (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a00z/index.m3u8',
-    cover: 'https://i.imgur.com/gqUYk6C.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-lr13np5',
+    id: 'vid-upglu2h',
     title: 'Sony One Favoris (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8954,7 +7664,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-lo1ni3u',
+    id: 'vid-xgk10ag',
     title: 'Sony One Hits Action (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8964,7 +7674,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-buwsw7c',
+    id: 'vid-e4x1kbv',
     title: 'Sony One Hits Comedie (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8974,7 +7684,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-svminhp',
+    id: 'vid-xxxcm9h',
     title: 'Sony Pix HD (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8984,7 +7694,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-vgn6o8g',
+    id: 'vid-0glc66k',
     title: 'Sony Wah (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -8994,7 +7704,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-fvyepy0',
+    id: 'vid-qpno57b',
     title: 'South Station (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9004,77 +7714,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-i4jshk4',
-    title: 'Squirrel (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://92.176.119.180:2095/play/a1ey',
-    cover: 'https://i.imgur.com/9y8VcBr.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-h1pj6ln',
-    title: 'Star 2 (544p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs27',
-    cover: 'https://i.imgur.com/QOriZy5.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-disao3b',
-    title: 'Star 3 (544p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs28',
-    cover: 'https://i.imgur.com/Z1x8ecY.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-yv9ynrr',
-    title: 'Star Gold 2 (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.253.18.58:8000/play/a00r',
-    cover: 'https://i.imgur.com/G0ZfzZr.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-wxf0nmn',
-    title: 'Star Gold Romance (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.253.18.58:8000/play/a017',
-    cover: 'https://i.imgur.com/gSWv9U3.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-00b7a0h',
-    title: 'Star Gold Select HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.253.18.58:8000/play/a02u',
-    cover: 'https://i.imgur.com/U7eiuqv.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-p29347d',
-    title: 'Star Gold Thrills (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.253.18.58:8000/play/a00o',
-    cover: 'https://i.imgur.com/azqtpYh.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-mb8zd88',
+    id: 'vid-vimckt9',
     title: 'Star Maa Movies HD (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9084,27 +7724,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-j0d1hhq',
-    title: 'Star Movies HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a01f/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-gqgfwx4',
-    title: 'Star Movies Select HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a01g/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_STAR_MOVIES_SELECT_HD/images/LOGO_HD/image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-vgca0fs',
+    id: 'vid-t2srrhq',
     title: 'Star Tamil Television (360p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9114,17 +7734,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-41uqqms',
-    title: 'Star Utsav Movies (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a059/index.m3u8',
-    cover: 'https://i.imgur.com/k5QHfH2.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-zsqdmit',
+    id: 'vid-1f1ws7e',
     title: 'START Air',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9134,7 +7744,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3ulkl7i',
+    id: 'vid-j65e4g7',
     title: 'START World',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9144,7 +7754,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jaie2ke',
+    id: 'vid-if6ddv8',
     title: 'Studio One + (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9154,7 +7764,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-5i09rwa',
+    id: 'vid-yzf8iv8',
     title: 'Suriyan TV (576p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9164,7 +7774,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tdkdz23',
+    id: 'vid-s0nfbk3',
     title: 'T2 Movies',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9174,7 +7784,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3h6hd6k',
+    id: 'vid-ab6c1ua',
     title: 'Tamasha',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9184,7 +7794,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-pmbdh2k',
+    id: 'vid-ti068jl',
     title: 'TF1 Series Films (1080p) [Geo-Blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9194,7 +7804,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-cgw1qxe',
+    id: 'vid-cq3o685',
     title: 'Thalaa TV (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9204,7 +7814,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-iid7byw',
+    id: 'vid-4cyvyn9',
     title: 'The Film Detective (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9214,7 +7824,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-4x7o148',
+    id: 'vid-9xe3euf',
     title: 'The Movie Club (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9224,7 +7834,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-7mn0kd8',
+    id: 'vid-l1z8io3',
     title: 'The Movie Club +2 (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9234,7 +7844,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-mj0u8ji',
+    id: 'vid-wkk3030',
     title: 'Thrill (540p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9244,7 +7854,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-awnnj25',
+    id: 'vid-zvxqrs4',
     title: 'Tolly TV (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9254,7 +7864,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-fcycywn',
+    id: 'vid-rewgjwe',
     title: 'TVCARiB Cinema (720p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9264,7 +7874,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ijvk6js',
+    id: 'vid-z9xan2h',
     title: 'TVS Drive In Movie (360p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9274,7 +7884,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-etc3p5b',
+    id: 'vid-folyrwo',
     title: 'TVS Film Noir Network (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9284,27 +7894,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-kyjx92j',
-    title: 'Universal Cinema (480p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://190.2.212.209:8050/play/a0q3',
-    cover: 'https://i.imgur.com/XxfET68.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-xczzjrd',
-    title: 'Universal Comedy (480p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://190.2.212.209:8050/play/a0q4',
-    cover: 'https://i.imgur.com/avBL8pQ.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-arnt3hc',
+    id: 'vid-cp6r5it',
     title: 'USA Network East (1080p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9314,37 +7904,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-5bekhgo',
-    title: 'Veo7 (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://92.176.119.180:2095/play/a1f1',
-    cover: 'https://i.imgur.com/kklTIMm.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-714lh3z',
-    title: 'Viasat Kino (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://89.254.128.5:22280/viasat_kino/index.m3u8',
-    cover: 'https://i.imgur.com/io0WAkA.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-vb1h6o3',
-    title: 'Viasat Kino Action (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://89.254.128.5:22280/viasat_kino_action/index.m3u8',
-    cover: 'https://i.imgur.com/HwsNIDK.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-y44j7kd',
+    id: 'vid-buaumj5',
     title: 'Victor Valley Movies (1080p) [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9354,27 +7914,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jc06we8',
-    title: 'Vijay Super (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://202.70.146.135:8000/play/a008/index.m3u8',
-    cover: 'https://i.imgur.com/3MWm9nD.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-to6bpqg',
-    title: 'viju TV1000 Русское',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/TV1000_Russkoe_kino/index.m3u8',
-    cover: 'https://i.imgur.com/Meak2y4.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-jrgebm8',
+    id: 'vid-6ez255v',
     title: 'Whiplash Cinema (480p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9384,7 +7924,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-308a9f7',
+    id: 'vid-rv3z0cx',
     title: 'Wildside TV (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9394,17 +7934,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-9zg1sb2',
-    title: 'WOWOW Cinema (544p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs07',
-    cover: 'https://i.imgur.com/Wx9fkCW.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-518y0w7',
+    id: 'vid-ob8ip67',
     title: 'Wu Tang Collection (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9414,7 +7944,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-0hn9h3j',
+    id: 'vid-x45u4xf',
     title: 'Xtrema Accion',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9424,7 +7954,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-b97gzox',
+    id: 'vid-usjnikr',
     title: 'Xtrema Cine Clasico',
     author: 'Ретро / Класика',
     type: 'video',
@@ -9434,7 +7964,7 @@ const PODCASTS = [
     category: 'Ретро / Класика'
   },
   {
-    id: 'vid-wy6n0vb',
+    id: 'vid-geq84zp',
     title: 'Xtrema Terror',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9444,7 +7974,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-0y2yrlt',
+    id: 'vid-7ckd1kb',
     title: 'ZB Cinema (720p)',
     author: 'Ретро / Класика',
     type: 'video',
@@ -9454,27 +7984,7 @@ const PODCASTS = [
     category: 'Ретро / Класика'
   },
   {
-    id: 'vid-usmsd1u',
-    title: 'Zee Action (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/488.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/GNLZZGG0022K5ZV.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-9r81wvn',
-    title: 'Zee Biskope (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.154.3.101:5001/live/559.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_BISKOPE/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-nh6igwv',
+    id: 'vid-dip9iup',
     title: 'Zee Bollymovies (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9484,7 +7994,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ob9oo1b',
+    id: 'vid-b79j09a',
     title: 'Zee Bollymovies Australia (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9494,17 +8004,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-cof2f7q',
-    title: 'Zee Bollywood (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a01q/index.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/GNLZZGG0022T6DM.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-8gtlq4x',
+    id: 'vid-lzmpmkf',
     title: 'Zee Cinema APAC (1080p) [Geo-blocked]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9514,27 +8014,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jqcrbtg',
-    title: 'Zee Cinema HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/165.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_CINEMA/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-4zf3ksa',
-    title: 'Zee Cinemalu (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/413.m3u8',
-    cover: 'https://dtil.tmsimg.com/assets/GNLZZGG0022ZNDZ.png?lock=720x540',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-tvk3vck',
+    id: 'vid-3rbwt3r',
     title: 'Zee Cinemalu HD (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9544,7 +8024,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-jtksjx9',
+    id: 'vid-4ko4sq3',
     title: 'Zee South Flix (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9554,27 +8034,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-9ymr8vf',
-    title: 'Zee Talkies HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://103.72.101.252:8080/live/1358.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_TALKIES/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-a356btb',
-    title: 'Zee Thirai HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://149.71.34.166:8000/play/a06d/index.m3u8',
-    cover: 'https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ZEE_THIRAI/images/LOGO_HD/LOGO_HD_image.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-8cuvm8e',
+    id: 'vid-36n2pk0',
     title: 'Zylo Cine Friki (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9584,7 +8044,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-hwf0d6l',
+    id: 'vid-m4gqwl2',
     title: 'Zylo Ciné Nanar (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9594,7 +8054,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-zibe6yj',
+    id: 'vid-oojfn5z',
     title: 'Zylo Cine Western (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9604,7 +8064,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-3vyqwrm',
+    id: 'vid-h459p40',
     title: 'Zylo Ciné Western (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9614,7 +8074,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-e70wol9',
+    id: 'vid-ongaicb',
     title: 'Zylo Emotion\' L (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9624,7 +8084,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-1mfh3lg',
+    id: 'vid-sbmrumd',
     title: 'Zylo ScreamIN (1080p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9634,7 +8094,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-ze4tycy',
+    id: 'vid-rxjtyu5',
     title: 'Детское кино International [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9644,7 +8104,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-5mmocwx',
+    id: 'vid-fcu8dn4',
     title: 'Дом Кино',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9654,87 +8114,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-27h2jhy',
-    title: 'Дом Кино Премиум HD (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Dom_Kino_Premium_HD/index.m3u8',
-    cover: 'https://i.imgur.com/rJpQtvK.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-tqv33oo',
-    title: 'Еврокино (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Evrokino/index.m3u8',
-    cover: 'https://i.imgur.com/8LPtPf6.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-c57p724',
-    title: 'Иллюзион+ (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Illusion_plus/index.m3u8',
-    cover: 'https://i.imgur.com/9GvuHQ5.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-ebp7l72',
-    title: 'Кинеко (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Kineko_HD/index.m3u8',
-    cover: 'https://i.imgur.com/Otfvlmf.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-cu6rob3',
-    title: 'Кино 1 International [Not 24/7]',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://kino-1.catcast.tv/content/38617/index.m3u8',
-    cover: 'https://i.imgur.com/zsCPLs4.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-keoe8i9',
-    title: 'КИНО ТВ (720p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Kino_TV_HD/index.m3u8',
-    cover: 'https://i.imgur.com/sMpamNO.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-aels2ne',
-    title: 'Кинопоказ (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Kinopokaz/index.m3u8',
-    cover: 'https://i.imgur.com/nNjMyAq.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-00o75gu',
-    title: 'КИНОСАТ (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Kineko/index.m3u8',
-    cover: 'https://i.imgur.com/7KsNvBz.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-kj29a01',
+    id: 'vid-xl3olc8',
     title: 'Новый Русский (720p)',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9744,67 +8124,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-8ycf47s',
-    title: 'Патриот (576i)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://catchup.videoline.ru/asvtv/index.m3u8',
-    cover: 'https://patriotkanal.ru/assets/cached/2025/02/resize/264_112_q100_patriot-only-logo.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-w5s00jn',
-    title: 'Родное Кино (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Rodnoe_kino/index.m3u8',
-    cover: 'https://i.imgur.com/H70LxoZ.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-680z25p',
-    title: 'Русский Бестселлер (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Russkiy_Bestseller/index.m3u8',
-    cover: 'https://i.imgur.com/w0ZE9QJ.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-6woaaft',
-    title: 'Русский Детектив (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Russkiy_Detektiv/index.m3u8',
-    cover: 'https://i.imgur.com/H3qhN8S.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-1gt3t5h',
-    title: 'Русский Иллюзион (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Russkiy_illusion/index.m3u8',
-    cover: 'https://i.imgur.com/RlsqFN8.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-g7p024s',
-    title: 'Русский Роман (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Russkiy_Roman_HD/index.m3u8',
-    cover: 'https://i.imgur.com/cQN0P2B.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-e7c1gch',
+    id: 'vid-fz9zk3i',
     title: 'Сити Эдем КиноАзия [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9814,7 +8134,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-m69lk3j',
+    id: 'vid-fttd2dd',
     title: 'Сити Эдем КиноАрт [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9824,7 +8144,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-9c35m4t',
+    id: 'vid-09zxm5c',
     title: 'Сити Эдем КиноДетектив [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9834,7 +8154,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-6ucooqq',
+    id: 'vid-auz4y4g',
     title: 'Сити Эдем КиноДрама [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9844,7 +8164,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-q2d8lir',
+    id: 'vid-7zbeo45',
     title: 'Сити Эдем КиноКлассика [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9854,7 +8174,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-k51ktlw',
+    id: 'vid-tfzs5gs',
     title: 'Сити Эдем КиноКомедия [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9864,7 +8184,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-tvs5vmz',
+    id: 'vid-qe8s9gl',
     title: 'Сити Эдем КиноМистика [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9874,7 +8194,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-o2xztp8',
+    id: 'vid-joo7v2f',
     title: 'Сити Эдем КиноСемья [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9884,7 +8204,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-7fafkay',
+    id: 'vid-txbq4we',
     title: 'Сити Эдем КиноФантастика [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9894,7 +8214,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-gsh3ykn',
+    id: 'vid-4cg6qkv',
     title: 'Сити Эдем КиноЭкшен [Not 24/7]',
     author: 'Кіно та Фільми',
     type: 'video',
@@ -9904,7 +8224,7 @@ const PODCASTS = [
     category: 'Кіно та Фільми'
   },
   {
-    id: 'vid-a0bo3l2',
+    id: 'vid-cj5drtv',
     title: 'Смотрим 100% Классика',
     author: 'Ретро / Класика',
     type: 'video',
@@ -9912,36 +8232,6 @@ const PODCASTS = [
     cover: 'https://i.imgur.com/aASNpKq.png',
     description: '24/7 Ретро / Класика Stream',
     category: 'Ретро / Класика'
-  },
-  {
-    id: 'vid-svw88pu',
-    title: 'Феникс плюс Кино (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://31.148.48.15/Feniks_plus_kino/index.m3u8',
-    cover: 'https://i.imgur.com/S9OPMLE.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-y50cklz',
-    title: '动作电影 (1080p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://39.134.19.68/dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226465/index.m3u8',
-    cover: 'https://i.imgur.com/AuiVcyh.png',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
-  },
-  {
-    id: 'vid-fq2uilq',
-    title: '江苏影视 (576p)',
-    author: 'Кіно та Фільми',
-    type: 'video',
-    url: 'http://223.110.243.134/PLTV/4/224/3221225937/index.m3u8',
-    cover: 'https://www.tvchinese.net/uploads/tv/jsys.jpg',
-    description: '24/7 Кіно та Фільми Stream',
-    category: 'Кіно та Фільми'
   },
 ];
 

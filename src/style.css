@@ -598,6 +598,16 @@ body {
 .tv-channel-item.playing::before { content: ""; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--secondary-container); box-shadow: 0 0 8px var(--secondary-container); }
 .tv-channel-name { font-size: 13px; font-weight: 500; color: var(--on-surface); }
 .tv-channel-category { font-size: 11px; color: var(--on-surface-variant); margin-top: 2px; }
+
+/* Clips List */
+.tv-channel { display: flex; align-items: center; padding: 10px; cursor: pointer; transition: background 0.2s; border-radius: 8px; margin-bottom: 4px; gap: 12px; }
+.tv-channel:hover { background: var(--surface-container-high); }
+.tv-channel.active { background: var(--surface-container-highest); border-left: 3px solid var(--primary-fixed); }
+.tv-channel-logo { width: 48px; height: 48px; flex-shrink: 0; background: var(--surface-container-lowest); border-radius: 6px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.tv-channel-logo img { width: 100%; height: 100%; object-fit: contain; }
+.tv-channel-info { flex: 1; overflow: hidden; }
+.tv-channel-name { font-size: 14px; font-weight: 600; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px; }
+.tv-channel-cat { font-size: 11px; color: var(--on-surface-variant); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-transform: uppercase; letter-spacing: 0.5px; }
 .tv-channel-play-icon { display: none; }
 
 
