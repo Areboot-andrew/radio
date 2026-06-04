@@ -46,7 +46,6 @@ export function initPlayer(onStateChange) {
 
   // Create audio element (hidden)
   audioEl = document.createElement('audio');
-  audioEl.crossOrigin = 'anonymous';
   audioEl.volume = volume;
 
   // Video element for TV
@@ -205,7 +204,9 @@ function fetchMetadata(url) {
   metadataController = new AbortController();
   const signal = metadataController.signal;
 
-  fetch(url, {
+  const proxiedUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+
+  fetch(proxiedUrl, {
     headers: { 'Icy-MetaData': '1' },
     signal,
   }).then(res => {
@@ -221,7 +222,7 @@ function fetchMetadata(url) {
         reader.read().then(({ done, value }) => {
           if (done || signal.aborted) return;
           if (value) {
-            bytesDownloaded += value.length;
+            bytesDownloaded += (value.byteLength || value.length || 0);
             buffer = concat(buffer, value);
             if (buffer.length >= metaint) {
               const metaLen = buffer[metaint] * 16;
@@ -286,8 +287,11 @@ export async function playTVChannel(channel) {
           updatePlayBtn();
         });
         hls.on(Hls.Events.FRAG_LOADED, (event, data) => {
-          if (data && data.frag) {
-            bytesDownloaded += data.frag.loaded;
+          if (data) {
+            const loaded = (data.stats && data.stats.loaded) || (data.payload && data.payload.byteLength) || 0;
+            if (typeof loaded === 'number' && !isNaN(loaded)) {
+              bytesDownloaded += loaded;
+            }
           }
         });
         hls.on(Hls.Events.ERROR, (event, data) => {
@@ -321,6 +325,8 @@ export async function playTVChannel(channel) {
 }
 
 export function stopPlayback() {
+  bytesDownloaded = 0;
+  lastBytesDownloaded = 0;
   if (metadataController) {
     metadataController.abort();
     metadataController = null;
