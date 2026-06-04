@@ -138,15 +138,18 @@ function drawVisualizer() {
   
   if (!vizInitialized || !isPlaying) {
     ctx.clearRect(0, 0, width, height);
-    if (!isPlaying) return; 
+    if (!isPlaying) {
+      drawVisual = null;
+      return;
+    }
   } else {
     analyserNode.getByteFrequencyData(freqDataArray);
     ctx.clearRect(0, 0, width, height);
     
-    // Check if array is completely silent (CORS block on cross-origin stream)
+    // Check if array has actual sound (ignore small DC offset noise from empty contexts)
     let isSilent = true;
     for (let i = 0; i < freqDataArray.length; i++) {
-      if (freqDataArray[i] > 0) {
+      if (freqDataArray[i] > 10) { // threshold for silence
         isSilent = false;
         break;
       }
