@@ -386,29 +386,46 @@ function initPodcasts() {
   
   let html = '';
   const fallbackImg = 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png';
-  for (let i = 0; i < podcasts.length; i++) {
-    const p = podcasts[i];
-    // Enforce HTTPS for images, or use fallback
-    let cover = p.cover;
-    if (!cover || cover.startsWith('http:')) {
-      cover = fallbackImg;
-    }
-    const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    const safeAuthor = (p.author || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  
+  // Group by category
+  const grouped = {};
+  podcasts.forEach(p => {
+    const cat = p.category || 'Інше';
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push(p);
+  });
+  
+  // Sort categories alphabetically
+  const categories = Object.keys(grouped).sort((a, b) => a.localeCompare(b, 'uk'));
+  
+  categories.forEach(cat => {
+    html += `<h3 style="margin: 24px 0 16px 0; color: var(--primary-fixed); border-bottom: 1px solid var(--outline-variant); padding-bottom: 8px; font-size: 20px;">${cat} <span style="font-size: 14px; color: var(--on-surface-variant); font-weight: normal;">(${grouped[cat].length})</span></h3>`;
+    html += `<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; min-height: 0;">`;
     
-    html += `
-      <div class="podcast-card" data-id="${p.id}" style="background: var(--surface-container); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;">
-        <div style="width: 100%; aspect-ratio: 1; background: var(--surface-container-highest); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-          <img src="${cover}" alt="${safeTitle}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
+    grouped[cat].forEach(p => {
+      let cover = p.cover;
+      if (!cover || cover.startsWith('http:')) {
+        cover = fallbackImg;
+      }
+      const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const safeAuthor = (p.author || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      
+      html += `
+        <div class="podcast-card" data-id="${p.id}" style="background: var(--surface-container); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;">
+          <div style="width: 100%; aspect-ratio: 1; background: var(--surface-container-highest); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <img src="${cover}" alt="${safeTitle}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
+          </div>
+          <div style="padding: 12px;">
+            <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${safeTitle}">${safeTitle}</h3>
+            <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);" title="${safeAuthor}">${safeAuthor}</p>
+            <span style="display: inline-block; padding: 2px 6px; background: var(--primary-fixed); color: var(--on-primary-fixed); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase;">${p.type}</span>
+          </div>
         </div>
-        <div style="padding: 12px;">
-          <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${safeTitle}">${safeTitle}</h3>
-          <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);" title="${safeAuthor}">${safeAuthor}</p>
-          <span style="display: inline-block; padding: 2px 6px; background: var(--primary-fixed); color: var(--on-primary-fixed); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase;">${p.type}</span>
-        </div>
-      </div>
-    `;
-  }
+      `;
+    });
+    html += `</div>`;
+  });
+  
   podcastsGrid.innerHTML = html;
 
   podcastsGrid.querySelectorAll('.podcast-card').forEach(card => {
