@@ -717,11 +717,31 @@ function playStationByUuid(uuid) {
 }
 
 function switchStation(direction) {
-  if (filteredStations.length === 0) return;
-  let idx = filteredStations.findIndex(s => s.stationuuid === currentStationUuid);
-  if (idx === -1) idx = 0;
-  idx = (idx + direction + filteredStations.length) % filteredStations.length;
-  playStationByUuid(filteredStations[idx].stationuuid);
+  if (currentMode === 'tv') {
+    if (!currentTVPlaylist || !currentTVChannel) return;
+    let idx = currentTVPlaylist.channels.findIndex(c => c.url === currentTVChannel.url);
+    if (idx === -1) idx = 0;
+    idx = (idx + direction + currentTVPlaylist.channels.length) % currentTVPlaylist.channels.length;
+    selectTVChannel(currentTVPlaylist, idx);
+    renderTVGuide(getTVPlaylists());
+  } else if (currentMode === 'podcasts') {
+    const listEl = document.getElementById('clipsGuideList');
+    if (!listEl) return;
+    const channels = Array.from(listEl.querySelectorAll('.tv-channel'));
+    if (channels.length === 0) return;
+    let idx = channels.findIndex(c => c.classList.contains('active'));
+    if (idx === -1) idx = 0;
+    idx = (idx + direction + channels.length) % channels.length;
+    channels[idx].click();
+    channels[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } else {
+    // Radio mode
+    if (filteredStations.length === 0) return;
+    let idx = filteredStations.findIndex(s => s.stationuuid === currentStationUuid);
+    if (idx === -1) idx = 0;
+    idx = (idx + direction + filteredStations.length) % filteredStations.length;
+    playStationByUuid(filteredStations[idx].stationuuid);
+  }
 }
 
 // ========================================
