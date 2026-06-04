@@ -273,19 +273,56 @@ export async function playTVChannel(channel) {
   clearMiniGlobe();
 
   const url = channel.url;
+  const tvMode = document.getElementById('tvMode');
+
+  // Handle YouTube links
+  if (url.includes('youtube.com') || url.includes('youtu.be')) {
+    let videoId = '';
+    if (url.includes('youtube.com/watch?v=')) {
+      videoId = new URL(url).searchParams.get('v');
+    } else if (url.includes('youtu.be/')) {
+      videoId = url.split('youtu.be/')[1].split('?')[0];
+    }
+    
+    if (videoId) {
+      // Hide video element, show iframe
+      if (videoEl) videoEl.style.display = 'none';
+      let iframe = document.getElementById('ytIframe');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.id = 'ytIframe';
+        iframe.className = 'tv-video';
+        iframe.setAttribute('allowfullscreen', 'true');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media');
+        iframe.style.border = 'none';
+        tvMode.insertBefore(iframe, document.getElementById('fullscreenBtn'));
+      }
+      iframe.style.display = 'block';
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      
+      isPlaying = true;
+      updatePlayBtn();
+      onStateChangeCb?.('tvChange', currentStation);
+      return;
+    }
+  }
+
+  // Hide iframe if exists, show videoEl
+  const iframe = document.getElementById('ytIframe');
+  if (iframe) iframe.style.display = 'none';
+  if (videoEl) videoEl.style.display = 'block';
 
   try {
     if (url.endsWith('.m3u8') || url.includes('.m3u8')) {
       const Hls = (await import('hls.js')).default;
       if (Hls.isSupported() && videoEl) {
         
-        function initHls(streamUrl, useProxy = false) {
+        function initHls(streamUrl) {
           if (hls) {
             hls.destroy();
           }
-          const finalUrl = useProxy ? 'https://corsproxy.io/?' + encodeURIComponent(streamUrl) : streamUrl;
           hls = new Hls({ enableWorker: true, lowLatencyMode: true });
-          hls.loadSource(finalUrl);
+          hls.loadSource(streamUrl);
           hls.attachMedia(videoEl);
           
           hls.on(Hls.Events.MANIFEST_PARSED, () => {
@@ -306,21 +343,16 @@ export async function playTVChannel(channel) {
           hls.on(Hls.Events.ERROR, (event, data) => {
             if (data.fatal) {
               console.error('HLS fatal error:', data.type, data.details);
-              if (data.type === Hls.ErrorTypes.NETWORK_ERROR && !useProxy) {
-                console.log('HLS Network/CORS Error. Retrying with proxy...');
-                initHls(streamUrl, true);
-              } else {
-                hls.destroy();
-                hls = null;
-                isPlaying = false;
-                updatePlayBtn();
-                onStateChangeCb?.('tvError', currentStation);
-              }
+              hls.destroy();
+              hls = null;
+              isPlaying = false;
+              updatePlayBtn();
+              onStateChangeCb?.('tvError', currentStation);
             }
           });
         }
         
-        initHls(url, false);
+        initHls(url);
 
       } else if (videoEl) {
         videoEl.src = url;
