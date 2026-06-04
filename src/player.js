@@ -22,6 +22,17 @@ let sourceNode = null;
 let freqDataArray = null;
 let vizInitialized = false;
 
+// Bandwidth tracking
+let bytesDownloaded = 0;
+let lastBytesDownloaded = 0;
+setInterval(() => {
+  const diff = bytesDownloaded - lastBytesDownloaded;
+  lastBytesDownloaded = bytesDownloaded;
+  const kbps = Math.round((diff * 8) / 1000);
+  const el = document.getElementById('realtimeBitrate');
+  if (el) el.textContent = isPlaying ? `${kbps} kbps` : '0 kbps';
+}, 1000);
+
 // Now-playing metadata
 let currentTrack = null;
 let currentTrackCover = null;
@@ -210,6 +221,7 @@ function fetchMetadata(url) {
         reader.read().then(({ done, value }) => {
           if (done || signal.aborted) return;
           if (value) {
+            bytesDownloaded += value.length;
             buffer = concat(buffer, value);
             if (buffer.length >= metaint) {
               const metaLen = buffer[metaint] * 16;
@@ -272,6 +284,11 @@ export async function playTVChannel(channel) {
           videoEl.play().catch(() => {});
           isPlaying = true;
           updatePlayBtn();
+        });
+        hls.on(Hls.Events.FRAG_LOADED, (event, data) => {
+          if (data && data.frag) {
+            bytesDownloaded += data.frag.loaded;
+          }
         });
         hls.on(Hls.Events.ERROR, (event, data) => {
           if (data.fatal) {

@@ -48,8 +48,18 @@
         </nav>
         
         <div class="user-profile" style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 16px; border-top: 1px solid var(--outline-variant); margin-top: auto;">
-          <div style="font-size: 12px; color: var(--on-surface-variant); text-transform: uppercase; letter-spacing: 0.5px;">Всього станцій:</div>
-          <div id="sidebarStationCount" style="font-size: 20px; font-weight: 700; color: var(--primary-fixed); font-family: var(--font-mono);">0</div>
+          <div class="stations-status">
+           <div style="display:flex; justify-content:space-between; align-items:flex-end; gap: 20px;">
+             <div>
+               <span style="font-size:10px;text-transform:uppercase;color:var(--on-surface-variant);letter-spacing:1px">Всього станцій:</span>
+               <h4 id="sidebarStationCount" style="margin:4px 0 0;font-size:16px;color:var(--primary-fixed)">0</h4>
+             </div>
+             <div style="text-align:right;">
+               <span style="font-size:10px;text-transform:uppercase;color:var(--on-surface-variant);letter-spacing:1px">Потік:</span>
+               <h4 id="realtimeBitrate" style="margin:4px 0 0;font-size:14px;color:#10b981;font-family:var(--font-mono)">0 kbps</h4>
+             </div>
+           </div>
+          </div>
         </div>
       </aside>
 
@@ -101,8 +111,11 @@
         </div>
 
         <!-- TV & Clips Mode (Shared Video Player) -->
-        <div class="tv-mode" id="tvMode" style="display:none;">
+        <div class="tv-mode" id="tvMode" style="display:none; position:relative;">
            <video id="tvVideo" class="tv-video" playsinline></video>
+           <button id="fullscreenBtn" style="position:absolute; bottom:40px; right:40px; background:rgba(0,0,0,0.6); border:none; color:white; padding:8px; border-radius:8px; cursor:pointer; z-index:10;">
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+           </button>
            <div id="tvSignalMeter"></div>
         </div>
       </main>

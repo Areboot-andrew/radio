@@ -277,6 +277,29 @@ function setupEventListeners() {
     });
   });
 
+  // UI events
+  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+    document.querySelector('.sidebar-left').classList.toggle('active');
+  });
+
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      switchMode(e.currentTarget.dataset.mode);
+      if (window.innerWidth <= 768) {
+        document.querySelector('.sidebar-left').classList.remove('active');
+      }
+    });
+  });
+
+  const fsBtn = document.getElementById('fullscreenBtn');
+  if (fsBtn) {
+    fsBtn.addEventListener('click', () => {
+      const vid = document.getElementById('tvVideo');
+      if (vid.requestFullscreen) vid.requestFullscreen();
+      else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
+    });
+  }
+
   // Timer
   document.getElementById('timerBtn').addEventListener('click', openTimer);
   document.getElementById('timerOverlay').addEventListener('click', closeTimer);
@@ -395,25 +418,40 @@ function initPodcasts() {
     const show = filter === 'all' ? podcasts : podcasts.filter(p => (p.category || 'Інше') === filter);
     if (countEl) countEl.textContent = `${show.length} кліпів`;
     
+    // Group them for inline display
+    const grouped = {};
+    show.forEach(p => {
+      const cat = p.category || 'Інше';
+      if (!grouped[cat]) grouped[cat] = [];
+      grouped[cat].push(p);
+    });
+    
     const fallbackImg = 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png';
-    listEl.innerHTML = show.map(p => {
-      let cover = p.cover;
-      if (!cover || cover.startsWith('http:')) cover = fallbackImg;
-      const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      const safeAuthor = (p.author || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      
-      return `
-        <div class="tv-channel" data-id="${p.id}">
-          <div class="tv-channel-logo">
-            <img src="${cover}" alt="" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
+    
+    let html = '';
+    const sortedCats = Object.keys(grouped).sort((a, b) => a.localeCompare(b, 'uk'));
+    sortedCats.forEach(cat => {
+      html += `<div style="padding: 8px 12px; margin-top: 12px; font-size: 13px; font-weight: 700; color: var(--primary-fixed); background: var(--surface-container-lowest); border-left: 3px solid var(--primary-fixed); text-transform: uppercase;">${cat}</div>`;
+      html += grouped[cat].map(p => {
+        let cover = p.cover;
+        if (!cover || cover.startsWith('http:')) cover = fallbackImg;
+        const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const safeAuthor = (p.author || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        
+        return `
+          <div class="tv-channel" data-id="${p.id}">
+            <div class="tv-channel-logo">
+              <img src="${cover}" alt="" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
+            </div>
+            <div class="tv-channel-info">
+              <div class="tv-channel-name" title="${safeTitle}">${safeTitle}</div>
+            </div>
           </div>
-          <div class="tv-channel-info">
-            <div class="tv-channel-name" title="${safeTitle}">${safeTitle}</div>
-            <div class="tv-channel-cat">${safeAuthor}</div>
-          </div>
-        </div>
-      `;
-    }).join('');
+        `;
+      }).join('');
+    });
+    
+    listEl.innerHTML = html;
     
     listEl.querySelectorAll('.tv-channel').forEach(el => {
       el.addEventListener('click', () => {
