@@ -15,6 +15,10 @@ let isPlaying = false;
 let volume = 0.7;
 let onStateChangeCb = null;
 
+// Mock variables to prevent visualization ReferenceErrors after removing equalizer
+let vizInitialized = false;
+let audioCtx = null;
+
 // Bandwidth tracking
 let bytesDownloaded = 0;
 let lastBytesDownloaded = 0;
@@ -248,12 +252,14 @@ function fetchMetadata(url) {
   metadataController = new AbortController();
   const signal = metadataController.signal;
 
-  const proxiedUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
-
-  fetch(proxiedUrl, {
+  const rawUrl = url;
+  
+  // Direct fetch with no-cors or clean error handling
+  fetch(rawUrl, {
     headers: { 'Icy-MetaData': '1' },
     signal,
   }).then(res => {
+    if (!res.ok) throw new Error('Direct fetch failed');
     const metaint = parseInt(res.headers.get('icy-metaint'));
     const name = res.headers.get('icy-name');
     if (name) {
@@ -290,7 +296,21 @@ function fetchMetadata(url) {
       }
       read();
     }
-  }).catch(() => {});
+  }).catch(() => {
+    // Graceful fallback to proxy if direct metadata fails (e.g. CORS)
+    const proxiedUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+    fetch(proxiedUrl, {
+      headers: { 'Icy-MetaData': '1' },
+      signal,
+    }).then(res => {
+      if (!res.ok) return;
+      const metaint = parseInt(res.headers.get('icy-metaint'));
+      const name = res.headers.get('icy-name');
+      if (name) {
+        currentTrack = name;
+      }
+    }).catch(() => {});
+  });
 }
 
 function concat(a, b) {
