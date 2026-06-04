@@ -627,3 +627,35 @@ body {
   color: var(--on-surface);
 }
 
+
+/* Inline Search Bar */
+.search-container-inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  color: var(--on-surface-variant);
+  max-width: 400px;
+  transition: border-color 0.2s;
+  margin-top: 1rem;
+}
+.search-container-inline:focus-within {
+  border-color: var(--on-surface);
+  color: var(--on-surface);
+}
+.search-input-inline {
+  background: transparent;
+  border: none;
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+}
+.search-input-inline::placeholder {
+  color: var(--on-surface-variant);
+}
+

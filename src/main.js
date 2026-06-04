@@ -63,9 +63,7 @@ const genreFilterEl = document.getElementById('genreFilter');
 const sortFilterEl = document.getElementById('sortFilter');
 const premiumOnlyEl = document.getElementById('premiumOnly');
 const stationTotalEl = document.getElementById('stationTotal');
-const searchModal = document.getElementById('searchModal');
 const searchInput = document.getElementById('searchInput');
-const searchResults = document.getElementById('searchResults');
 const timerModal = document.getElementById('timerModal');
 
 const tvGuideList = document.getElementById('tvGuideList');
@@ -242,8 +240,6 @@ function setupEventListeners() {
   }
 
   // Search
-  document.getElementById('searchTrigger').addEventListener('click', openSearch);
-  document.getElementById('searchOverlay').addEventListener('click', closeSearch);
   searchInput.addEventListener('input', debounce(onSearchInput, 150));
 
   // Chips
@@ -289,10 +285,10 @@ function setupEventListeners() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
       e.preventDefault();
-      openSearch();
+      searchInput.focus();
     }
     if (e.key === 'Escape') {
-      closeSearch();
+      searchInput.blur();
       closeTimer();
     }
     if (e.key === ' ' && document.activeElement === document.body) {
@@ -576,88 +572,9 @@ function handlePlayerStateChange(event, station) {
 // ========================================
 // Search
 // ========================================
-function openSearch() {
-  searchModal.classList.add('active');
-  searchInput.value = '';
-  searchInput.focus();
-  searchResults.innerHTML = '';
-  renderSearchSections();
-}
-
-function closeSearch() {
-  searchModal.classList.remove('active');
-}
-
 function onSearchInput(e) {
-  const q = e.target.value.trim().toLowerCase();
-  if (!q) {
-    renderSearchSections();
-    return;
-  }
-
-  const matches = getFilteredStations('', '', q).slice(0, 20);
-  renderSearchResults(matches, q);
-}
-
-function renderSearchSections() {
-  // Show favorites + popular
-  const favUuids = JSON.parse(localStorage.getItem('vsesvit_favorites') || '[]');
-  const favStations = favUuids
-    .map(uuid => getStationByUuid(uuid))
-    .filter(Boolean)
-    .slice(0, 6);
-
-  const popular = allStations.slice(0, 8);
-
-  let html = '';
-
-  if (favStations.length > 0) {
-    html += `<div class="search-section-title">Обране</div>`;
-    html += favStations.map(s => renderSearchItem(s)).join('');
-  }
-
-  html += `<div class="search-section-title">Популярні</div>`;
-  html += popular.map(s => renderSearchItem(s)).join('');
-
-  searchResults.innerHTML = html;
-  bindSearchResults();
-}
-
-function renderSearchResults(stations, query) {
-  if (stations.length === 0) {
-    searchResults.innerHTML = `<div class="search-no-results">Немає результатів для "${escapeHtml(query)}"</div>`;
-    return;
-  }
-
-  searchResults.innerHTML =
-    `<div class="search-section-title">Результати (${stations.length})</div>` +
-    stations.map(s => renderSearchItem(s)).join('');
-
-  bindSearchResults();
-}
-
-function renderSearchItem(s) {
-  const flag = getCountryFlag(s.countrycode);
-  return `
-    <div class="search-result-item" data-uuid="${s.stationuuid}">
-      <div class="result-fallback">${flag}</div>
-      <div class="search-result-info">
-        <div class="search-result-name">${escapeHtml(s.name)}</div>
-        <div class="search-result-meta">${flag} ${escapeHtml(s.country)} · ${escapeHtml(s.genre)}</div>
-      </div>
-    </div>
-  `;
-}
-
-function bindSearchResults() {
-  searchResults.querySelectorAll('.search-result-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const uuid = item.dataset.uuid;
-      closeSearch();
-      playStationByUuid(uuid);
-      if (currentMode !== 'radio') switchMode('radio');
-    });
-  });
+  searchQuery = e.target.value.trim().toLowerCase();
+  applyFilters();
 }
 
 // ========================================
