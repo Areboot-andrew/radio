@@ -49,7 +49,7 @@ let countryFilter = '';
 let genreFilter = '';
 let sortBy = 'popular';
 let searchQuery = '';
-let showFavoritesOnly = false;
+let showFavoritesOnly = localStorage.getItem('texnoplus_show_favs') === 'true';
 let premiumOnly = false;
 
 // ========================================
@@ -333,10 +333,16 @@ function setupEventListeners() {
   // Favorites button
   document.getElementById('favoritesBtn').addEventListener('click', () => {
     showFavoritesOnly = !showFavoritesOnly;
+    localStorage.setItem('texnoplus_show_favs', showFavoritesOnly);
     document.getElementById('favoritesBtn').style.color = showFavoritesOnly ? '#ef4444' : '';
     applyFilters();
   });
 
+  // Initial Render for Favorites
+  if (showFavoritesOnly) {
+    document.getElementById('favoritesBtn').style.color = '#ef4444';
+  }
+  
   // Shift+T: toggle radio/tv
   document.addEventListener('keydown', (e) => {
     if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
