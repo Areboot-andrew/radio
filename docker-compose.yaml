@@ -6,8 +6,10 @@ services:
     image: radio-player:latest
     container_name: radio-player
     restart: unless-stopped
-    ports:
-      - "${PORT:-8080}:8080"
+    # Coolify's Traefik reaches the container via Docker network — no
+    # host port binding required. App listens on internal :8080.
+    expose:
+      - "8080"
     healthcheck:
       test: ["CMD-SHELL", "wget -q -O- http://127.0.0.1:8080/ >/dev/null 2>&1 || exit 1"]
       interval: 30s
