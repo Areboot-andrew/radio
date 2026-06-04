@@ -104,6 +104,7 @@ export function initPlayer(onStateChange) {
     isPlaying = true;
     updatePlayBtn();
     onStateChangeCb?.('playing', currentStation);
+    if (!drawVisual && vizInitialized) drawVisualizer();
   });
 
   audioEl.addEventListener('pause', () => {
@@ -122,23 +123,75 @@ export function initPlayer(onStateChange) {
   return { audioEl, videoEl };
 }
 
+let drawVisual = null;
+function drawVisualizer() {
+  const canvas = document.getElementById('audioVisualizer');
+  if (!canvas) {
+    drawVisual = requestAnimationFrame(drawVisualizer);
+    return;
+  }
+  const ctx = canvas.getContext('2d');
+  const width = canvas.width;
+  const height = canvas.height;
+  
+  if (!vizInitialized || !isPlaying) {
+    ctx.clearRect(0, 0, width, height);
+    if (!isPlaying) return; 
+  } else {
+    analyserNode.getByteFrequencyData(freqDataArray);
+    ctx.clearRect(0, 0, width, height);
+    
+    const barWidth = 6;
+    const gap = 3;
+    const barCount = Math.floor(width / (barWidth + gap));
+    const step = Math.max(1, Math.floor((freqDataArray.length * 0.6) / barCount)); // Use only lower 60% of frequencies
+    
+    for (let i = 0; i < barCount; i++) {
+      const dataIndex = i * step;
+      let sum = 0;
+      for (let j = 0; j < step; j++) {
+         sum += freqDataArray[dataIndex + j] || 0;
+      }
+      const val = sum / step;
+      
+      const percent = val / 255;
+      const barHeight = Math.max(3, percent * height);
+      
+      const gradient = ctx.createLinearGradient(0, height, 0, 0);
+      gradient.addColorStop(0, '#10b981'); // Primary
+      gradient.addColorStop(1, '#059669'); // Darker primary
+      
+      ctx.fillStyle = gradient;
+      // Center the bars vertically or bottom align? Bottom align is standard
+      ctx.beginPath();
+      ctx.roundRect(i * (barWidth + gap), height - barHeight, barWidth, barHeight, 3);
+      ctx.fill();
+    }
+  }
+  drawVisual = requestAnimationFrame(drawVisualizer);
+}
+
 export function initAudioVisualizer() {
   if (vizInitialized) return;
   try {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     analyserNode = audioCtx.createAnalyser();
     analyserNode.fftSize = 256;
-    analyserNode.smoothingTimeConstant = 0.8;
+    analyserNode.smoothingTimeConstant = 0.85;
     freqDataArray = new Uint8Array(analyserNode.frequencyBinCount);
 
     if (audioEl) {
+      // CORS workaround for Web Audio API: 
+      // some native streams might fail cors check for createMediaElementSource
+      // but we will try anyway.
       sourceNode = audioCtx.createMediaElementSource(audioEl);
       sourceNode.connect(analyserNode);
       analyserNode.connect(audioCtx.destination);
     }
     vizInitialized = true;
+    if (!drawVisual) drawVisualizer();
   } catch (e) {
-    // Web Audio not supported
+    console.warn('Web Audio visualizer init failed:', e);
   }
 }
 
