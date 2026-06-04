@@ -385,14 +385,25 @@ function initPodcasts() {
   }
   
   let html = '';
+  const fallbackImg = 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png';
   for (let i = 0; i < podcasts.length; i++) {
     const p = podcasts[i];
+    // Enforce HTTPS for images, or use fallback
+    let cover = p.cover;
+    if (!cover || cover.startsWith('http:')) {
+      cover = fallbackImg;
+    }
+    const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const safeAuthor = (p.author || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    
     html += `
       <div class="podcast-card" data-id="${p.id}" style="background: var(--surface-container); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;">
-        <img src="${p.cover || 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png'}" alt="" style="width: 100%; aspect-ratio: 1; object-fit: cover;" loading="lazy">
+        <div style="width: 100%; aspect-ratio: 1; background: var(--surface-container-highest); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img src="${cover}" alt="${safeTitle}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
+        </div>
         <div style="padding: 12px;">
-          <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</h3>
-          <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);">${p.author}</p>
+          <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${safeTitle}">${safeTitle}</h3>
+          <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);" title="${safeAuthor}">${safeAuthor}</p>
           <span style="display: inline-block; padding: 2px 6px; background: var(--primary-fixed); color: var(--on-primary-fixed); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase;">${p.type}</span>
         </div>
       </div>
