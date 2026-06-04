@@ -366,6 +366,46 @@ function setupEventListeners() {
   // Window resize
   window.addEventListener('resize', debounce(() => {
   }, 200));
+
+  // ---- Mobile sidebar toggle ----
+  const mobileToggle = document.getElementById('mobilePlayerToggle');
+  const sidebarRight = document.querySelector('.sidebar-right');
+  const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+  function openMobileSidebar() {
+    sidebarRight.classList.add('mobile-open');
+    sidebarOverlay.classList.add('active');
+    mobileToggle.style.display = 'none';
+  }
+  function closeMobileSidebar() {
+    sidebarRight.classList.remove('mobile-open');
+    sidebarOverlay.classList.remove('active');
+    // Re-show toggle only on mobile
+    if (window.innerWidth <= 768) {
+      mobileToggle.style.display = 'flex';
+    }
+  }
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', openMobileSidebar);
+  }
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeMobileSidebar);
+  }
+
+  // Swipe-down to close mobile sidebar
+  let touchStartY = 0;
+  if (sidebarRight) {
+    sidebarRight.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    sidebarRight.addEventListener('touchend', (e) => {
+      const dy = e.changedTouches[0].clientY - touchStartY;
+      if (dy > 100) {
+        closeMobileSidebar();
+      }
+    }, { passive: true });
+  }
 }
 
 // ========================================
