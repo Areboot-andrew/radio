@@ -6,8 +6,6 @@ services:
     image: radio-player:latest
     container_name: radio-player
     restart: unless-stopped
-    # Coolify's Traefik reaches the container via Docker network — no
-    # host port binding required. App listens on internal :8080.
     expose:
       - "8080"
     healthcheck:
@@ -23,3 +21,20 @@ services:
         max-file: "3"
     security_opt:
       - no-new-privileges:true
+    # Coolify's Docker Compose mode does NOT auto-inject Traefik labels
+    # (unlike Dockerfile deploys). Add them by hand so Traefik routes
+    # the domain to this container.
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=coolify"
+      - "traefik.http.services.radio.loadbalancer.server.port=8080"
+      - "traefik.http.routers.radio.rule=Host(`radio.texno.plus`)"
+      - "traefik.http.routers.radio.entrypoints=https"
+      - "traefik.http.routers.radio.tls=true"
+      - "traefik.http.routers.radio.tls.certresolver=letsencrypt"
+      # Auto-redirect http → https
+      - "traefik.http.routers.radio-http.rule=Host(`radio.texno.plus`)"
+      - "traefik.http.routers.radio-http.entrypoints=http"
+      - "traefik.http.routers.radio-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
