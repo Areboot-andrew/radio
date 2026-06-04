@@ -21,6 +21,9 @@ services:
         max-file: "3"
     security_opt:
       - no-new-privileges:true
+    # Attach to Coolify's network so Traefik can reach this container
+    networks:
+      - coolify
     # Coolify's Docker Compose mode does NOT auto-inject Traefik labels
     # (unlike Dockerfile deploys). Add them by hand so Traefik routes
     # the domain to this container.
@@ -38,3 +41,9 @@ services:
       - "traefik.http.routers.radio-http.middlewares=redirect-to-https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
+
+networks:
+  coolify:
+    external: true
+    name: coolify
+
