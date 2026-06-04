@@ -680,3 +680,8 @@ body {
   color: var(--primary-fixed);
 }
 
+
+.tv-country {
+  flex-shrink: 0;
+}
+
