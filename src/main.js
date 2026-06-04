@@ -394,7 +394,26 @@ function initPodcasts() {
   });
 }
 
-function playPodcast(p) {
+async function playPodcast(p) {
+  if (p.rssUrl && !p.url) {
+    try {
+      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(p.rssUrl);
+      const res = await fetch(proxyUrl);
+      const xml = await res.text();
+      const match = xml.match(/<enclosure[^>]+url=[\"\']([^\"\']+)[\"\']/i);
+      if (match) {
+        p.url = match[1];
+      } else {
+        alert('Не вдалося знайти аудіофайл у стрічці цього подкасту.');
+        return;
+      }
+    } catch (e) {
+      console.error('Podcast fetch error:', e);
+      alert('Помилка завантаження останнього випуску подкасту.');
+      return;
+    }
+  }
+
   if (p.type === 'video') {
     switchMode('tv');
     const channel = { name: p.title, url: p.url, category: p.category };
