@@ -372,18 +372,33 @@ function initPodcasts() {
   const podcasts = getPodcasts();
   const podcastsGrid = document.getElementById('podcastsGrid');
   
-  if (!podcastsGrid) return;
+  if (!podcastsGrid) {
+    console.error('podcastsGrid not found');
+    return;
+  }
   
-  podcastsGrid.innerHTML = podcasts.map(p => `
-    <div class="podcast-card" data-id="${p.id}" style="background: var(--surface-container); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;">
-      <img src="${p.cover}" alt="${p.title}" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
-      <div style="padding: 12px;">
-        <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</h3>
-        <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);">${p.author}</p>
-        <span style="display: inline-block; padding: 2px 6px; background: var(--primary-fixed); color: var(--on-primary-fixed); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase;">${p.type}</span>
+  console.log('Rendering podcasts/clips count:', podcasts.length);
+  
+  if (podcasts.length === 0) {
+    podcastsGrid.innerHTML = '<div style="padding: 20px; color: #ef4444;">Помилка: список кліпів порожній!</div>';
+    return;
+  }
+  
+  let html = '';
+  for (let i = 0; i < podcasts.length; i++) {
+    const p = podcasts[i];
+    html += `
+      <div class="podcast-card" data-id="${p.id}" style="background: var(--surface-container); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;">
+        <img src="${p.cover || 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png'}" alt="" style="width: 100%; aspect-ratio: 1; object-fit: cover;" loading="lazy">
+        <div style="padding: 12px;">
+          <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</h3>
+          <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);">${p.author}</p>
+          <span style="display: inline-block; padding: 2px 6px; background: var(--primary-fixed); color: var(--on-primary-fixed); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase;">${p.type}</span>
+        </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }
+  podcastsGrid.innerHTML = html;
 
   podcastsGrid.querySelectorAll('.podcast-card').forEach(card => {
     card.addEventListener('click', () => {
