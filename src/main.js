@@ -419,7 +419,8 @@ function recomputeFilterCounts() {
   const genreMap = new Map();
   genreFiltered.forEach(s => {
     if (favs && !favs.has(s.stationuuid)) return;
-    genreMap.set(s.genre, (genreMap.get(s.genre) || 0) + 1);
+    const g = s.displayGenre || s.genre;
+    genreMap.set(g, (genreMap.get(g) || 0) + 1);
   });
 
   // Update country options
