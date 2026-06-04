@@ -253,10 +253,7 @@ function extractGenre(tags, name) {
 
   if (best) return best.genre;
 
-  // Fallback to first non-empty tag
-  const tagList = tagStr.split(',').map(t => t.trim()).filter(Boolean);
-  if (tagList.length > 0) return tagList[0];
-
+  // Fallback to 'misc' immediately, instead of random unmapped tags
   return 'misc';
 }
 
@@ -376,8 +373,8 @@ const GENRE_TRANSLATIONS = {
   'lounge': 'Lounge / Chillout',
   'ambient': 'Lounge / Chillout',
   'soundtrack': 'Саундтреки / Кіно',
-  'jazz': 'Джаз',
-  'blues': 'Блюз',
+  'jazz': 'Джаз / Блюз',
+  'blues': 'Джаз / Блюз',
   'classical': 'Класична музика',
   'hip hop': 'Хіп-хоп / Реп',
   'rnb': 'R&B / Соул',
@@ -391,23 +388,43 @@ const GENRE_TRANSLATIONS = {
   'disco': 'Диско',
   'retro': 'Ретро / Oldies',
   'news': 'Новини / Розмовне',
+  'gospel': 'Релігійна / Госпел',
   'misc': 'Інше',
 };
 
 export function getGenres() {
   const map = new Map();
+  // First pass: count raw genres to find ones with very few stations
   allStations.forEach(s => {
     const raw = s.genre;
-    const translated = GENRE_TRANSLATIONS[raw] || raw.charAt(0).toUpperCase() + raw.slice(1);
+    if (!map.has(raw)) map.set(raw, 0);
+    map.set(raw, map.get(raw) + 1);
+  });
+
+  const finalMap = new Map();
+  allStations.forEach(s => {
+    let raw = s.genre;
+    // Group stations into 'misc' if their genre has fewer than 3 stations
+    if (map.get(raw) < 3) {
+      raw = 'misc';
+      s.genre = 'misc'; // Also update underlying genre so filtering works
+    }
+
+    const translated = GENRE_TRANSLATIONS[raw] || 'Інше';
     
-    // Update the station's genre property so it displays translated everywhere
+    // Update the station's display genre
     s.displayGenre = translated;
 
-    if (!map.has(translated)) map.set(translated, 0);
-    map.set(translated, map.get(translated) + 1);
+    if (!finalMap.has(translated)) finalMap.set(translated, 0);
+    finalMap.set(translated, finalMap.get(translated) + 1);
   });
-  // Sort alphabetically
-  return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+
+  // Sort alphabetically by Ukrainian names, but put 'Інше' at the very end
+  return [...finalMap.entries()].sort((a, b) => {
+    if (a[0] === 'Інше') return 1;
+    if (b[0] === 'Інше') return -1;
+    return a[0].localeCompare(b[0], 'uk');
+  });
 }
 
 export function getTunerStations() {
