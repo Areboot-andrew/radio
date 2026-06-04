@@ -101,7 +101,7 @@ function updateRadioInfo(station) {
 
   const metaParts = [];
   if (station.country && station.country !== 'Unknown') metaParts.push(station.country);
-  if (station.genre) metaParts.push(station.genre);
+  if (station.displayGenre || station.genre) metaParts.push(station.displayGenre || station.genre);
   radioInfoMeta.textContent = metaParts.join(' · ') || '';
 
   if (station.bitrate) {
@@ -140,10 +140,24 @@ function startNowPlayingPolling() {
       if (cover) {
         if (radioInfoTrackArtImg.src !== cover) {
           radioInfoTrackArtImg.src = cover;
+          const artImg = radioInfoArt.querySelector('img');
+          if (artImg && artImg.src !== cover) {
+            artImg.src = cover;
+          } else if (!artImg) {
+            radioInfoArt.innerHTML = `<img src="${cover}" alt="Track Cover" />`;
+          }
         }
-        radioInfoTrackArt.style.display = 'block';
       } else {
-        radioInfoTrackArt.style.display = 'none';
+        // If no track cover, revert to station favicon if possible
+        const currentStation = getCurrentStation();
+        if (currentStation && currentStation.favicon) {
+           const artImg = radioInfoArt.querySelector('img');
+           if (!artImg || artImg.src !== currentStation.favicon) {
+               radioInfoArt.innerHTML = `<img src="${currentStation.favicon}" alt="" onerror="this.parentElement.innerHTML='<div class=\\'art-fallback\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/><line x1=\\'12\\' y1=\\'22\\' x2=\\'12\\' y2=\\'15\\'/></svg></div>'">`;
+           }
+        } else {
+           radioInfoArt.innerHTML = `<div class="art-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="22" x2="12" y2="15"/></svg></div>`;
+        }
       }
     } else {
       rdsLabel.classList.remove('active');
@@ -470,7 +484,7 @@ function renderStations() {
           </div>
         </div>
         <div class="station-col-genre">
-          ${s.genre ? `<span class="genre-badge">${escapeHtml(s.genre)}</span>` : '-'}
+          ${(s.displayGenre || s.genre) ? `<span class="genre-badge">${escapeHtml(s.displayGenre || s.genre)}</span>` : '-'}
         </div>
         <div class="station-col-country">${flag} ${escapeHtml(s.country)}</div>
         <div class="station-col-quality">

@@ -135,6 +135,7 @@ export async function fetchStations(onProgress) {
       votes: parseInt(s.votes) || 0,
       genre: extractGenre(s.tags, s.name),
       genreColor: getGenreColor(extractGenre(s.tags, s.name)),
+      displayGenre: extractGenre(s.tags, s.name),
       health: computeHealth(s),
     }))
     .filter(s => {
@@ -321,7 +322,7 @@ export function getFilteredStations(country, genre, query, premiumOnly = false) 
     result = result.filter(s => s.country === country);
   }
   if (genre) {
-    result = result.filter(s => s.genre === genre);
+    result = result.filter(s => s.displayGenre === genre || s.genre === genre);
   }
   if (query) {
     const q = query.toLowerCase();
@@ -345,13 +346,65 @@ export function getCountries() {
   return [...map.entries()].sort((a, b) => b[1] - a[1]);
 }
 
+const GENRE_TRANSLATIONS = {
+  '80s': 'Музика 80-х',
+  '90s': 'Музика 90-х',
+  '70s': 'Музика 70-х',
+  '60s': 'Музика 60-х',
+  '2000s': 'Музика 2000-х',
+  '2010s': 'Музика 2010-х',
+  '2020s': 'Сучасні хіти',
+  'rock': 'Рок / Метал',
+  'indie': 'Інді / Альтернатива',
+  'metal': 'Рок / Метал',
+  'punk': 'Рок / Метал',
+  'pop': 'Поп-музика',
+  'charts': 'Топ Чарти',
+  'hits': 'Популярні хіти',
+  'electronic': 'Електронна',
+  'dance': 'Танцювальна',
+  'house': 'Електронна',
+  'techno': 'Електронна',
+  'trance': 'Електронна',
+  'edm': 'Електронна',
+  'drum and bass': 'Електронна',
+  'dubstep': 'Електронна',
+  'chill': 'Lounge / Chillout',
+  'lounge': 'Lounge / Chillout',
+  'ambient': 'Lounge / Chillout',
+  'soundtrack': 'Саундтреки / Кіно',
+  'jazz': 'Джаз',
+  'blues': 'Блюз',
+  'classical': 'Класична музика',
+  'hip hop': 'Хіп-хоп / Реп',
+  'rnb': 'R&B / Соул',
+  'soul': 'R&B / Соул',
+  'funk': 'R&B / Соул',
+  'latin': 'Латиноамериканська',
+  'afrobeats': 'Афро',
+  'ethno': 'Етно / World',
+  'reggae': 'Реггі',
+  'country': 'Кантрі',
+  'disco': 'Диско',
+  'retro': 'Ретро / Oldies',
+  'news': 'Новини / Розмовне',
+  'misc': 'Інше',
+};
+
 export function getGenres() {
   const map = new Map();
   allStations.forEach(s => {
-    if (!map.has(s.genre)) map.set(s.genre, 0);
-    map.set(s.genre, map.get(s.genre) + 1);
+    const raw = s.genre;
+    const translated = GENRE_TRANSLATIONS[raw] || raw.charAt(0).toUpperCase() + raw.slice(1);
+    
+    // Update the station's genre property so it displays translated everywhere
+    s.displayGenre = translated;
+
+    if (!map.has(translated)) map.set(translated, 0);
+    map.set(translated, map.get(translated) + 1);
   });
-  return [...map.entries()].sort((a, b) => b[1] - a[1]);
+  // Sort alphabetically
+  return [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
 }
 
 export function getTunerStations() {
