@@ -31,7 +31,7 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Coolify needs wget/curl for healthcheck — wget is already there.
 # Healthcheck — use the same wget that alpine ships, but via `wget --spider`
 HEALTHCHECK --interval=30s --timeout=3s --retries=3 --start-period=5s \
-  CMD wget -q -O- http://127.0.0.1/ >/dev/null 2>&1 || exit 1
+  CMD wget -q -O- http://127.0.0.1:8080/ >/dev/null 2>&1 || exit 1
 
 # Listen on 8080 inside the container so we don't need root for port binding.
 # The compose file maps host port to 8080 inside.
