@@ -57,13 +57,20 @@
         <!-- Radio Mode -->
         <div class="radio-mode active" id="radioMode">
           <header class="content-header">
-            <h2 class="page-title">Каталог Радіо</h2>
+            <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 1.5rem;">
+               <h2 class="page-title" style="margin-bottom: 0;">Каталог Радіо</h2>
+               <div id="stationTotal" style="font-family: var(--font-mono); font-size: 14px; color: var(--on-surface-variant);"></div>
+            </div>
             
             <div class="chips-container">
-              <button class="chip active" id="chipAll">Всі станції</button>
-              <button class="chip" id="chipFavs">Улюблені</button>
-              <button class="chip" data-genre="Electronic">Електронна</button>
-              <button class="chip" data-genre="Jazz">Джаз</button>
+              <select id="countryFilter" class="neo-select"></select>
+              <select id="genreFilter" class="neo-select"></select>
+              <select id="sortFilter" class="neo-select">
+                 <option value="popular">Популярні</option>
+                 <option value="name">За назвою</option>
+                 <option value="bitrate">За якістю</option>
+              </select>
+              
               <label class="chip">
                  <input type="checkbox" id="premiumOnly" style="display:none">
                  <span style="display:flex; align-items:center; gap:6px;">
@@ -161,10 +168,6 @@
         
         <!-- Hidden elements for JS compatibility -->
         <div style="display:none">
-           <select id="countryFilter"></select>
-           <select id="genreFilter"></select>
-           <select id="sortFilter"></select>
-           <div id="stationTotal"></div>
            <div id="radioInfoTrackArt"></div>
            <img id="radioInfoTrackArtImg">
            <div id="timerBtn"></div>
