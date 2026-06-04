@@ -740,7 +740,10 @@ function handlePlayerStateChange(event, station) {
     const subEl = document.getElementById('tvMetaSubtitle');
     const playBtn = document.getElementById('tvPlay');
     if (titleEl) titleEl.textContent = station ? station.name : 'Оберіть відео';
-    if (subEl) subEl.textContent = 'Завантаження потоку...';
+    if (subEl) {
+       subEl.textContent = '';
+       subEl.style.display = 'none';
+    }
     if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>';
   }
   if (event === 'playing') {
@@ -761,7 +764,10 @@ function handlePlayerStateChange(event, station) {
   }
   if (event === 'tvError') {
     const subEl = document.getElementById('tvMetaSubtitle');
-    if (subEl) subEl.textContent = '⚠️ Помилка відтворення потоку (CORS/Мережа)';
+    if (subEl) {
+       subEl.textContent = '⚠️ Помилка відтворення потоку (CORS/Мережа)';
+       subEl.style.display = 'block';
+    }
     const playBtn = document.getElementById('tvPlay');
     if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
   }
