@@ -659,3 +659,24 @@ body {
   color: var(--on-surface-variant);
 }
 
+
+/* Hi-Res Chip Active State */
+.chip:has(input:checked) {
+  background: var(--primary-fixed);
+  color: var(--on-primary-fixed);
+  border-color: var(--primary-fixed);
+}
+
+
+/* Spinning Fallback Logo Animation */
+@keyframes spin-record {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.art-fallback svg,
+.st-art .art-fallback svg {
+  animation: spin-record 4s linear infinite;
+  color: var(--primary-fixed);
+}
+
