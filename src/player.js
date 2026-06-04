@@ -452,10 +452,17 @@ export function togglePlay() {
 }
 
 function updatePlayBtn() {
-  if (!playerPlayBtn) return;
-  playerPlayBtn.innerHTML = isPlaying
-    ? `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>`
-    : `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
+  const pauseIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>`;
+  const playIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
+
+  if (playerPlayBtn) {
+    playerPlayBtn.innerHTML = isPlaying ? pauseIcon : playIcon;
+  }
+  // Also update TV play button
+  const tvPlayBtn = document.getElementById('tvPlay');
+  if (tvPlayBtn) {
+    tvPlayBtn.innerHTML = isPlaying ? pauseIcon : playIcon;
+  }
 }
 
 function updatePlayerUI(station) {
