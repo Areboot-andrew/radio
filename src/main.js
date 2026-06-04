@@ -377,6 +377,8 @@ function applyFilters() {
 
   // Update station count
   stationTotalEl.textContent = `${filteredStations.length} станцій`;
+  const sidebarCountEl = document.getElementById('sidebarStationCount');
+  if (sidebarCountEl) sidebarCountEl.textContent = filteredStations.length;
 
   // Recompute filter counts relative to current selection
   recomputeFilterCounts();
