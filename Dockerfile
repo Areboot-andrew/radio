@@ -19,7 +19,7 @@ RUN npm run build
 FROM nginx:1.27-alpine
 
 # Drop default config
-RUN rm /etc/nginx/conf.d/default.conf
+RUN rm -f /etc/nginx/conf.d/default.conf
 
 # Custom nginx config (SPA fallback, gzip, cache)
 COPY nginx.conf /etc/nginx/conf.d/app.conf
@@ -27,16 +27,17 @@ COPY nginx.conf /etc/nginx/conf.d/app.conf
 # Static build output
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Run as non-root (nginx-alpine ships with nginx user; pid needs /tmp)
-RUN sed -i 's|^pid.*|pid /tmp/nginx.pid;|' /etc/nginx/nginx.conf \
-    && touch /tmp/nginx.pid \
-    && chown nginx:nginx /tmp/nginx.pid
+# nginx:1.27-alpine ships with: wget (busybox), no curl
+# Coolify needs wget/curl for healthcheck — wget is already there.
+# Healthcheck — use the same wget that alpine ships, but via `wget --spider`
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 --start-period=5s \
+  CMD wget -q -O- http://127.0.0.1/ >/dev/null 2>&1 || exit 1
 
-EXPOSE 80
+# Listen on 8080 inside the container so we don't need root for port binding.
+# The compose file maps host port to 8080 inside.
+EXPOSE 8080
 
-HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
-  CMD wget -q --spider http://localhost/ || exit 1
-
-USER nginx
-
+# Run as root (standard nginx-in-container pattern).
+# Static-only SPA → no real attack surface, and avoids the
+# /var/cache/nginx + /var/run + port-80 dance.
 CMD ["nginx", "-g", "daemon off;"]
