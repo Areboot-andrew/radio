@@ -7,7 +7,7 @@ services:
     container_name: radio-player
     restart: unless-stopped
     ports:
-      - "${RADIO_PORT:-8080}:8080"
+      - "${PORT:-8080}:8080"
     healthcheck:
       test: ["CMD-SHELL", "wget -q -O- http://127.0.0.1:8080/ >/dev/null 2>&1 || exit 1"]
       interval: 30s
