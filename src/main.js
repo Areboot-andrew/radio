@@ -415,25 +415,26 @@ function setupEventListeners() {
   const sidebarRight = document.querySelector('.sidebar-right');
   const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-  function openMobileSidebar() {
-    sidebarRight.classList.add('mobile-open');
-    sidebarOverlay.classList.add('active');
-    mobileToggle.style.display = 'none';
-  }
-  function closeMobileSidebar() {
-    sidebarRight.classList.remove('mobile-open');
-    sidebarOverlay.classList.remove('active');
+  window.openMobileSidebar = function() {
+    if (sidebarRight) sidebarRight.classList.add('mobile-open');
+    if (sidebarOverlay) sidebarOverlay.classList.add('active');
+    if (mobileToggle) mobileToggle.style.display = 'none';
+  };
+
+  window.closeMobileSidebar = function() {
+    if (sidebarRight) sidebarRight.classList.remove('mobile-open');
+    if (sidebarOverlay) sidebarOverlay.classList.remove('active');
     // Re-show toggle only on mobile
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768 && mobileToggle) {
       mobileToggle.style.display = 'flex';
     }
-  }
+  };
 
   if (mobileToggle) {
-    mobileToggle.addEventListener('click', openMobileSidebar);
+    mobileToggle.addEventListener('click', window.openMobileSidebar);
   }
   if (sidebarOverlay) {
-    sidebarOverlay.addEventListener('click', closeMobileSidebar);
+    sidebarOverlay.addEventListener('click', window.closeMobileSidebar);
   }
 
   // Swipe-down to close mobile sidebar
@@ -445,7 +446,7 @@ function setupEventListeners() {
     sidebarRight.addEventListener('touchend', (e) => {
       const dy = e.changedTouches[0].clientY - touchStartY;
       if (dy > 100) {
-        closeMobileSidebar();
+        window.closeMobileSidebar();
       }
     }, { passive: true });
   }
@@ -605,6 +606,11 @@ async function playPodcast(p) {
     import('./player.js').then(module => {
       module.playStation(station);
     });
+  }
+
+  // Auto-close mobile drawer to show playing content immediately
+  if (window.closeMobileSidebar) {
+    window.closeMobileSidebar();
   }
 }
 
@@ -792,6 +798,11 @@ function playStationByUuid(uuid) {
 
   currentStationUuid = uuid;
   playStation(station);
+
+  // Auto-close mobile drawer to let the user see the visualizer or clean UI
+  if (window.closeMobileSidebar) {
+    window.closeMobileSidebar();
+  }
 
   // Update UI
   document.querySelectorAll('.station-card').forEach(c => {
@@ -1007,6 +1018,11 @@ async function selectTVChannel(playlist, channelIndex) {
   const channel = playlist.channels[channelIndex];
   if (channel) {
     playTVChannel(channel);
+  }
+
+  // Auto-close mobile drawer to show the video player immediately
+  if (window.closeMobileSidebar) {
+    window.closeMobileSidebar();
   }
 
   setTimeout(() => {
