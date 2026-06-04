@@ -190,14 +190,10 @@ async function init() {
 
   // Wire TV play controls
   const tvPlay = document.getElementById('tvPlay');
-  const tvStop = document.getElementById('tvStop');
   const tvPrev = document.getElementById('tvPrev');
   const tvNext = document.getElementById('tvNext');
   
   if (tvPlay) tvPlay.addEventListener('click', togglePlay);
-  if (tvStop) tvStop.addEventListener('click', () => {
-    import('./player.js').then(p => p.stopPlayback());
-  });
   if (tvPrev) tvPrev.addEventListener('click', playPrev);
   if (tvNext) tvNext.addEventListener('click', playNext);
 
@@ -309,8 +305,22 @@ function setupEventListeners() {
   if (fsBtn) {
     fsBtn.addEventListener('click', () => {
       const vid = document.getElementById('tvVideo');
-      if (vid.requestFullscreen) vid.requestFullscreen();
-      else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
+      if (!vid) return;
+      // iOS Safari: use webkitEnterFullscreen on video element directly
+      if (vid.webkitEnterFullscreen) {
+        vid.webkitEnterFullscreen();
+      } else if (vid.requestFullscreen) {
+        vid.requestFullscreen();
+      } else if (vid.webkitRequestFullscreen) {
+        vid.webkitRequestFullscreen();
+      } else if (vid.msRequestFullscreen) {
+        vid.msRequestFullscreen();
+      } else {
+        // Fallback: fullscreen the whole TV mode container
+        const container = document.getElementById('tvMode');
+        if (container?.requestFullscreen) container.requestFullscreen();
+        else if (container?.webkitRequestFullscreen) container.webkitRequestFullscreen();
+      }
     });
   }
 
