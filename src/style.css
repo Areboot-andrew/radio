@@ -1151,25 +1151,60 @@ body {
 
 /* ================== LANDSCAPE MOBILE ================== */
 @media (max-height: 500px) and (orientation: landscape) {
+  /* Hide navigation bar on landscape to maximize video space */
   .sidebar-left {
-    height: auto;
+    display: none !important;
+  }
+  
+  .main-content {
+    padding-bottom: 0 !important;
+  }
+
+  /* Make video fill the viewport in landscape */
+  .tv-mode {
+    padding: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    justify-content: center !important;
+    background: #000;
+  }
+
+  .tv-video {
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    border-radius: 0 !important;
+    object-fit: contain !important;
+  }
+
+  /* Hide controls in pure landscape unless hovered/interacted if we want, but let's hide overlay or keep it overlayed */
+  .tv-controls-bar {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto !important;
+    background: rgba(30, 30, 30, 0.8) !important;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    margin-top: 0 !important;
   }
 
   .sidebar-right {
-    height: 80vh;
+    height: 85vh;
   }
 
   .player-art-large {
-    max-width: 120px;
+    max-width: 100px;
     aspect-ratio: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .player-meta-large {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .track-name {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
