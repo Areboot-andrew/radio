@@ -18,6 +18,8 @@ import {
   getTotalChannelCount,
 } from './tvData.js';
 
+import { getPodcasts } from './podcastsData.js';
+
 import {
   initPlayer,
   playStation,
@@ -207,6 +209,9 @@ async function init() {
     // Init TV guide
     initTVGuide();
 
+    // Init Podcasts
+    initPodcasts();
+
     // Hide loading
     setTimeout(() => {
       loadingScreen.classList.add('hidden');
@@ -334,11 +339,12 @@ function switchMode(mode) {
   // Update center panels
   document.getElementById('radioMode').style.display = mode === 'radio' ? 'flex' : 'none';
   document.getElementById('tvMode').style.display = mode === 'tv' ? 'flex' : 'none';
+  document.getElementById('podcastsMode').style.display = mode === 'podcasts' ? 'flex' : 'none';
 
   // Update right sidebar panels
   document.getElementById('playerBar').classList.toggle('hidden-panel', mode === 'tv');
-  document.getElementById('playerBar').classList.toggle('active-panel', mode === 'radio');
-  document.getElementById('tvGuidePanel').classList.toggle('hidden-panel', mode === 'radio');
+  document.getElementById('playerBar').classList.toggle('active-panel', mode !== 'tv');
+  document.getElementById('tvGuidePanel').classList.toggle('hidden-panel', mode !== 'tv');
   document.getElementById('tvGuidePanel').classList.toggle('active-panel', mode === 'tv');
 
   // TV: stop audio, handle video
@@ -348,6 +354,65 @@ function switchMode(mode) {
     resumeAudioContext();
     const ve = getVideoEl();
     if (ve) ve.play().catch(() => {});
+  } else if (mode === 'podcasts') {
+    // stop video if playing
+    const ve = getVideoEl();
+    if (ve) ve.pause();
+  } else {
+    // radio
+    const ve = getVideoEl();
+    if (ve) ve.pause();
+  }
+}
+
+// ========================================
+// Podcasts
+// ========================================
+function initPodcasts() {
+  const podcasts = getPodcasts();
+  const podcastsGrid = document.getElementById('podcastsGrid');
+  
+  if (!podcastsGrid) return;
+  
+  podcastsGrid.innerHTML = podcasts.map(p => `
+    <div class="podcast-card" data-id="${p.id}" style="background: var(--surface-container); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;">
+      <img src="${p.cover}" alt="${p.title}" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+      <div style="padding: 12px;">
+        <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${p.title}</h3>
+        <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);">${p.author}</p>
+        <span style="display: inline-block; padding: 2px 6px; background: var(--primary-fixed); color: var(--on-primary-fixed); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase;">${p.type}</span>
+      </div>
+    </div>
+  `).join('');
+
+  podcastsGrid.querySelectorAll('.podcast-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const p = podcasts.find(x => x.id === card.dataset.id);
+      if (!p) return;
+      playPodcast(p);
+    });
+  });
+}
+
+function playPodcast(p) {
+  if (p.type === 'video') {
+    switchMode('tv');
+    const channel = { name: p.title, url: p.url, category: p.category };
+    import('./player.js').then(module => {
+      module.playTVChannel(channel);
+    });
+  } else {
+    const station = {
+      stationuuid: p.id,
+      name: p.title,
+      url: p.streamUrl || p.url,
+      favicon: p.cover,
+      type: 'podcast'
+    };
+    currentStationUuid = p.id;
+    import('./player.js').then(module => {
+      module.playStation(station);
+    });
   }
 }
 

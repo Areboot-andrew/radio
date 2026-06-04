@@ -105,10 +105,13 @@ export async function fetchStations(onProgress) {
   if (onProgress) onProgress(60);
 
   // 4. Filter healthy stations (relaxed geo) and bitrate < 128 only if known
+  const blockedCountries = ['CN', 'JP', 'KR', 'KP', 'IN', 'PK', 'BD', 'SA', 'AE', 'QA', 'KW', 'BH', 'OM', 'YE', 'IR', 'IQ', 'SY', 'LB', 'JO', 'EG', 'MA', 'DZ', 'TN', 'LY', 'TH', 'VN', 'MY', 'ID', 'PH', 'MM', 'KH', 'LA', 'SG', 'LK', 'NP', 'AF', 'TW', 'HK', 'SA', 'AE', 'TR', 'AZ', 'AM', 'GE'];
   const healthy = unique.filter(s => {
     if (!isHealthyStation(s, { requireGeo: false })) return false;
     const br = parseInt(s.bitrate);
     if (br > 0 && br < 128) return false;
+    const cc = (s.countrycode || '').toUpperCase();
+    if (blockedCountries.includes(cc)) return false;
     return true;
   });
 
