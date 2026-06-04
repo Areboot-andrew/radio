@@ -4,68 +4,45 @@
 
 const PODCASTS = [
   {
-    id: 'podcast-joe-rogan',
-    title: 'The Joe Rogan Experience',
-    author: 'Joe Rogan',
-    type: 'video',
-    url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8', // placeholder for testing video
-    cover: 'https://i.scdn.co/image/ab6765630000ba8a786d75d3c87dc5fba3993d39',
-    description: 'The official podcast of comedian Joe Rogan.',
-    category: 'Comedy'
-  },
-  {
-    id: 'podcast-lex-fridman',
-    title: 'Lex Fridman Podcast',
-    author: 'Lex Fridman',
-    type: 'video',
-    url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
-    cover: 'https://i.scdn.co/image/ab6765630000ba8a385750868f9a3eaf591a2fc7',
-    description: 'Conversations about the nature of intelligence, consciousness, love, and power.',
-    category: 'Science & Tech'
-  },
-  {
-    id: 'podcast-huberman',
-    title: 'Huberman Lab',
-    author: 'Andrew Huberman',
-    type: 'video',
-    url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
-    cover: 'https://i.scdn.co/image/ab6765630000ba8af1d251d102eec30541cfc846',
-    description: 'Neuroscience: how our brain and its connections with the organs of our body control our perceptions, our behaviors, and our health.',
-    category: 'Health'
-  },
-  {
-    id: 'podcast-bbc-global-news',
-    title: 'Global News Podcast',
-    author: 'BBC World Service',
+    id: 'song-exploder',
+    title: 'Song Exploder',
+    author: 'Hrishikesh Hirway',
     type: 'audio',
-    url: 'https://podcasts.files.bbci.co.uk/p02nq0gn.rss', // RSS placeholder, or a direct stream URL if we want simple audio
-    streamUrl: 'http://stream.live.vc.bbcmedia.co.uk/bbc_world_service',
-    cover: 'https://sounds.files.bbci.co.uk/2.4.0/networks/bbc_world_service/colour_default.svg',
-    description: 'The day’s top stories from BBC News.',
-    category: 'News'
-  },
-  {
-    id: 'podcast-radiolab',
-    title: 'Radiolab',
-    author: 'WNYC Studios',
-    type: 'audio',
-    url: 'http://fm939.wnyc.org/radiolab',
-    streamUrl: 'http://fm939.wnyc.org/radiolab',
-    cover: 'https://media.wnyc.org/i/1400/1400/l/80/1/Radiolab_Square_Logo.png',
-    description: 'Investigating a strange world.',
-    category: 'Science & Tech'
-  },
-  {
-    id: 'podcast-music-history',
-    title: 'A History of Rock Music in 500 Songs',
-    author: 'Andrew Hickey',
-    type: 'audio',
-    url: 'http://stream.radioparadise.com/rock-320', // placeholder
-    streamUrl: 'http://stream.radioparadise.com/rock-320',
-    cover: 'https://500songs.com/wp-content/uploads/2018/10/500-Songs-Logo.png',
-    description: 'A history of rock and roll music.',
+    url: 'https://dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/sblTq32fyWAjsHzze2LG/dovetail.prxu.org/_/93/b7d39af5-7b4a-4106-8dda-92a6fe3adcef/SongExploder314-HotChip-Part1.mp3',
+    cover: 'https://songexploder.net/wp-content/uploads/2014/12/SongExploder_Logo_500.png',
+    description: 'Musicians take apart their songs, and piece by piece, tell the story of how they were made.',
     category: 'Music'
-  }
+  },
+  {
+    id: 'switched-on-pop',
+    title: 'Switched on Pop',
+    author: 'Vulture',
+    type: 'audio',
+    url: 'https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/pscrb.fm/rss/p/mgln.ai/e/257/traffic.megaphone.fm/VMP5091820996.mp3?updated=1780355924',
+    cover: 'https://images.megaphone.fm/switchedonpop',
+    description: 'A podcast about the making and meaning of popular music.',
+    category: 'Music'
+  },
+  {
+    id: 'rewatchables',
+    title: 'The Rewatchables',
+    author: 'The Ringer',
+    type: 'audio',
+    url: 'https://traffic.megaphone.fm/GLT1039772520.mp3',
+    cover: 'https://images.megaphone.fm/the-rewatchables',
+    description: 'A film podcast from the Ringer universe featuring movies we can’t stop watching.',
+    category: 'Cinema'
+  },
+  {
+    id: 'unspooled',
+    title: 'Unspooled',
+    author: 'Paul Scheer & Amy Nicholson',
+    type: 'audio',
+    url: 'https://dts.podtrac.com/redirect.mp3/pdst.fm/e/pfx.vpixl.com/6qj4J/pscrb.fm/rss/p/nyt.simplecastaudio.com/3026b665-46df-4d18-98e9-d1ce16bbb1df/episodes/54f7928d-5868-4d12-bb7f-b2642c7b7f7e/audio/128/default.mp3?aid=rss_feed&amp;awCollectionId=3026b665-46df-4d18-98e9-d1ce16bbb1df&amp;awEpisodeId=54f7928d-5868-4d12-bb7f-b2642c7b7f7e&amp;feed=82FI35Px',
+    cover: 'https://image.simplecastcdn.com/images/82FI35Px/unspooled.jpg',
+    description: 'Paul Scheer and Amy Nicholson are watching the AFI top 100 movies of all time.',
+    category: 'Cinema'
+  },
 ];
 
 export function getPodcasts() {
