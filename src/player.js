@@ -207,14 +207,10 @@ export function initAudioVisualizer() {
     analyserNode.smoothingTimeConstant = 0.85;
     freqDataArray = new Uint8Array(analyserNode.frequencyBinCount);
 
-    if (audioEl) {
-      // CORS workaround for Web Audio API: 
-      // some native streams might fail cors check for createMediaElementSource
-      // but we will try anyway.
-      sourceNode = audioCtx.createMediaElementSource(audioEl);
-      sourceNode.connect(analyserNode);
-      analyserNode.connect(audioCtx.destination);
-    }
+    // Deliberately NOT connecting audioEl to audioCtx.createMediaElementSource()
+    // Connecting cross-origin streams without CORS headers mutes the HTMLAudioElement!
+    // We will rely entirely on our realistic fake visualizer for all radio streams.
+    
     vizInitialized = true;
     if (!drawVisual) drawVisualizer();
   } catch (e) {
