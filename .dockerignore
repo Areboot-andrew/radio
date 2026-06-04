@@ -25,13 +25,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Docs / deploy artefacts (keep only the essentials in image)
+# Docs / deploy artefacts (NOT needed in image)
 README-DEPLOY.md
 deploy.sh
 docker-compose.yml
-Dockerfile
 .dockerignore
-nginx.conf
 
 # Editor / OS junk
 Thumbs.db
