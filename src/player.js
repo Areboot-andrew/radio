@@ -25,12 +25,33 @@ let vizInitialized = false;
 // Bandwidth tracking
 let bytesDownloaded = 0;
 let lastBytesDownloaded = 0;
+let kbpsDisplay = 0;
 setInterval(() => {
-  const diff = bytesDownloaded - lastBytesDownloaded;
-  lastBytesDownloaded = bytesDownloaded;
-  const kbps = Math.round((diff * 8) / 1000);
   const el = document.getElementById('realtimeBitrate');
-  if (el) el.textContent = isPlaying ? `${kbps} kbps` : '0 kbps';
+  if (!el) return;
+  
+  if (!isPlaying) {
+    el.textContent = '0 kbps';
+    return;
+  }
+  
+  if (hls && hls.bandwidthEstimate) {
+    // HLS provides a built-in bandwidth estimator
+    kbpsDisplay = Math.round(hls.bandwidthEstimate / 1000);
+  } else {
+    // Manual diff (bursty)
+    const diff = bytesDownloaded - lastBytesDownloaded;
+    lastBytesDownloaded = bytesDownloaded;
+    const currentKbps = Math.round((diff * 8) / 1000);
+    // Smooth it out: if 0, decay slowly so it doesn't flash
+    if (currentKbps > 0) {
+      kbpsDisplay = currentKbps;
+    } else {
+      kbpsDisplay = Math.max(0, Math.round(kbpsDisplay * 0.8)); 
+    }
+  }
+  
+  el.textContent = `${kbpsDisplay} kbps`;
 }, 1000);
 
 // Now-playing metadata
