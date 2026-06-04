@@ -548,3 +548,55 @@ body {
   transition: width 0.3s;
 }
 .loading-screen.hidden { display: none; }
+
+/* Player Meta row */
+.track-title-row { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.player-fav { background: none; border: none; color: var(--outline-variant); cursor: pointer; transition: all 0.2s; display: flex; align-items: center; padding: 4px; }
+.player-fav:hover { color: var(--secondary-container); transform: scale(1.1); }
+.player-fav.is-fav { color: var(--secondary-container); }
+
+/* Volume Slider */
+.volume-container { display: flex; align-items: center; gap: 12px; margin-top: 2rem; color: var(--on-surface-variant); padding: 0 1rem; }
+.volume-slider { flex: 1; -webkit-appearance: none; height: 4px; background: var(--surface-container-high); border-radius: 2px; outline: none; }
+.volume-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--primary-fixed-dim); cursor: pointer; box-shadow: 0 0 8px var(--primary-fixed-dim); transition: transform 0.1s; }
+.volume-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+/* Fallback Logo Animation */
+.art-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--surface-container-high), var(--surface-container-highest)); color: var(--outline-variant); }
+.art-fallback svg { width: 64px; height: 64px; animation: spin 8s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* TV Mode */
+.tv-mode { flex: 1; display: flex; padding: 2.5rem; justify-content: center; align-items: center; }
+.tv-video { width: 100%; max-width: 1000px; aspect-ratio: 16/9; border-radius: var(--radius-lg); background: #000; box-shadow: 0 12px 32px rgba(0,0,0,0.6), 0 0 0 1px var(--outline-variant); object-fit: cover; }
+
+/* TV Guide Panel */
+.hidden-panel { display: none !important; }
+.active-panel { display: block; }
+.right-panel-content { height: 100%; display: flex; flex-direction: column; }
+.tv-guide-header { margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end; }
+.tv-guide-header h3 { font-family: var(--font-display); font-size: 24px; color: var(--on-surface); }
+.tv-guide-header span { font-size: 12px; color: var(--on-surface-variant); font-family: var(--font-mono); }
+.tv-guide-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+.tv-guide-list::-webkit-scrollbar { width: 4px; }
+.tv-guide-list::-webkit-scrollbar-thumb { background: var(--surface-container-high); border-radius: 2px; }
+
+.tv-country { background: var(--surface-container-low); border: 1px solid var(--outline-variant); border-radius: var(--radius-md); overflow: hidden; }
+.tv-country-header { display: flex; align-items: center; padding: 12px 16px; cursor: pointer; user-select: none; }
+.tv-country-header:hover { background: var(--surface-container); }
+.tv-guide-flag { font-size: 18px; margin-right: 12px; }
+.tv-guide-info { flex: 1; }
+.tv-guide-name { font-weight: 600; font-size: 14px; }
+.tv-guide-channels { font-size: 11px; color: var(--on-surface-variant); }
+.tv-country-arrow { font-size: 10px; color: var(--outline); transition: transform 0.2s; }
+.tv-country.expanded .tv-country-arrow { transform: rotate(90deg); }
+
+.tv-channel-list { background: var(--surface-container-lowest); border-top: 1px solid var(--outline-variant); }
+.tv-channel-item { display: flex; align-items: center; padding: 10px 16px 10px 42px; cursor: pointer; transition: background 0.2s; position: relative; }
+.tv-channel-item:hover { background: var(--surface-container-low); }
+.tv-channel-item.playing { background: var(--surface-container); }
+.tv-channel-item.playing::before { content: ""; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--secondary-container); box-shadow: 0 0 8px var(--secondary-container); }
+.tv-channel-name { font-size: 13px; font-weight: 500; color: var(--on-surface); }
+.tv-channel-category { font-size: 11px; color: var(--on-surface-variant); margin-top: 2px; }
+.tv-channel-play-icon { display: none; }
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/radio-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AuraStream - Hi-Fi Streaming</title>
+    <title>Texnoplus-radio - Hi-Fi Streaming</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
       <!-- Left Sidebar -->
       <aside class="sidebar-left">
         <div class="logo-area">
-          <h1 class="logo-text">AuraStream</h1>
-          <p class="logo-subtext">Hi-Fi Streaming</p>
+          <h1 class="logo-text">Texnoplus</h1>
+          <p class="logo-subtext">Radio Hi-Fi Streaming</p>
         </div>
         
         <nav class="main-nav">
@@ -95,46 +95,68 @@
         <!-- TV Mode -->
         <div class="tv-mode" id="tvMode" style="display:none;">
            <video id="tvVideo" class="tv-video" playsinline></video>
-           <div id="tvGuide"><div id="tvGuideList"></div><span id="tvGuideCount"></span></div>
            <div id="tvSignalMeter"></div>
         </div>
       </main>
 
-      <!-- Right Sidebar (Player) -->
-      <aside class="sidebar-right player-panel" id="playerBar">
-        <div class="player-top-bar">
-          <div class="live-indicator">
-            <div class="live-dot"></div> LIVE
+      <!-- Right Sidebar (Player & TV Guide) -->
+      <aside class="sidebar-right player-panel">
+        
+        <!-- RADIO PLAYER -->
+        <div id="playerBar" class="right-panel-content active-panel">
+          <div class="player-top-bar">
+            <div class="live-indicator">
+              <div class="live-dot"></div> LIVE
+            </div>
+            <div class="player-badges">
+               <span class="badge badge-outline">HI-RES</span>
+               <span class="badge badge-outline" id="radioInfoBitrate">320 KBPS</span>
+            </div>
           </div>
-          <div class="player-badges">
-             <span class="badge badge-outline">HI-RES</span>
-             <span class="badge badge-outline" id="radioInfoBitrate">320 KBPS</span>
+          
+          <div class="player-art-large" id="radioInfoArt">
+             <!-- Fallback -->
+          </div>
+          
+          <div class="player-meta-large">
+            <div class="track-title-row">
+              <h3 class="track-name" id="radioInfoName">Оберіть станцію</h3>
+              <button class="st-fav-btn player-fav" id="playerFavorite" title="Додати в обране">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <p class="artist-name" id="radioInfoNow"><span class="rds-label" style="display:none"></span><span class="rds-text"></span></p>
+            <p class="station-meta" id="radioInfoMeta"></p>
+          </div>
+          
+          <div class="player-controls-container">
+             <div class="player-status-row">
+               <span class="status-left">Live</span>
+               <span class="status-right"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3 22v-8h4v8H3zm7 0V8h4v14h-4zm7 0V2h4v20h-4z"/></svg> Стабільний</span>
+             </div>
+             
+             <div class="player-controls-main">
+               <button class="ctrl-btn" id="hdrPrev"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+               <button class="ctrl-btn play-btn" id="hdrPlay">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+               </button>
+               <button class="ctrl-btn" id="hdrNext"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+             </div>
+             
+             <div class="volume-container">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70" class="volume-slider">
+             </div>
           </div>
         </div>
-        
-        <div class="player-art-large" id="radioInfoArt">
-           <!-- Fallback -->
-        </div>
-        
-        <div class="player-meta-large">
-          <h3 class="track-name" id="radioInfoName">Оберіть станцію</h3>
-          <p class="artist-name" id="radioInfoNow"><span class="rds-label" style="display:none"></span><span class="rds-text"></span></p>
-          <p class="station-meta" id="radioInfoMeta"></p>
-        </div>
-        
-        <div class="player-controls-container">
-           <div class="player-status-row">
-             <span class="status-left">Live</span>
-             <span class="status-right"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M3 22v-8h4v8H3zm7 0V8h4v14h-4zm7 0V2h4v20h-4z"/></svg> Стабільний</span>
+
+        <!-- TV GUIDE -->
+        <div id="tvGuidePanel" class="right-panel-content hidden-panel">
+           <div class="tv-guide-header">
+             <h3>Live TV Guide</h3>
+             <span id="tvGuideCount">0 каналів</span>
            </div>
-           
-           <div class="player-controls-main">
-             <button class="ctrl-btn" id="hdrPrev"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
-             <button class="ctrl-btn play-btn" id="hdrPlay">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-             </button>
-             <button class="ctrl-btn" id="hdrNext"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
-           </div>
+           <div id="tvGuideList" class="tv-guide-list"></div>
         </div>
         
         <!-- Hidden elements for JS compatibility -->

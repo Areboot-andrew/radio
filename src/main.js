@@ -95,7 +95,7 @@ function updateRadioInfo(station) {
     radioInfoBitrate.textContent = '';
     radioInfoMeta.textContent = '';
     radioInfoTrackArt.style.display = 'none';
-    radioInfoArt.innerHTML = `<div class="radio-info-art-fallback"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>`;
+    radioInfoArt.innerHTML = `<div class="art-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="22" x2="12" y2="15"/></svg></div>`;
     return;
   }
 
@@ -114,9 +114,9 @@ function updateRadioInfo(station) {
 
   // Art
   if (station.favicon) {
-    radioInfoArt.innerHTML = `<img src="${station.favicon}" alt="" onerror="this.innerHTML=''">`;
+    radioInfoArt.innerHTML = `<img src="${station.favicon}" alt="" onerror="this.parentElement.innerHTML='<div class=\\'art-fallback\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/><line x1=\\'12\\' y1=\\'22\\' x2=\\'12\\' y2=\\'15\\'/></svg></div>'">`;
   } else {
-    radioInfoArt.innerHTML = `<div class="radio-info-art-fallback"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>`;
+    radioInfoArt.innerHTML = `<div class="art-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="22" x2="12" y2="15"/></svg></div>`;
   }
 }
 
@@ -321,9 +321,15 @@ function switchMode(mode) {
     btn.classList.toggle('active', btn.dataset.mode === mode);
   });
 
-  // Update panels
-  document.getElementById('radioMode').classList.toggle('active', mode === 'radio');
-  document.getElementById('tvMode').classList.toggle('active', mode === 'tv');
+  // Update center panels
+  document.getElementById('radioMode').style.display = mode === 'radio' ? 'flex' : 'none';
+  document.getElementById('tvMode').style.display = mode === 'tv' ? 'flex' : 'none';
+
+  // Update right sidebar panels
+  document.getElementById('playerBar').classList.toggle('hidden-panel', mode === 'tv');
+  document.getElementById('playerBar').classList.toggle('active-panel', mode === 'radio');
+  document.getElementById('tvGuidePanel').classList.toggle('hidden-panel', mode === 'radio');
+  document.getElementById('tvGuidePanel').classList.toggle('active-panel', mode === 'tv');
 
   // TV: stop audio, handle video
   if (mode === 'tv') {
@@ -454,10 +460,10 @@ function renderStations() {
     return `
       <div class="station-item ${isActive ? 'active' : ''} ${isNowPlaying ? 'playing' : ''}" data-uuid="${s.stationuuid}">
         <div class="station-col-primary">
-          <div class="st-art ${s.hiRes ? 'hires-fallback' : ''}">
+          <div class="st-art">
             ${s.favicon
-              ? `<img src="${s.favicon}" alt="" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='${s.hiRes ? 'FLAC' : flag}'">`
-              : (s.hiRes ? 'FLAC' : flag)
+              ? `<img src="${s.favicon}" alt="" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'art-fallback\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/><line x1=\\'12\\' y1=\\'22\\' x2=\\'12\\' y2=\\'15\\'/></svg></div>'">`
+              : `<div class="art-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="22" x2="12" y2="15"/></svg></div>`
             }
           </div>
           <div class="st-info">
