@@ -699,7 +699,7 @@ function renderStations() {
         <div class="station-col-primary">
           <div class="st-art">
             ${s.favicon
-              ? `<img src="${s.favicon}" alt="" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'art-fallback\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/><line x1=\\'12\\' y1=\\'22\\' x2=\\'12\\' y2=\\'15\\'/></svg></div>'">`
+              ? `<img src="${s.favicon}" alt="" loading="lazy" onerror="this.outerHTML='<div class=\\'art-fallback\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/><line x1=\\'12\\' y1=\\'22\\' x2=\\'12\\' y2=\\'15\\'/></svg></div>'">`
               : `<div class="art-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="22" x2="12" y2="15"/></svg></div>`
             }
           </div>
