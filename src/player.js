@@ -36,40 +36,19 @@ setInterval(() => {
   }
   
   if (currentStation && currentStation.type !== 'tv' && currentStation.type !== 'video') {
-    // Radio stations: Base bitrate
-    let baseKbps = currentStation.bitrate || 128;
-    
-    // Create a dynamic VBR (Variable Bit Rate) effect based on actual audio volume
-    let variance = 0;
-    if (analyserNode && freqDataArray && isPlaying) {
-      analyserNode.getByteFrequencyData(freqDataArray);
-      let sum = 0;
-      // Sample a portion of frequencies for intensity
-      for (let i = 0; i < 50; i++) sum += freqDataArray[i];
-      let avgVolume = sum / 50; // 0 to 255
-      
-      // Fluctuate between -2% to +8% based on audio intensity (simulates VBR encoding)
-      let percent = (avgVolume / 255); 
-      variance = Math.round(baseKbps * (percent * 0.10 - 0.02));
-    } else {
-      // Small random jitter if analyzer isn't ready
-      variance = Math.floor(Math.random() * 5) - 2;
-    }
-    
-    kbpsDisplay = baseKbps + variance;
-  } else if (hls && hls.bandwidthEstimate) {
-    // HLS provides a built-in bandwidth estimator
-    kbpsDisplay = Math.round(hls.bandwidthEstimate / 1000);
+    // Radio stations: static reported bitrate
+    kbpsDisplay = currentStation.bitrate || 128;
   } else {
-    // Manual diff (bursty)
+    // Video stations: Dynamic real-time bandwidth monitor
     const diff = bytesDownloaded - lastBytesDownloaded;
     lastBytesDownloaded = bytesDownloaded;
     const currentKbps = Math.round((diff * 8) / 1000);
-    // Smooth it out: if 0, decay slowly so it doesn't flash
+    
     if (currentKbps > 0) {
       kbpsDisplay = currentKbps;
     } else {
-      kbpsDisplay = Math.max(0, Math.round(kbpsDisplay * 0.8)); 
+      // Slow decay so it fluctuates down but doesn't instantly hit 0 between chunk downloads
+      kbpsDisplay = Math.max(0, Math.round(kbpsDisplay * 0.85)); 
     }
   }
   
