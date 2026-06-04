@@ -306,22 +306,55 @@ function setupEventListeners() {
     fsBtn.addEventListener('click', () => {
       const vid = document.getElementById('tvVideo');
       if (!vid) return;
-      // iOS Safari: use webkitEnterFullscreen on video element directly
+
+      // Function to try to lock orientation to landscape
+      const lockLandscape = () => {
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock('landscape').catch(() => {});
+        } else if (screen.lockOrientation) {
+          screen.lockOrientation('landscape');
+        } else if (screen.webkitLockOrientation) {
+          screen.webkitLockOrientation('landscape');
+        } else if (screen.mozLockOrientation) {
+          screen.mozLockOrientation('landscape');
+        } else if (screen.msLockOrientation) {
+          screen.msLockOrientation('landscape');
+        }
+      };
+
+      // iOS Safari (webkitEnterFullscreen handles native iOS player with its own orientation)
       if (vid.webkitEnterFullscreen) {
         vid.webkitEnterFullscreen();
+        lockLandscape();
       } else if (vid.requestFullscreen) {
-        vid.requestFullscreen();
+        vid.requestFullscreen().then(lockLandscape).catch(() => {});
       } else if (vid.webkitRequestFullscreen) {
         vid.webkitRequestFullscreen();
+        lockLandscape();
       } else if (vid.msRequestFullscreen) {
         vid.msRequestFullscreen();
+        lockLandscape();
       } else {
-        // Fallback: fullscreen the whole TV mode container
         const container = document.getElementById('tvMode');
-        if (container?.requestFullscreen) container.requestFullscreen();
-        else if (container?.webkitRequestFullscreen) container.webkitRequestFullscreen();
+        if (container?.requestFullscreen) {
+          container.requestFullscreen().then(lockLandscape).catch(() => {});
+        } else if (container?.webkitRequestFullscreen) {
+          container.webkitRequestFullscreen();
+          lockLandscape();
+        }
       }
     });
+
+    // Reset orientation lock when exiting fullscreen
+    const onFullscreenChange = () => {
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (screen.orientation && screen.orientation.unlock) {
+          screen.orientation.unlock();
+        }
+      }
+    };
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', onFullscreenChange);
   }
 
   // Timer
