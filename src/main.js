@@ -278,9 +278,12 @@ function setupEventListeners() {
   });
 
   // UI events
-  document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-    document.querySelector('.sidebar-left').classList.toggle('active');
-  });
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  if (mobileBtn) {
+    mobileBtn.addEventListener('click', () => {
+      document.querySelector('.sidebar-left').classList.toggle('active');
+    });
+  }
 
   document.querySelectorAll('.mode-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
