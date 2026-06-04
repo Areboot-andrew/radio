@@ -109,12 +109,7 @@ export function initPlayer(onStateChange) {
     onStateChangeCb?.('paused', currentStation);
   });
 
-  audioEl.addEventListener('error', () => {
-    console.error('Audio error');
-    isPlaying = false;
-    updatePlayBtn();
-    onStateChangeCb?.('error', currentStation);
-  });
+  // Removed global audioEl error event listener that was conflicting with tryPlayAudio's retry cascade
 
   return { audioEl, videoEl };
 }
@@ -206,12 +201,16 @@ export async function playStation(station) {
 async function tryPlayAudio(originalUrl, attempt) {
   const proxied = proxyUrl(originalUrl, attempt);
   if (!proxied) {
-    // All proxies exhausted
     console.error('All proxy attempts failed for:', originalUrl);
     isPlaying = false;
     updatePlayBtn();
     onStateChangeCb?.('error', currentStation);
     return;
+  }
+
+  // Clear any existing error listeners to prevent multi-firing
+  if (audioEl._errorHandler) {
+    audioEl.removeEventListener('error', audioEl._errorHandler);
   }
 
   audioEl.src = proxied;
@@ -220,25 +219,24 @@ async function tryPlayAudio(originalUrl, attempt) {
   if (playPromise) {
     playPromise.catch(err => {
       console.warn(`Attempt ${attempt} failed (${proxied}):`, err.message);
-      // Only retry if it's a network/CORS error, not a user gesture issue
       if (err.name === 'NotAllowedError') {
-        // Autoplay blocked — don't retry
         isPlaying = false;
         updatePlayBtn();
         return;
       }
+      // If error event listener didn't catch it yet, proceed to next
+      audioEl.removeEventListener('error', audioEl._errorHandler);
       tryPlayAudio(originalUrl, attempt + 1);
     });
   }
 
-  // Also handle network errors via the error event
-  const errorHandler = () => {
-    audioEl.removeEventListener('error', errorHandler);
-    console.warn(`Audio error on attempt ${attempt}, trying next proxy...`);
+  // Define and store errorHandler on the element reference for complete cleanup
+  audioEl._errorHandler = () => {
+    audioEl.removeEventListener('error', audioEl._errorHandler);
+    console.warn(`Audio element network error on attempt ${attempt}, trying next proxy...`);
     tryPlayAudio(originalUrl, attempt + 1);
   };
-  // Remove previous error handlers and add new one
-  audioEl.addEventListener('error', errorHandler, { once: true });
+  audioEl.addEventListener('error', audioEl._errorHandler, { once: true });
 
   if (vizInitialized) {
     resumeAudioContext();
