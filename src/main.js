@@ -190,6 +190,19 @@ async function init() {
   hdrNext.addEventListener('click', playNext);
   updateRadioPlayBtn(false);
 
+  // Wire TV play controls
+  const tvPlay = document.getElementById('tvPlay');
+  const tvStop = document.getElementById('tvStop');
+  const tvPrev = document.getElementById('tvPrev');
+  const tvNext = document.getElementById('tvNext');
+  
+  if (tvPlay) tvPlay.addEventListener('click', togglePlay);
+  if (tvStop) tvStop.addEventListener('click', () => {
+    import('./player.js').then(p => p.stopPlayback());
+  });
+  if (tvPrev) tvPrev.addEventListener('click', playPrev);
+  if (tvNext) tvNext.addEventListener('click', playNext);
+
   // Setup event listeners
   setupEventListeners();
 
@@ -429,7 +442,7 @@ function initPodcasts() {
       grouped[cat].push(p);
     });
     
-    const fallbackImg = 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png';
+    const fallbackImg = '/texnoplus.svg';
     
     let html = '';
     const sortedCats = Object.keys(grouped).sort((a, b) => a.localeCompare(b, 'uk'));
@@ -439,7 +452,7 @@ function initPodcasts() {
         let cover = p.cover;
         if (!cover || cover.startsWith('http:')) cover = fallbackImg;
         const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        const safeAuthor = (p.author || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const safeCountry = p.country ? (p.country || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '';
         
         return `
           <div class="tv-channel" data-id="${p.id}">
@@ -448,6 +461,7 @@ function initPodcasts() {
             </div>
             <div class="tv-channel-info">
               <div class="tv-channel-name" title="${safeTitle}">${safeTitle}</div>
+              ${safeCountry ? `<div class="tv-channel-category">Країна: ${safeCountry}</div>` : ''}
             </div>
           </div>
         `;
@@ -721,17 +735,35 @@ function handlePlayerStateChange(event, station) {
       startNowPlayingPolling();
     }
   }
+  if (event === 'tvChange') {
+    const titleEl = document.getElementById('tvMetaTitle');
+    const subEl = document.getElementById('tvMetaSubtitle');
+    const playBtn = document.getElementById('tvPlay');
+    if (titleEl) titleEl.textContent = station ? station.name : 'Оберіть відео';
+    if (subEl) subEl.textContent = 'Завантаження потоку...';
+    if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>';
+  }
   if (event === 'playing') {
     renderStations();
     updateRadioPlayBtn(true);
+    const playBtn = document.getElementById('tvPlay');
+    if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>';
   }
   if (event === 'paused') {
     renderStations();
     updateRadioPlayBtn(false);
     stopNowPlayingPolling();
+    const playBtn = document.getElementById('tvPlay');
+    if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
   }
   if (event === 'prev' || event === 'next') {
     switchStation(event === 'next' ? 1 : -1);
+  }
+  if (event === 'tvError') {
+    const subEl = document.getElementById('tvMetaSubtitle');
+    if (subEl) subEl.textContent = '⚠️ Помилка відтворення потоку (CORS/Мережа)';
+    const playBtn = document.getElementById('tvPlay');
+    if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
   }
   if (event === 'error') {
     const rdsLabel = radioInfoNow.querySelector('.rds-label');

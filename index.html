@@ -111,12 +111,27 @@
         </div>
 
         <!-- TV & Clips Mode (Shared Video Player) -->
-        <div class="tv-mode" id="tvMode" style="display:none; position:relative;">
+        <div class="tv-mode" id="tvMode" style="display:none; position:relative; flex-direction:column; align-items:center;">
            <video id="tvVideo" class="tv-video" playsinline></video>
-           <button id="fullscreenBtn" style="position:absolute; bottom:40px; right:40px; background:rgba(0,0,0,0.6); border:none; color:white; padding:8px; border-radius:8px; cursor:pointer; z-index:10;">
+           <button id="fullscreenBtn" style="position:absolute; bottom:80px; right:40px; background:rgba(0,0,0,0.6); border:none; color:white; padding:8px; border-radius:8px; cursor:pointer; z-index:10;">
              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
            </button>
-           <div id="tvSignalMeter"></div>
+           
+           <!-- TV Controls and Meta -->
+           <div class="tv-controls-bar" style="width:100%; display:flex; justify-content:space-between; align-items:center; background:var(--surface-container); padding:12px 24px; border-radius:12px; margin-top:16px;">
+              <div class="tv-meta" style="flex:1;">
+                 <h3 id="tvMetaTitle" style="margin:0; font-size:16px; color:var(--on-surface);">Оберіть відео</h3>
+                 <p id="tvMetaSubtitle" style="margin:4px 0 0 0; font-size:13px; color:var(--on-surface-variant);">---</p>
+              </div>
+              <div class="tv-actions" style="display:flex; gap:12px; align-items:center;">
+                 <button class="ctrl-btn" id="tvPrev"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+                 <button class="ctrl-btn play-btn" id="tvPlay" style="width:48px; height:48px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                 </button>
+                 <button class="ctrl-btn" id="tvStop"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></svg></button>
+                 <button class="ctrl-btn" id="tvNext"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+              </div>
+           </div>
         </div>
       </main>
 
