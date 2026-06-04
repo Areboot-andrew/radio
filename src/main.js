@@ -32,8 +32,6 @@ import {
   getVideoEl,
   getCurrentTrack,
   getCurrentTrackCover,
-  initAudioVisualizer,
-  resumeAudioContext,
 } from './player.js';
 
 import { isFav, toggleFav } from './favorites.js';
@@ -394,8 +392,6 @@ function switchMode(mode) {
   // TV: stop audio, handle video
   if (mode === 'tv') {
     stopPlayback();
-    initAudioVisualizer();
-    resumeAudioContext();
     const ve = getVideoEl();
     if (ve) ve.play().catch(() => {});
   } else if (mode === 'podcasts') {
@@ -764,11 +760,11 @@ function handlePlayerStateChange(event, station) {
   }
   if (event === 'tvError') {
     const subEl = document.getElementById('tvMetaSubtitle');
+    const playBtn = document.getElementById('tvPlay');
     if (subEl) {
        subEl.textContent = '⚠️ Помилка відтворення потоку (CORS/Мережа)';
        subEl.style.display = 'block';
     }
-    const playBtn = document.getElementById('tvPlay');
     if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
   }
   if (event === 'error') {
