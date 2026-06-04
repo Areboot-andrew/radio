@@ -278,32 +278,50 @@ export async function playTVChannel(channel) {
     if (url.endsWith('.m3u8') || url.includes('.m3u8')) {
       const Hls = (await import('hls.js')).default;
       if (Hls.isSupported() && videoEl) {
-        hls = new Hls({ enableWorker: true, lowLatencyMode: true });
-        hls.loadSource(url);
-        hls.attachMedia(videoEl);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          videoEl.play().catch(() => {});
-          isPlaying = true;
-          updatePlayBtn();
-        });
-        hls.on(Hls.Events.FRAG_LOADED, (event, data) => {
-          if (data) {
-            const loaded = (data.stats && data.stats.loaded) || (data.payload && data.payload.byteLength) || 0;
-            if (typeof loaded === 'number' && !isNaN(loaded)) {
-              bytesDownloaded += loaded;
-            }
-          }
-        });
-        hls.on(Hls.Events.ERROR, (event, data) => {
-          if (data.fatal) {
-            console.error('HLS fatal error:', data.type, data.details);
+        
+        function initHls(streamUrl, useProxy = false) {
+          if (hls) {
             hls.destroy();
-            hls = null;
-            isPlaying = false;
-            updatePlayBtn();
-            onStateChangeCb?.('tvError', currentStation);
           }
-        });
+          const finalUrl = useProxy ? 'https://corsproxy.io/?' + encodeURIComponent(streamUrl) : streamUrl;
+          hls = new Hls({ enableWorker: true, lowLatencyMode: true });
+          hls.loadSource(finalUrl);
+          hls.attachMedia(videoEl);
+          
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            videoEl.play().catch(() => {});
+            isPlaying = true;
+            updatePlayBtn();
+          });
+          
+          hls.on(Hls.Events.FRAG_LOADED, (event, data) => {
+            if (data) {
+              const loaded = (data.stats && data.stats.loaded) || (data.payload && data.payload.byteLength) || 0;
+              if (typeof loaded === 'number' && !isNaN(loaded)) {
+                bytesDownloaded += loaded;
+              }
+            }
+          });
+          
+          hls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+              console.error('HLS fatal error:', data.type, data.details);
+              if (data.type === Hls.ErrorTypes.NETWORK_ERROR && !useProxy) {
+                console.log('HLS Network/CORS Error. Retrying with proxy...');
+                initHls(streamUrl, true);
+              } else {
+                hls.destroy();
+                hls = null;
+                isPlaying = false;
+                updatePlayBtn();
+                onStateChangeCb?.('tvError', currentStation);
+              }
+            }
+          });
+        }
+        
+        initHls(url, false);
+
       } else if (videoEl) {
         videoEl.src = url;
         videoEl.play().catch(() => {});
