@@ -337,15 +337,20 @@ function switchMode(mode) {
   });
 
   // Update center panels
+  const isVideo = (mode === 'tv' || mode === 'podcasts');
   document.getElementById('radioMode').style.display = mode === 'radio' ? 'flex' : 'none';
-  document.getElementById('tvMode').style.display = mode === 'tv' ? 'flex' : 'none';
-  document.getElementById('podcastsMode').style.display = mode === 'podcasts' ? 'flex' : 'none';
+  document.getElementById('tvMode').style.display = isVideo ? 'flex' : 'none';
 
   // Update right sidebar panels
-  document.getElementById('playerBar').classList.toggle('hidden-panel', mode === 'tv');
-  document.getElementById('playerBar').classList.toggle('active-panel', mode !== 'tv');
+  document.getElementById('playerBar').classList.toggle('hidden-panel', mode !== 'radio');
+  document.getElementById('playerBar').classList.toggle('active-panel', mode === 'radio');
   document.getElementById('tvGuidePanel').classList.toggle('hidden-panel', mode !== 'tv');
   document.getElementById('tvGuidePanel').classList.toggle('active-panel', mode === 'tv');
+  const clipsPanel = document.getElementById('clipsGuidePanel');
+  if (clipsPanel) {
+    clipsPanel.classList.toggle('hidden-panel', mode !== 'podcasts');
+    clipsPanel.classList.toggle('active-panel', mode === 'podcasts');
+  }
 
   // TV: stop audio, handle video
   if (mode === 'tv') {
@@ -370,71 +375,57 @@ function switchMode(mode) {
 // ========================================
 function initPodcasts() {
   const podcasts = getPodcasts();
-  const podcastsGrid = document.getElementById('podcastsGrid');
+  const listEl = document.getElementById('clipsGuideList');
+  const countEl = document.getElementById('clipsCount');
+  const filterEl = document.getElementById('clipsCategoryFilter');
+  if (!listEl) return;
   
-  if (!podcastsGrid) {
-    console.error('podcastsGrid not found');
-    return;
+  // Extract unique categories
+  const categories = [...new Set(podcasts.map(p => p.category || 'Інше'))].sort((a, b) => a.localeCompare(b, 'uk'));
+  
+  // Populate filter
+  if (filterEl) {
+    filterEl.innerHTML = '<option value="all">Всі тематики</option>' + categories.map(c => `<option value="${c}">${c}</option>`).join('');
+    filterEl.addEventListener('change', () => {
+      renderClipsList(filterEl.value);
+    });
   }
-  
-  console.log('Rendering podcasts/clips count:', podcasts.length);
-  
-  if (podcasts.length === 0) {
-    podcastsGrid.innerHTML = '<div style="padding: 20px; color: #ef4444;">Помилка: список кліпів порожній!</div>';
-    return;
-  }
-  
-  let html = '';
-  const fallbackImg = 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png';
-  
-  // Group by category
-  const grouped = {};
-  podcasts.forEach(p => {
-    const cat = p.category || 'Інше';
-    if (!grouped[cat]) grouped[cat] = [];
-    grouped[cat].push(p);
-  });
-  
-  // Sort categories alphabetically
-  const categories = Object.keys(grouped).sort((a, b) => a.localeCompare(b, 'uk'));
-  
-  categories.forEach(cat => {
-    html += `<h3 style="margin: 24px 0 16px 0; color: var(--primary-fixed); border-bottom: 1px solid var(--outline-variant); padding-bottom: 8px; font-size: 20px;">${cat} <span style="font-size: 14px; color: var(--on-surface-variant); font-weight: normal;">(${grouped[cat].length})</span></h3>`;
-    html += `<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; min-height: 0;">`;
+
+  function renderClipsList(filter = 'all') {
+    const show = filter === 'all' ? podcasts : podcasts.filter(p => (p.category || 'Інше') === filter);
+    if (countEl) countEl.textContent = `${show.length} кліпів`;
     
-    grouped[cat].forEach(p => {
+    const fallbackImg = 'https://raw.githubusercontent.com/iptv-org/iptv/master/logo.png';
+    listEl.innerHTML = show.map(p => {
       let cover = p.cover;
-      if (!cover || cover.startsWith('http:')) {
-        cover = fallbackImg;
-      }
+      if (!cover || cover.startsWith('http:')) cover = fallbackImg;
       const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       const safeAuthor = (p.author || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       
-      html += `
-        <div class="podcast-card" data-id="${p.id}" style="background: var(--surface-container); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.2s;">
-          <div style="width: 100%; aspect-ratio: 1; background: var(--surface-container-highest); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-            <img src="${cover}" alt="${safeTitle}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
+      return `
+        <div class="tv-channel" data-id="${p.id}">
+          <div class="tv-channel-logo">
+            <img src="${cover}" alt="" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">
           </div>
-          <div style="padding: 12px;">
-            <h3 style="margin: 0 0 4px 0; font-size: 16px; color: var(--on-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${safeTitle}">${safeTitle}</h3>
-            <p style="margin: 0 0 8px 0; font-size: 12px; color: var(--on-surface-variant);" title="${safeAuthor}">${safeAuthor}</p>
-            <span style="display: inline-block; padding: 2px 6px; background: var(--primary-fixed); color: var(--on-primary-fixed); border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase;">${p.type}</span>
+          <div class="tv-channel-info">
+            <div class="tv-channel-name" title="${safeTitle}">${safeTitle}</div>
+            <div class="tv-channel-cat">${safeAuthor}</div>
           </div>
         </div>
       `;
+    }).join('');
+    
+    listEl.querySelectorAll('.tv-channel').forEach(el => {
+      el.addEventListener('click', () => {
+        listEl.querySelectorAll('.tv-channel').forEach(c => c.classList.remove('active'));
+        el.classList.add('active');
+        const p = podcasts.find(x => x.id === el.dataset.id);
+        if (p) playPodcast(p);
+      });
     });
-    html += `</div>`;
-  });
-  
-  podcastsGrid.innerHTML = html;
+  }
 
-  podcastsGrid.querySelectorAll('.podcast-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const p = podcasts.find(x => x.id === card.dataset.id);
-      if (!p) return;
-      playPodcast(p);
-    });
-  });
+  renderClipsList();
 }
 
 async function playPodcast(p) {
@@ -458,7 +449,6 @@ async function playPodcast(p) {
   }
 
   if (p.type === 'video') {
-    switchMode('tv');
     const channel = { name: p.title, url: p.url, category: p.category };
     import('./player.js').then(module => {
       module.playTVChannel(channel);

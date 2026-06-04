@@ -100,20 +100,10 @@
           </div>
         </div>
 
-        <!-- TV Mode -->
+        <!-- TV & Clips Mode (Shared Video Player) -->
         <div class="tv-mode" id="tvMode" style="display:none;">
            <video id="tvVideo" class="tv-video" playsinline></video>
            <div id="tvSignalMeter"></div>
-        </div>
-
-        <!-- Video Clips Mode -->
-        <div class="radio-mode podcasts-mode" id="podcastsMode" style="display:none;">
-          <header class="content-header">
-            <h2 class="page-title">Музичні Відеокліпи та Кіно</h2>
-          </header>
-          <div class="podcasts-grid" id="podcastsGrid" style="overflow-y: auto; flex: 1; padding-right: 8px; min-height: 0; display: flex; flex-direction: column;">
-            <!-- Populated by JS -->
-          </div>
         </div>
       </main>
 
@@ -175,6 +165,20 @@
              <span id="tvGuideCount">0 каналів</span>
            </div>
            <div id="tvGuideList" class="tv-guide-list"></div>
+        </div>
+        
+        <!-- CLIPS GUIDE -->
+        <div id="clipsGuidePanel" class="right-panel-content hidden-panel">
+           <div class="tv-guide-header">
+             <h3>Відеокліпи та Кіно</h3>
+             <span id="clipsCount">0 кліпів</span>
+           </div>
+           <div class="tv-guide-filters">
+             <select id="clipsCategoryFilter" class="tv-select" style="width:100%; margin:8px 0; padding:8px; border-radius:8px; background:var(--surface-container-high); border:none; color:var(--on-surface);">
+               <option value="all">Всі тематики</option>
+             </select>
+           </div>
+           <div id="clipsGuideList" class="tv-guide-list"></div>
         </div>
         
         <!-- Hidden elements for JS compatibility -->
