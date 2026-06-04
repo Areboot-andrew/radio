@@ -143,6 +143,8 @@ function ensureHttps(url) {
   return url;
 }
 
+let currentAudioRequestId = 0;
+
 export async function playStation(station) {
   if (!station) return;
 
@@ -167,6 +169,9 @@ export async function playStation(station) {
   // Fetch ICY metadata for now-playing
   fetchMetadata(rawUrl);
 
+  currentAudioRequestId++;
+  const reqId = currentAudioRequestId;
+
   try {
     if (url.endsWith('.m3u8') || url.includes('.m3u8')) {
       const Hls = (await import('hls.js')).default;
@@ -175,6 +180,7 @@ export async function playStation(station) {
         hls.loadSource(url);
         hls.attachMedia(audioEl);
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          if (reqId !== currentAudioRequestId) return;
           audioEl.play().catch(() => {});
           if (vizInitialized) {
             resumeAudioContext();
@@ -189,7 +195,7 @@ export async function playStation(station) {
       }
     } else {
       // Try direct HTTPS first, then cascade through proxies on error
-      await tryPlayAudio(url, 0);
+      await tryPlayAudio(url, 0, reqId);
     }
   } catch (err) {
     console.error('Playback error:', err);
@@ -198,13 +204,17 @@ export async function playStation(station) {
   onStateChangeCb?.('stationChange', station);
 }
 
-async function tryPlayAudio(originalUrl, attempt) {
+async function tryPlayAudio(originalUrl, attempt, reqId) {
+  if (reqId !== currentAudioRequestId) return;
+
   const proxied = proxyUrl(originalUrl, attempt);
   if (!proxied) {
     console.error('All proxy attempts failed for:', originalUrl);
-    isPlaying = false;
-    updatePlayBtn();
-    onStateChangeCb?.('error', currentStation);
+    if (reqId === currentAudioRequestId) {
+      isPlaying = false;
+      updatePlayBtn();
+      onStateChangeCb?.('error', currentStation);
+    }
     return;
   }
 
@@ -218,6 +228,7 @@ async function tryPlayAudio(originalUrl, attempt) {
   const playPromise = audioEl.play();
   if (playPromise) {
     playPromise.catch(err => {
+      if (reqId !== currentAudioRequestId) return;
       console.warn(`Attempt ${attempt} failed (${proxied}):`, err.message);
       if (err.name === 'NotAllowedError') {
         isPlaying = false;
@@ -226,15 +237,16 @@ async function tryPlayAudio(originalUrl, attempt) {
       }
       // If error event listener didn't catch it yet, proceed to next
       audioEl.removeEventListener('error', audioEl._errorHandler);
-      tryPlayAudio(originalUrl, attempt + 1);
+      tryPlayAudio(originalUrl, attempt + 1, reqId);
     });
   }
 
   // Define and store errorHandler on the element reference for complete cleanup
   audioEl._errorHandler = () => {
     audioEl.removeEventListener('error', audioEl._errorHandler);
+    if (reqId !== currentAudioRequestId) return;
     console.warn(`Audio element network error on attempt ${attempt}, trying next proxy...`);
-    tryPlayAudio(originalUrl, attempt + 1);
+    tryPlayAudio(originalUrl, attempt + 1, reqId);
   };
   audioEl.addEventListener('error', audioEl._errorHandler, { once: true });
 
