@@ -50,17 +50,22 @@ export function initPlayer(onStateChange) {
 
   // Bind controls
   if (playerPlayBtn) playerPlayBtn.addEventListener('click', togglePlay);
-  document.getElementById('volumeSlider').addEventListener('input', (e) => {
-    volume = e.target.value / 100;
-    if (audioEl) audioEl.volume = volume;
-  });
-  playerFavorite.addEventListener('click', () => {
-    if (currentStation) {
-      toggleFav(currentStation.stationuuid);
-      updateFavBtn();
-      onStateChangeCb?.('favorite', currentStation);
-    }
-  });
+  const volSlider = document.getElementById('volumeSlider');
+  if (volSlider) {
+    volSlider.addEventListener('input', (e) => {
+      volume = e.target.value / 100;
+      if (audioEl) audioEl.volume = volume;
+    });
+  }
+  if (playerFavorite) {
+    playerFavorite.addEventListener('click', () => {
+      if (currentStation) {
+        toggleFav(currentStation.stationuuid);
+        updateFavBtn();
+        onStateChangeCb?.('favorite', currentStation);
+      }
+    });
+  }
 
   // Audio events
   audioEl.addEventListener('playing', () => {
