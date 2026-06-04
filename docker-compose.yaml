@@ -7,9 +7,9 @@ services:
     container_name: radio-player
     restart: unless-stopped
     expose:
-      - "8080"
+      - "80"
     healthcheck:
-      test: ["CMD-SHELL", "wget --spider -q http://127.0.0.1:8080/health || exit 1"]
+      test: ["CMD-SHELL", "wget --spider -q http://127.0.0.1/health || exit 1"]
       interval: 30s
       timeout: 3s
       retries: 3
@@ -30,17 +30,11 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=coolify"
-      - "traefik.http.services.radio.loadbalancer.server.port=8080"
+      - "traefik.http.services.radio.loadbalancer.server.port=80"
       - "traefik.http.routers.radio.rule=Host(`radio.texno.plus`)"
       - "traefik.http.routers.radio.entrypoints=https"
       - "traefik.http.routers.radio.tls=true"
       - "traefik.http.routers.radio.tls.certresolver=letsencrypt"
-      # Auto-redirect http → https
-      - "traefik.http.routers.radio-http.rule=Host(`radio.texno.plus`)"
-      - "traefik.http.routers.radio-http.entrypoints=http"
-      - "traefik.http.routers.radio-http.middlewares=redirect-to-https"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
 
 networks:
   coolify:

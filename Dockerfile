@@ -31,13 +31,10 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Coolify needs wget/curl for healthcheck — wget is already there.
 # Healthcheck — use the same wget that alpine ships, but via `wget --spider`
 HEALTHCHECK --interval=30s --timeout=3s --retries=3 --start-period=5s \
-  CMD wget --spider -q http://127.0.0.1:8080/health || exit 1
+  CMD wget --spider -q http://127.0.0.1/health || exit 1
 
-# Listen on 8080 inside the container so we don't need root for port binding.
-# The compose file maps host port to 8080 inside.
-EXPOSE 8080
+# Listen on 80 inside the container
+EXPOSE 80
 
 # Run as root (standard nginx-in-container pattern).
-# Static-only SPA → no real attack surface, and avoids the
-# /var/cache/nginx + /var/run + port-80 dance.
 CMD ["nginx", "-g", "daemon off;"]
