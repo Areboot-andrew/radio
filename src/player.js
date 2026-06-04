@@ -121,6 +121,29 @@ export function resumeAudioContext() {
   }
 }
 
+// ========================================
+// CORS Proxy helpers
+// ========================================
+const CORS_PROXIES = [
+  (url) => url, // try direct first
+  (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
+  (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
+  (url) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+];
+
+function proxyUrl(url, proxyIndex = 0) {
+  if (proxyIndex >= CORS_PROXIES.length) return null;
+  return CORS_PROXIES[proxyIndex](url);
+}
+
+// Ensures http URLs are upgraded to https to avoid Mixed Content
+function ensureHttps(url) {
+  if (url && url.startsWith('http://')) {
+    return url.replace('http://', 'https://');
+  }
+  return url;
+}
+
 export async function playStation(station) {
   if (!station) return;
 
@@ -139,10 +162,11 @@ export async function playStation(station) {
   }
 
   // Play audio
-  const url = station.url_resolved || station.url;
+  const rawUrl = station.url_resolved || station.url;
+  const url = ensureHttps(rawUrl);
 
   // Fetch ICY metadata for now-playing
-  fetchMetadata(url);
+  fetchMetadata(rawUrl);
 
   try {
     if (url.endsWith('.m3u8') || url.includes('.m3u8')) {
@@ -165,21 +189,56 @@ export async function playStation(station) {
         resumeAudioContext();
       }
     } else {
-      audioEl.src = url;
-      await audioEl.play().catch(err => {
-        console.warn('Autoplay blocked:', err);
-        isPlaying = false;
-        updatePlayBtn();
-      });
-      if (vizInitialized) {
-        resumeAudioContext();
-      }
+      // Try direct HTTPS first, then cascade through proxies on error
+      await tryPlayAudio(url, 0);
     }
   } catch (err) {
     console.error('Playback error:', err);
   }
 
   onStateChangeCb?.('stationChange', station);
+}
+
+async function tryPlayAudio(originalUrl, attempt) {
+  const proxied = proxyUrl(originalUrl, attempt);
+  if (!proxied) {
+    // All proxies exhausted
+    console.error('All proxy attempts failed for:', originalUrl);
+    isPlaying = false;
+    updatePlayBtn();
+    onStateChangeCb?.('error', currentStation);
+    return;
+  }
+
+  audioEl.src = proxied;
+
+  const playPromise = audioEl.play();
+  if (playPromise) {
+    playPromise.catch(err => {
+      console.warn(`Attempt ${attempt} failed (${proxied}):`, err.message);
+      // Only retry if it's a network/CORS error, not a user gesture issue
+      if (err.name === 'NotAllowedError') {
+        // Autoplay blocked — don't retry
+        isPlaying = false;
+        updatePlayBtn();
+        return;
+      }
+      tryPlayAudio(originalUrl, attempt + 1);
+    });
+  }
+
+  // Also handle network errors via the error event
+  const errorHandler = () => {
+    audioEl.removeEventListener('error', errorHandler);
+    console.warn(`Audio error on attempt ${attempt}, trying next proxy...`);
+    tryPlayAudio(originalUrl, attempt + 1);
+  };
+  // Remove previous error handlers and add new one
+  audioEl.addEventListener('error', errorHandler, { once: true });
+
+  if (vizInitialized) {
+    resumeAudioContext();
+  }
 }
 
 function fetchMetadata(url) {
@@ -257,18 +316,28 @@ export async function playTVChannel(channel) {
   updatePlayerUI(currentStation);
   clearMiniGlobe();
 
-  const url = channel.url;
+  const url = ensureHttps(channel.url);
 
   try {
     if (url.endsWith('.m3u8') || url.includes('.m3u8')) {
       const Hls = (await import('hls.js')).default;
       if (Hls.isSupported() && videoEl) {
         
-        function initHls(streamUrl, useProxy = false) {
+        let proxyAttempt = 0;
+
+        function initHls(streamUrl, pIdx) {
           if (hls) {
             hls.destroy();
           }
-          const finalUrl = useProxy ? 'https://corsproxy.io/?' + encodeURIComponent(streamUrl) : streamUrl;
+          const finalUrl = proxyUrl(streamUrl, pIdx);
+          if (!finalUrl) {
+            // All proxies exhausted
+            isPlaying = false;
+            updatePlayBtn();
+            onStateChangeCb?.('tvError', currentStation);
+            return;
+          }
+          console.log(`TV: trying proxy #${pIdx}: ${finalUrl.substring(0, 80)}...`);
           hls = new Hls({ enableWorker: true, lowLatencyMode: true });
           hls.loadSource(finalUrl);
           hls.attachMedia(videoEl);
@@ -291,9 +360,10 @@ export async function playTVChannel(channel) {
           hls.on(Hls.Events.ERROR, (event, data) => {
             if (data.fatal) {
               console.error('HLS fatal error:', data.type, data.details);
-              if (data.type === Hls.ErrorTypes.NETWORK_ERROR && !useProxy) {
-                console.log('HLS Network/CORS Error. Retrying with proxy...');
-                initHls(streamUrl, true);
+              proxyAttempt++;
+              if (proxyAttempt < CORS_PROXIES.length) {
+                console.log(`Retrying with proxy #${proxyAttempt}...`);
+                initHls(streamUrl, proxyAttempt);
               } else {
                 hls.destroy();
                 hls = null;
@@ -305,7 +375,7 @@ export async function playTVChannel(channel) {
           });
         }
         
-        initHls(url, false);
+        initHls(url, 0);
 
       } else if (videoEl) {
         videoEl.src = url;
