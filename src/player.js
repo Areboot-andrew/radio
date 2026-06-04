@@ -124,6 +124,8 @@ export function initPlayer(onStateChange) {
 }
 
 let drawVisual = null;
+let fakeVizPhase = 0;
+
 function drawVisualizer() {
   const canvas = document.getElementById('audioVisualizer');
   if (!canvas) {
@@ -141,20 +143,47 @@ function drawVisualizer() {
     analyserNode.getByteFrequencyData(freqDataArray);
     ctx.clearRect(0, 0, width, height);
     
+    // Check if array is completely silent (CORS block on cross-origin stream)
+    let isSilent = true;
+    for (let i = 0; i < freqDataArray.length; i++) {
+      if (freqDataArray[i] > 0) {
+        isSilent = false;
+        break;
+      }
+    }
+    
     const barWidth = 6;
     const gap = 3;
     const barCount = Math.floor(width / (barWidth + gap));
-    const step = Math.max(1, Math.floor((freqDataArray.length * 0.6) / barCount)); // Use only lower 60% of frequencies
+    const step = Math.max(1, Math.floor((freqDataArray.length * 0.6) / barCount));
+    
+    fakeVizPhase += 0.15;
     
     for (let i = 0; i < barCount; i++) {
-      const dataIndex = i * step;
-      let sum = 0;
-      for (let j = 0; j < step; j++) {
-         sum += freqDataArray[dataIndex + j] || 0;
-      }
-      const val = sum / step;
+      let percent = 0;
       
-      const percent = val / 255;
+      if (isSilent) {
+        // Fake realistic visualizer for CORS-blocked streams
+        // Combine sine waves with random noise for a natural "dancing" effect
+        const noise = Math.random() * 0.4;
+        const wave1 = Math.sin(fakeVizPhase + i * 0.2) * 0.3 + 0.3;
+        const wave2 = Math.cos(fakeVizPhase * 1.5 - i * 0.1) * 0.2 + 0.2;
+        // Make the center bars bounce higher naturally
+        const centerDist = 1 - Math.abs((i / barCount) - 0.5) * 2; 
+        percent = (wave1 + wave2 + noise) * (0.4 + centerDist * 0.6);
+        // Sometimes drop to 0 to simulate real music beats
+        if (Math.random() > 0.95) percent *= 0.2;
+      } else {
+        // Real Web Audio data
+        const dataIndex = i * step;
+        let sum = 0;
+        for (let j = 0; j < step; j++) {
+           sum += freqDataArray[dataIndex + j] || 0;
+        }
+        const val = sum / step;
+        percent = val / 255;
+      }
+      
       const barHeight = Math.max(3, percent * height);
       
       const gradient = ctx.createLinearGradient(0, height, 0, 0);
@@ -162,10 +191,8 @@ function drawVisualizer() {
       gradient.addColorStop(1, '#059669'); // Darker primary
       
       ctx.fillStyle = gradient;
-      // Center the bars vertically or bottom align? Bottom align is standard
-      ctx.beginPath();
-      ctx.roundRect(i * (barWidth + gap), height - barHeight, barWidth, barHeight, 3);
-      ctx.fill();
+      // Using fillRect for wider browser compatibility instead of roundRect
+      ctx.fillRect(i * (barWidth + gap), height - barHeight, barWidth, barHeight);
     }
   }
   drawVisual = requestAnimationFrame(drawVisualizer);
@@ -230,6 +257,9 @@ export async function playStation(station) {
 
   // Play audio
   const url = station.url_resolved || station.url;
+
+  // Initialize visualizer on user interaction
+  initAudioVisualizer();
 
   // Fetch ICY metadata for now-playing
   fetchMetadata(url);
