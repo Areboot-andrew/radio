@@ -36,8 +36,27 @@ setInterval(() => {
   }
   
   if (currentStation && currentStation.type !== 'tv' && currentStation.type !== 'video') {
-    // Radio stations: display reported bitrate or default 128 kbps
-    kbpsDisplay = currentStation.bitrate || 128;
+    // Radio stations: Base bitrate
+    let baseKbps = currentStation.bitrate || 128;
+    
+    // Create a dynamic VBR (Variable Bit Rate) effect based on actual audio volume
+    let variance = 0;
+    if (analyserNode && freqDataArray && isPlaying) {
+      analyserNode.getByteFrequencyData(freqDataArray);
+      let sum = 0;
+      // Sample a portion of frequencies for intensity
+      for (let i = 0; i < 50; i++) sum += freqDataArray[i];
+      let avgVolume = sum / 50; // 0 to 255
+      
+      // Fluctuate between -2% to +8% based on audio intensity (simulates VBR encoding)
+      let percent = (avgVolume / 255); 
+      variance = Math.round(baseKbps * (percent * 0.10 - 0.02));
+    } else {
+      // Small random jitter if analyzer isn't ready
+      variance = Math.floor(Math.random() * 5) - 2;
+    }
+    
+    kbpsDisplay = baseKbps + variance;
   } else if (hls && hls.bandwidthEstimate) {
     // HLS provides a built-in bandwidth estimator
     kbpsDisplay = Math.round(hls.bandwidthEstimate / 1000);
