@@ -905,23 +905,26 @@ body {
 
   /* --- Station list: simplified grid --- */
   .list-header {
-    grid-template-columns: 1fr auto 32px;
+    grid-template-columns: 3fr 2fr auto 32px;
     padding: 0 12px 8px;
     font-size: 10px;
   }
-  .list-header .col-genre,
-  .list-header .col-country {
+  .list-header .col-genre {
     display: none;
   }
 
   .station-item {
-    grid-template-columns: 1fr auto 32px;
+    grid-template-columns: 3fr 2fr auto 32px;
     padding: 10px 12px;
     gap: 8px;
   }
-  .station-col-genre,
-  .station-col-country {
+  .station-col-genre {
     display: none !important;
+  }
+  .station-col-country {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .st-art {
@@ -1091,6 +1094,12 @@ body {
 
   .station-item {
     padding: 8px 10px;
+    grid-template-columns: 3fr 1fr auto 28px;
+  }
+
+  .station-col-country {
+    font-size: 11px;
+    max-width: 60px;
   }
 
   .st-art {
