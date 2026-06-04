@@ -35,7 +35,10 @@ setInterval(() => {
     return;
   }
   
-  if (hls && hls.bandwidthEstimate) {
+  if (currentStation && currentStation.type !== 'tv' && currentStation.type !== 'video') {
+    // Radio stations: display reported bitrate or default 128 kbps
+    kbpsDisplay = currentStation.bitrate || 128;
+  } else if (hls && hls.bandwidthEstimate) {
     // HLS provides a built-in bandwidth estimator
     kbpsDisplay = Math.round(hls.bandwidthEstimate / 1000);
   } else {
