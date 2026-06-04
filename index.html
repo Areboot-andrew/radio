@@ -34,8 +34,8 @@
             Live TV
           </button>
           <button class="nav-item mode-btn" data-mode="podcasts">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
-            Подкасти
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            Відеокліпи
           </button>
           <button class="nav-item" id="favoritesBtn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -106,12 +106,12 @@
            <div id="tvSignalMeter"></div>
         </div>
 
-        <!-- Podcasts Mode -->
-        <div class="podcasts-mode" id="podcastsMode" style="display:none;">
+        <!-- Video Clips Mode -->
+        <div class="radio-mode podcasts-mode" id="podcastsMode" style="display:none;">
           <header class="content-header">
-            <h2 class="page-title">Каталог Подкастів</h2>
+            <h2 class="page-title">Музичні Відеокліпи та Кіно</h2>
           </header>
-          <div class="podcasts-grid" id="podcastsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px 0;">
+          <div class="podcasts-grid" id="podcastsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; overflow-y: auto; flex: 1; padding-right: 8px;">
             <!-- Populated by JS -->
           </div>
         </div>

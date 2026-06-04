@@ -256,8 +256,8 @@ body {
   gap: 4px;
   padding-right: 8px;
 }
-.stations-list::-webkit-scrollbar { width: 6px; }
-.stations-list::-webkit-scrollbar-thumb { background: var(--surface-container-high); border-radius: 3px; }
+.stations-list::-webkit-scrollbar, .podcasts-grid::-webkit-scrollbar { width: 6px; }
+.stations-list::-webkit-scrollbar-thumb, .podcasts-grid::-webkit-scrollbar-thumb { background: var(--surface-container-high); border-radius: 3px; }
 
 .station-item {
   display: grid;
