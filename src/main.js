@@ -246,6 +246,22 @@ function setupEventListeners() {
   document.getElementById('searchOverlay').addEventListener('click', closeSearch);
   searchInput.addEventListener('input', debounce(onSearchInput, 150));
 
+  // Chips
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', (e) => {
+      // ignore checkbox clicks inside labels
+      if (e.target.tagName === 'INPUT') return;
+      if (chip.tagName === 'LABEL') return;
+
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      genreFilter = chip.dataset.genre || '';
+      showFavoritesOnly = chip.id === 'chipFavs';
+      applyFilters();
+    });
+  });
+
   // Timer
   document.getElementById('timerBtn').addEventListener('click', openTimer);
   document.getElementById('timerOverlay').addEventListener('click', closeTimer);
@@ -436,33 +452,31 @@ function renderStations() {
       : '';
 
     return `
-      <div class="station-card ${isActive ? 'active' : ''} ${isNowPlaying ? 'playing' : ''}"
-           data-uuid="${s.stationuuid}">
-        <button class="station-fav-btn ${fav ? 'is-fav' : ''}" data-uuid="${s.stationuuid}" title="${fav ? 'Видалити з обраного' : 'Додати в обране'}">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="${fav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.5">
+      <div class="station-item ${isActive ? 'active' : ''} ${isNowPlaying ? 'playing' : ''}" data-uuid="${s.stationuuid}">
+        <div class="station-col-primary">
+          <div class="st-art ${s.hiRes ? 'hires-fallback' : ''}">
+            ${s.favicon
+              ? `<img src="${s.favicon}" alt="" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='${s.hiRes ? 'FLAC' : flag}'">`
+              : (s.hiRes ? 'FLAC' : flag)
+            }
+          </div>
+          <div class="st-info">
+            <div class="st-name" title="${escapeHtml(s.name)}">${escapeHtml(s.name)}</div>
+            <div class="st-now">Now: ${escapeHtml(s.name)}</div>
+          </div>
+        </div>
+        <div class="station-col-genre">
+          ${s.genre ? `<span class="genre-badge">${escapeHtml(s.genre)}</span>` : '-'}
+        </div>
+        <div class="station-col-country">${flag} ${escapeHtml(s.country)}</div>
+        <div class="station-col-quality">
+          ${qualityBadge || `<span class="quality-badge">${s.bitrate || '?'}k</span>`}
+        </div>
+        <button class="st-fav-btn ${fav ? 'is-fav' : ''}" data-uuid="${s.stationuuid}" title="${fav ? 'Remove from favorites' : 'Add to favorites'}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="${fav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
           </svg>
         </button>
-        ${qualityBadge}
-        <div class="station-favicon ${s.hiRes ? 'hires-fallback' : ''}">
-          ${s.favicon
-            ? `<img src="${s.favicon}" alt="" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('show-fallback');this.parentElement.innerHTML='${s.hiRes ? 'FLAC' : (s.premium ? '★' : flag)}'">`
-            : (s.hiRes ? 'FLAC' : (s.premium ? '★' : flag))
-          }
-        </div>
-        <div class="station-name" title="${escapeHtml(s.name)}">${escapeHtml(s.name)}</div>
-        ${bitrateStr ? `<div class="station-bitrate">${bitrateStr} ${codecStr}</div>` : ''}
-        <div class="station-meta">
-          <span>${flag}</span>
-          <span>${escapeHtml(s.country)}</span>
-        </div>
-        ${s.genre ? `<span class="station-genre-badge">${escapeHtml(s.genre)}</span>` : ''}
-        <div class="station-signal">
-          <div class="signal-dot ${healthClass}" style="height:40%"></div>
-          <div class="signal-dot ${healthClass}" style="height:60%"></div>
-          <div class="signal-dot ${healthClass}" style="height:80%"></div>
-          <div class="signal-dot ${healthClass}" style="height:100%"></div>
-        </div>
       </div>
     `;
   }).join('');
@@ -470,10 +484,10 @@ function renderStations() {
 
 // Event delegation for station grid
 stationsGrid.addEventListener('click', (e) => {
-  const card = e.target.closest('.station-card');
+  const card = e.target.closest('.station-item');
   if (!card) return;
 
-  const favBtn = e.target.closest('.station-fav-btn');
+  const favBtn = e.target.closest('.st-fav-btn');
   if (favBtn) {
     e.stopPropagation();
     const uuid = favBtn.dataset.uuid;
