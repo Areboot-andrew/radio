@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="100%" height="auto">
+  <!-- Round Icon with letter T and technical tracks -->
+  <g transform="translate(10, 10)">
+    <!-- White Left Half Circle -->
+    <path d="M 50 0 A 50 50 0 0 0 50 100 A 50 50 0 0 0 58 99.3 L 52.8 90.7 A 40 40 0 0 1 50 10 A 40 40 0 0 1 56 10.4 L 59 1.2 A 50 50 0 0 0 50 0 Z" fill="#FFFFFF"/>
+    
+    <!-- Orange Right Arch Sections -->
+    <path d="M 59 1.2 L 56.1 10.4 A 40 40 0 0 1 90 50 A 40 40 0 0 1 83.2 71 L 91.4 76.7 A 50 50 0 0 0 100 50 A 50 50 0 0 0 59 1.2 Z" fill="#E45B12"/>
+    <path d="M 80.2 77.8 A 40 40 0 0 1 59 90.1 L 63.8 98.8 A 50 50 0 0 0 88.2 83.4 Z" fill="#E45B12"/>
+    <path d="M 85 50 A 35 35 0 0 1 81.3 64.6 L 89.5 70.3 A 45 45 0 0 0 95 50 Z" fill="#E45B12"/>
+    
+    <!-- Stylized letter T inside -->
+    <path d="M 17 25 L 82 25 L 79 36 L 50 36 L 22.5 83 L 14 83 L 34.5 48 L 47 48 L 47 36 L 21 36 Z" fill="#FFFFFF"/>
+    <path d="M 17 25 L 82 25 L 79 36 L 21 36 Z" fill="#E45B12"/>
+    
+    <!-- Circuit connection tracks/nodes -->
+    <path d="M 50 78 L 54 85 L 50 90 L 47 85 Z" fill="#E45B12" opacity="0.3"/>
+    
+    <!-- Track 1 (Orange node) -->
+    <path d="M 39 88 L 48 72 L 57 60" fill="none" stroke="#E45B12" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="57" cy="60" r="3.5" fill="#E45B12"/>
+    <circle cx="57" cy="60" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Track 2 (White node) -->
+    <path d="M 45 88 L 53 74 L 71 58" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="71" cy="58" r="3.5" fill="#FFFFFF"/>
+    <circle cx="71" cy="58" r="1.5" fill="#E45B12"/>
+
+    <!-- Track 3 (White node) -->
+    <path d="M 52 88 L 59 76 L 77 64" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="77" cy="64" r="3.5" fill="#FFFFFF"/>
+    <circle cx="77" cy="64" r="1.5" fill="#E45B12"/>
+  </g>
+  
+  <!-- Sleek Typography -->
+  <g transform="translate(130, 20)">
+    <!-- "Texno" in bold white italic -->
+    <text x="0" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#FFFFFF" letter-spacing="-1">Texno</text>
+    
+    <!-- "plus" in bold orange italic -->
+    <text x="145" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#E45B12" letter-spacing="-1">plus</text>
+    
+    <!-- "-radio" in clean white italic -->
+    <text x="245" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="800" font-style="italic" fill="#FFFFFF" letter-spacing="-1">-radio</text>
+  </g>
+</svg>

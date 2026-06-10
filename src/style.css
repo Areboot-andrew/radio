@@ -64,22 +64,7 @@ body {
 }
 
 .logo-area {
-  margin-bottom: 3rem;
-}
-.logo-text {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--primary-fixed-dim);
-  letter-spacing: -0.02em;
-}
-.logo-subtext {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--on-surface-variant);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-top: 4px;
+  margin-bottom: 2rem;
 }
 
 .main-nav {
