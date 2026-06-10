@@ -32,15 +32,15 @@
     <circle cx="77" cy="64" r="1.5" fill="#E45B12"/>
   </g>
   
-  <!-- Sleek Typography with precise positioning -->
+  <!-- Sleek Typography with safe horizontal positions -->
   <g transform="translate(130, 20)">
     <!-- "Texno" in bold white italic -->
     <text x="0" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#FFFFFF" letter-spacing="-1">Texno</text>
     
-    <!-- "plus" in bold orange italic (shifted from 145 to 160) -->
-    <text x="160" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#E45B12" letter-spacing="-1">plus</text>
+    <!-- "plus" in bold orange italic (shifted to 175) -->
+    <text x="175" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="900" font-style="italic" fill="#E45B12" letter-spacing="-1">plus</text>
     
-    <!-- "-radio" in clean white italic (shifted from 245 to 275) -->
-    <text x="275" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="800" font-style="italic" fill="#FFFFFF" letter-spacing="-1">-radio</text>
+    <!-- "-radio" in clean white italic (shifted to 300) -->
+    <text x="300" y="55" font-family="'Hanken Grotesk', 'Inter', sans-serif" font-size="52" font-weight="800" font-style="italic" fill="#FFFFFF" letter-spacing="-1">-radio</text>
   </g>
 </svg>
