@@ -874,7 +874,9 @@ function handlePlayerStateChange(event, station) {
     const titleEl = document.getElementById('tvMetaTitle');
     const subEl = document.getElementById('tvMetaSubtitle');
     const overlay = document.getElementById('tvErrorOverlay');
+    const loadOverlay = document.getElementById('tvLoadingOverlay');
     if (overlay) overlay.style.display = 'none';
+    if (loadOverlay) loadOverlay.style.display = 'flex';
     if (titleEl) titleEl.textContent = station ? station.name : 'Оберіть відео';
     if (subEl) {
        subEl.textContent = '';
@@ -882,6 +884,8 @@ function handlePlayerStateChange(event, station) {
     }
   }
   if (event === 'playing') {
+    const loadOverlay = document.getElementById('tvLoadingOverlay');
+    if (loadOverlay) loadOverlay.style.display = 'none';
     renderStations();
     updateRadioPlayBtn(true);
   }
@@ -897,6 +901,8 @@ function handlePlayerStateChange(event, station) {
     const subEl = document.getElementById('tvMetaSubtitle');
     const playBtn = document.getElementById('tvPlay');
     const overlay = document.getElementById('tvErrorOverlay');
+    const loadOverlay = document.getElementById('tvLoadingOverlay');
+    if (loadOverlay) loadOverlay.style.display = 'none';
     if (subEl) {
        subEl.textContent = '⚠️ Помилка відтворення потоку (CORS/Мережа)';
        subEl.style.display = 'block';
