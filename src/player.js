@@ -148,16 +148,21 @@ export function resumeAudioContext() {
 // ========================================
 // CORS Proxy helpers
 // ========================================
+
+// Add your Cloudflare Worker URL here (e.g., 'https://proxy.myname.workers.dev/?url=')
+export const MY_CLOUDFLARE_PROXY = '';
+
 const CORS_PROXIES = [
-  (url) => url, // try direct first
-  (url) => 'https://corsproxy.io/?' + encodeURIComponent(url),
-  (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
-  (url) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+  { name: 'direct', getUrl: (url) => url, prefix: '' },
+  ...(MY_CLOUDFLARE_PROXY ? [{ name: 'cloudflare', getUrl: (url) => MY_CLOUDFLARE_PROXY + encodeURIComponent(url), prefix: MY_CLOUDFLARE_PROXY }] : []),
+  { name: 'corsproxy.io', getUrl: (url) => 'https://corsproxy.io/?' + encodeURIComponent(url), prefix: 'https://corsproxy.io/' },
+  { name: 'allorigins.win', getUrl: (url) => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url), prefix: 'https://api.allorigins.win/' },
+  { name: 'codetabs.com', getUrl: (url) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url), prefix: 'https://api.codetabs.com/' }
 ];
 
 function proxyUrl(url, proxyIndex = 0) {
   if (proxyIndex >= CORS_PROXIES.length) return null;
-  return CORS_PROXIES[proxyIndex](url);
+  return CORS_PROXIES[proxyIndex].getUrl(url);
 }
 
 // Ensures http URLs are upgraded to https to avoid Mixed Content
@@ -392,9 +397,21 @@ export async function playTVChannel(channel) {
             onStateChangeCb?.('tvError', currentStation);
             return;
           }
-          console.log(`TV: trying proxy #${pIdx}: ${finalUrl.substring(0, 80)}...`);
+          console.log(`TV: trying proxy #${pIdx} (${CORS_PROXIES[pIdx].name}): ${finalUrl.substring(0, 80)}...`);
           onStateChangeCb?.('tvLoadingProxy', { attempt: pIdx + 1, total: CORS_PROXIES.length });
-          hls = new Hls({ enableWorker: true, lowLatencyMode: true });
+          
+          hls = new Hls({ 
+            enableWorker: true, 
+            lowLatencyMode: true,
+            xhrSetup: function (xhr, url) {
+              const proxyObj = CORS_PROXIES[pIdx];
+              if (proxyObj.name === 'direct') return; // direct access, no proxy needed
+              if (url.startsWith(proxyObj.prefix)) return; // already proxied
+              
+              const rewrittenUrl = proxyObj.getUrl(url);
+              xhr.open('GET', rewrittenUrl, true);
+            }
+          });
           hls.loadSource(finalUrl);
           hls.attachMedia(videoEl);
           
