@@ -109,6 +109,22 @@ export function initPlayer(onStateChange) {
     onStateChangeCb?.('paused', currentStation);
   });
 
+  if (videoEl) {
+    videoEl.addEventListener('playing', () => {
+      isPlaying = true;
+      updatePlayBtn();
+      onStateChangeCb?.('playing', currentStation);
+    });
+    videoEl.addEventListener('pause', () => {
+      isPlaying = false;
+      updatePlayBtn();
+      onStateChangeCb?.('paused', currentStation);
+    });
+    videoEl.addEventListener('error', () => {
+      onStateChangeCb?.('tvError', currentStation);
+    });
+  }
+
   // Removed global audioEl error event listener that was conflicting with tryPlayAudio's retry cascade
 
   return { audioEl, videoEl };
@@ -368,6 +384,7 @@ export async function playTVChannel(channel) {
             return;
           }
           console.log(`TV: trying proxy #${pIdx}: ${finalUrl.substring(0, 80)}...`);
+          onStateChangeCb?.('tvLoadingProxy', { attempt: pIdx + 1, total: CORS_PROXIES.length });
           hls = new Hls({ enableWorker: true, lowLatencyMode: true });
           hls.loadSource(finalUrl);
           hls.attachMedia(videoEl);

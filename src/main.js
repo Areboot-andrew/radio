@@ -897,6 +897,12 @@ function handlePlayerStateChange(event, station) {
   if (event === 'prev' || event === 'next') {
     switchStation(event === 'next' ? 1 : -1);
   }
+  if (event === 'tvLoadingProxy') {
+    const loadText = document.getElementById('tvLoadingText');
+    if (loadText && station) {
+       loadText.textContent = `Спроба ${station.attempt} з ${station.total}: підключення через проксі...`;
+    }
+  }
   if (event === 'tvError') {
     const subEl = document.getElementById('tvMetaSubtitle');
     const playBtn = document.getElementById('tvPlay');
