@@ -544,7 +544,7 @@ function initPodcasts() {
       grouped[cat].push(p);
     });
     
-    const fallbackImg = '/texnoplus.svg';
+    const fallbackImg = '/radio-icon.svg';
     
     let html = '';
     const sortedCats = Object.keys(grouped).sort((a, b) => a.localeCompare(b, 'uk'));
@@ -1026,8 +1026,10 @@ function renderTVGuide(channels) {
 async function selectTVChannel(channel) {
   currentTVChannel = channel;
 
-  tvSignalMeter.classList.add('visible', 'scanning');
-  tvSignalMeter.classList.remove('locked');
+  if (tvSignalMeter) {
+    tvSignalMeter.classList.add('visible', 'scanning');
+    tvSignalMeter.classList.remove('locked');
+  }
 
   if (channel) {
     playTVChannel(channel);
@@ -1039,8 +1041,10 @@ async function selectTVChannel(channel) {
   }
 
   setTimeout(() => {
-    tvSignalMeter.classList.remove('scanning');
-    tvSignalMeter.classList.add('locked');
+    if (tvSignalMeter) {
+      tvSignalMeter.classList.remove('scanning');
+      tvSignalMeter.classList.add('locked');
+    }
   }, 800);
 
   const loc = getCountryLocation(channel.countryCode || channel.country);
