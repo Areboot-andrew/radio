@@ -207,19 +207,54 @@ export async function playStation(station) {
     if (url.endsWith('.m3u8') || url.includes('.m3u8')) {
       const Hls = (await import('hls.js')).default;
       if (Hls.isSupported()) {
-        hls = new Hls({ enableWorker: true, lowLatencyMode: true });
-        hls.loadSource(url);
-        hls.attachMedia(audioEl);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          if (reqId !== currentAudioRequestId) return;
-          audioEl.play().catch(() => {});
-          if (vizInitialized) {
-            resumeAudioContext();
+        
+        function initAudioHls(streamUrl, pIdx) {
+          if (hls) hls.destroy();
+          const finalUrl = proxyUrl(streamUrl, pIdx);
+          if (!finalUrl) {
+            isPlaying = false;
+            updatePlayBtn();
+            onStateChangeCb?.('error', currentStation);
+            return;
           }
-        });
+          
+          hls = new Hls({ 
+            enableWorker: true, 
+            lowLatencyMode: true,
+            xhrSetup: function (xhr, u) {
+              const proxyObj = CORS_PROXIES[pIdx];
+              if (proxyObj.name === 'direct') return;
+              if (u.startsWith(proxyObj.prefix)) return;
+              xhr.open('GET', proxyObj.getUrl(u), true);
+            }
+          });
+          
+          hls.loadSource(finalUrl);
+          hls.attachMedia(audioEl);
+          
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            if (reqId !== currentAudioRequestId) return;
+            audioEl.play().catch(() => {});
+            if (vizInitialized) resumeAudioContext();
+          });
+          
+          hls.on(Hls.Events.ERROR, function (event, data) {
+            if (data.fatal) {
+              if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+                initAudioHls(streamUrl, pIdx + 1);
+              } else {
+                isPlaying = false;
+                updatePlayBtn();
+                onStateChangeCb?.('error', currentStation);
+              }
+            }
+          });
+        }
+        
+        initAudioHls(url, 0);
+
       } else {
-        audioEl.src = url;
-        audioEl.play().catch(() => {});
+        await tryPlayAudio(url, 0, reqId);
       }
       if (vizInitialized) {
         resumeAudioContext();
