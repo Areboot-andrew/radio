@@ -873,6 +873,8 @@ function handlePlayerStateChange(event, station) {
   if (event === 'tvChange') {
     const titleEl = document.getElementById('tvMetaTitle');
     const subEl = document.getElementById('tvMetaSubtitle');
+    const overlay = document.getElementById('tvErrorOverlay');
+    if (overlay) overlay.style.display = 'none';
     if (titleEl) titleEl.textContent = station ? station.name : 'Оберіть відео';
     if (subEl) {
        subEl.textContent = '';
@@ -894,10 +896,12 @@ function handlePlayerStateChange(event, station) {
   if (event === 'tvError') {
     const subEl = document.getElementById('tvMetaSubtitle');
     const playBtn = document.getElementById('tvPlay');
+    const overlay = document.getElementById('tvErrorOverlay');
     if (subEl) {
        subEl.textContent = '⚠️ Помилка відтворення потоку (CORS/Мережа)';
        subEl.style.display = 'block';
     }
+    if (overlay) overlay.style.display = 'flex';
     if (playBtn) playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
   }
   if (event === 'error') {
