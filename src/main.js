@@ -1051,9 +1051,6 @@ async function selectTVChannel(channel) {
       tvSignalMeter.classList.add('locked');
     }
   }, 800);
-
-  const loc = getCountryLocation(channel.countryCode || channel.country);
-  if (loc) setMiniGlobeLocation(loc.lat, loc.lng);
 }
 
 function getCountryLocation(code) {
