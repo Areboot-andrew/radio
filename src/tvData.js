@@ -120,7 +120,7 @@ export function getTVCountries() {
     if (!counts[ch.country]) counts[ch.country] = 0;
     counts[ch.country]++;
   });
-  return Object.entries(counts).sort((a,b) => b[1] - a[1]);
+  return Object.entries(counts).sort((a,b) => a[0].localeCompare(b[0], 'uk'));
 }
 
 export function getTVCategories() {
@@ -129,7 +129,7 @@ export function getTVCategories() {
     if (!counts[ch.category]) counts[ch.category] = 0;
     counts[ch.category]++;
   });
-  return Object.entries(counts).sort((a,b) => b[1] - a[1]);
+  return Object.entries(counts).sort((a,b) => a[0].localeCompare(b[0], 'uk'));
 }
 
 export function getMusicTVChannels() {

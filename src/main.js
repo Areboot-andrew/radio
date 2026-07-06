@@ -996,6 +996,7 @@ function populateTVFilters() {
 
 function applyTVFilters() {
   const channels = getFilteredTVChannels(tvCountryFilter, tvCategoryFilter, tvSearchQuery);
+  channels.sort((a, b) => a.name.localeCompare(b.name, 'uk'));
   renderTVGuide(channels.slice(0, 150)); // Limit to 150 to keep UI fast
 }
 
