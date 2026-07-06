@@ -150,7 +150,7 @@ export function resumeAudioContext() {
 // ========================================
 
 // Add your Cloudflare Worker URL here (e.g., 'https://proxy.myname.workers.dev/?url=')
-export const MY_CLOUDFLARE_PROXY = '';
+export const MY_CLOUDFLARE_PROXY = 'https://radio-proxy.areboot.workers.dev/?url=';
 
 const CORS_PROXIES = [
   { name: 'direct', getUrl: (url) => url, prefix: '' },
