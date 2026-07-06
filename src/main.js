@@ -14,7 +14,12 @@ import {
 } from './radioData.js';
 
 import {
-  getTVPlaylists,
+  fetchTVPlaylists,
+  getAllTVChannels,
+  getFilteredTVChannels,
+  getTVCountries,
+  getTVCategories,
+  getMusicTVChannels,
   getTotalChannelCount,
 } from './tvData.js';
 
@@ -500,13 +505,24 @@ function switchMode(mode) {
 // ========================================
 function initPodcasts() {
   const podcasts = getPodcasts();
+  const musicChannels = getMusicTVChannels().map(ch => ({
+    id: ch.id || ch.url,
+    title: ch.name,
+    category: 'Музичні ТБ',
+    url: ch.url,
+    cover: ch.logo,
+    type: 'video',
+    country: ch.country
+  }));
+  const allClips = [...podcasts, ...musicChannels];
+
   const listEl = document.getElementById('clipsGuideList');
   const countEl = document.getElementById('clipsCount');
   const filterEl = document.getElementById('clipsCategoryFilter');
   if (!listEl) return;
   
   // Extract unique categories
-  const categories = [...new Set(podcasts.map(p => p.category || 'Інше'))].sort((a, b) => a.localeCompare(b, 'uk'));
+  const categories = [...new Set(allClips.map(p => p.category || 'Інше'))].sort((a, b) => a.localeCompare(b, 'uk'));
   
   // Populate filter
   if (filterEl) {
@@ -517,7 +533,7 @@ function initPodcasts() {
   }
 
   function renderClipsList(filter = 'all') {
-    const show = filter === 'all' ? podcasts : podcasts.filter(p => (p.category || 'Інше') === filter);
+    const show = filter === 'all' ? allClips : allClips.filter(p => (p.category || 'Інше') === filter);
     if (countEl) countEl.textContent = `${show.length} кліпів`;
     
     // Group them for inline display
@@ -534,7 +550,8 @@ function initPodcasts() {
     const sortedCats = Object.keys(grouped).sort((a, b) => a.localeCompare(b, 'uk'));
     sortedCats.forEach(cat => {
       html += `<div style="padding: 8px 12px; margin-top: 12px; font-size: 13px; font-weight: 700; color: var(--primary-fixed); background: var(--surface-container-lowest); border-left: 3px solid var(--primary-fixed); text-transform: uppercase;">${cat}</div>`;
-      html += grouped[cat].map(p => {
+      const itemsToRender = cat === 'Музичні ТБ' ? grouped[cat].slice(0, 100) : grouped[cat];
+      html += itemsToRender.map(p => {
         let cover = p.cover;
         if (!cover || cover.startsWith('http:')) cover = fallbackImg;
         const safeTitle = (p.title || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -560,7 +577,7 @@ function initPodcasts() {
       el.addEventListener('click', () => {
         listEl.querySelectorAll('.tv-channel').forEach(c => c.classList.remove('active'));
         el.classList.add('active');
-        const p = podcasts.find(x => x.id === el.dataset.id);
+        const p = allClips.find(x => x.id === el.dataset.id);
         if (p) playPodcast(p);
       });
     });
@@ -812,12 +829,14 @@ function playStationByUuid(uuid) {
 
 function switchStation(direction) {
   if (currentMode === 'tv') {
-    if (!currentTVPlaylist || !currentTVChannel) return;
-    let idx = currentTVPlaylist.channels.findIndex(c => c.url === currentTVChannel.url);
+    if (!currentTVChannel) return;
+    const channels = getFilteredTVChannels(tvCountryFilter, tvCategoryFilter, tvSearchQuery);
+    if (channels.length === 0) return;
+    let idx = channels.findIndex(c => c.url === currentTVChannel.url);
     if (idx === -1) idx = 0;
-    idx = (idx + direction + currentTVPlaylist.channels.length) % currentTVPlaylist.channels.length;
-    selectTVChannel(currentTVPlaylist, idx);
-    renderTVGuide(getTVPlaylists());
+    idx = (idx + direction + channels.length) % channels.length;
+    selectTVChannel(channels[idx]);
+    renderTVGuide(channels.slice(0, 150));
   } else if (currentMode === 'podcasts') {
     const listEl = document.getElementById('clipsGuideList');
     if (!listEl) return;
@@ -931,91 +950,85 @@ function startSleepTimer(minutes) {
 // ========================================
 // TV Guide
 // ========================================
-let currentTVPlaylist = null;
 let currentTVChannel = null;
-let expandedCountry = null;
 
-function initTVGuide() {
-  const playlists = getTVPlaylists();
-  tvGuideCount.textContent = `${getTotalChannelCount()} каналів, ${playlists.length} країн`;
+let tvCountryFilter = '';
+let tvCategoryFilter = '';
+let tvSearchQuery = '';
 
-  renderTVGuide(playlists);
+async function initTVGuide() {
+  tvGuideCount.textContent = 'Завантаження каналів...';
+  await fetchTVPlaylists();
+  
+  const count = getTotalChannelCount();
+  tvGuideCount.textContent = `${count} каналів`;
+
+  populateTVFilters();
+  
+  const searchInput = document.getElementById('tvSearchInput');
+  const countrySelect = document.getElementById('tvCountryFilter');
+  const categorySelect = document.getElementById('tvCategoryFilter');
+
+  if(searchInput) searchInput.addEventListener('input', e => { tvSearchQuery = e.target.value; applyTVFilters(); });
+  if(countrySelect) countrySelect.addEventListener('change', e => { tvCountryFilter = e.target.value; applyTVFilters(); });
+  if(categorySelect) categorySelect.addEventListener('change', e => { tvCategoryFilter = e.target.value; applyTVFilters(); });
+
+  applyTVFilters();
+  
+  // Re-init podcasts so they get the newly loaded music channels
+  initPodcasts();
 }
 
-function renderTVGuide(playlists) {
-  tvGuideList.innerHTML = playlists.map(p => {
-    const isExpanded = expandedCountry === p.countryCode;
-    const isActive = currentTVPlaylist?.countryCode === p.countryCode;
+function populateTVFilters() {
+  const countries = getTVCountries();
+  const cats = getTVCategories();
+  
+  const countryEl = document.getElementById('tvCountryFilter');
+  const catEl = document.getElementById('tvCategoryFilter');
+  
+  if(countryEl) {
+    countryEl.innerHTML = '<option value="">Всі країни</option>' + countries.map(c => `<option value="${escapeHtml(c[0])}">${escapeHtml(c[0])} (${c[1]})</option>`).join('');
+  }
+  if(catEl) {
+    catEl.innerHTML = '<option value="">Всі жанри</option>' + cats.map(c => `<option value="${escapeHtml(c[0])}">${escapeHtml(c[0])} (${c[1]})</option>`).join('');
+  }
+}
+
+function applyTVFilters() {
+  const channels = getFilteredTVChannels(tvCountryFilter, tvCategoryFilter, tvSearchQuery);
+  renderTVGuide(channels.slice(0, 150)); // Limit to 150 to keep UI fast
+}
+
+function renderTVGuide(channels) {
+  tvGuideList.innerHTML = channels.map((ch, idx) => {
+    const isPlaying = currentTVChannel?.url === ch.url;
     return `
-      <div class="tv-country ${isExpanded ? 'expanded' : ''}" data-country="${p.countryCode}">
-        <div class="tv-country-header ${isActive ? 'active' : ''}">
-          <span class="tv-guide-flag">${p.flag}</span>
-          <div class="tv-guide-info">
-            <div class="tv-guide-name">${escapeHtml(p.country)}</div>
-            <div class="tv-guide-channels">${p.channels.length} каналів</div>
-          </div>
-          <span class="tv-country-arrow">${isExpanded ? '▼' : '▶'}</span>
-        </div>
-        <div class="tv-channel-list" ${isExpanded ? '' : 'style="display:none"'}>
-          ${p.channels.map((ch, idx) => {
-            const isPlaying = currentTVChannel?.url === ch.url;
-            return `
-              <div class="tv-channel-item ${isPlaying ? 'playing' : ''}" data-country="${p.countryCode}" data-index="${idx}">
-                <span class="tv-channel-play-icon">${isPlaying ? '🔊' : '▶'}</span>
-                <div class="tv-channel-info">
-                  <div class="tv-channel-name">${escapeHtml(ch.name)}</div>
-                  <div class="tv-channel-category">${escapeHtml(ch.category)}</div>
-                </div>
-              </div>
-            `;
-          }).join('')}
+      <div class="tv-channel-item ${isPlaying ? 'playing' : ''}" data-index="${idx}">
+        <span class="tv-channel-play-icon">${isPlaying ? '🔊' : '▶'}</span>
+        <div class="tv-channel-info">
+          <div class="tv-channel-name">${escapeHtml(ch.name)}</div>
+          <div class="tv-channel-category">${ch.flag} ${escapeHtml(ch.country)} · ${escapeHtml(ch.category)}</div>
         </div>
       </div>
     `;
   }).join('');
 
-  tvGuideList.querySelectorAll('.tv-country-header').forEach(header => {
-    header.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const countryEl = header.closest('.tv-country');
-      const code = countryEl.dataset.country;
-      const playlists = getTVPlaylists();
-      const playlist = playlists.find(p => p.countryCode === code);
-      if (!playlist) return;
-
-      if (expandedCountry === code) {
-        expandedCountry = null;
-      } else {
-        expandedCountry = code;
-      }
-      renderTVGuide(playlists);
-    });
-  });
-
   tvGuideList.querySelectorAll('.tv-channel-item').forEach(item => {
     item.addEventListener('click', (e) => {
       e.stopPropagation();
-      const code = item.dataset.country;
       const index = parseInt(item.dataset.index);
-      const playlists = getTVPlaylists();
-      const playlist = playlists.find(p => p.countryCode === code);
-      if (!playlist) return;
-
-      selectTVChannel(playlist, index);
-      expandedCountry = code;
-      renderTVGuide(playlists);
+      selectTVChannel(channels[index]);
+      renderTVGuide(channels); // re-render to update playing state
     });
   });
 }
 
-async function selectTVChannel(playlist, channelIndex) {
-  currentTVPlaylist = playlist;
-  currentTVChannel = playlist.channels[channelIndex];
+async function selectTVChannel(channel) {
+  currentTVChannel = channel;
 
   tvSignalMeter.classList.add('visible', 'scanning');
   tvSignalMeter.classList.remove('locked');
 
-  const channel = playlist.channels[channelIndex];
   if (channel) {
     playTVChannel(channel);
   }
@@ -1030,7 +1043,7 @@ async function selectTVChannel(playlist, channelIndex) {
     tvSignalMeter.classList.add('locked');
   }, 800);
 
-  const loc = getCountryLocation(playlist.countryCode);
+  const loc = getCountryLocation(channel.countryCode || channel.country);
   if (loc) setMiniGlobeLocation(loc.lat, loc.lng);
 }
 

@@ -190,6 +190,15 @@
              <h3>Live TV Guide</h3>
              <span id="tvGuideCount">0 каналів</span>
            </div>
+           <div class="tv-guide-filters" style="padding: 0 16px 16px 16px; display: flex; flex-direction: column; gap: 8px;">
+             <input type="text" id="tvSearchInput" placeholder="Пошук каналу..." style="width:100%; padding:8px; border-radius:8px; background:var(--surface-container-high); border:none; color:var(--on-surface); outline:none;">
+             <select id="tvCountryFilter" style="width:100%; padding:8px; border-radius:8px; background:var(--surface-container-high); border:none; color:var(--on-surface); outline:none;">
+                <option value="">Всі країни</option>
+             </select>
+             <select id="tvCategoryFilter" style="width:100%; padding:8px; border-radius:8px; background:var(--surface-container-high); border:none; color:var(--on-surface); outline:none;">
+                <option value="">Всі жанри</option>
+             </select>
+           </div>
            <div id="tvGuideList" class="tv-guide-list"></div>
         </div>
         
