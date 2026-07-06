@@ -24,26 +24,68 @@ export async function fetchTVPlaylists() {
     const data = [];
     const music = [];
 
+    const categoryMap = {
+      'general': 'Загальні',
+      'news': 'Новини',
+      'music': 'Музика',
+      'sports': 'Спорт',
+      'movies': 'Фільми',
+      'kids': 'Дитячі',
+      'entertainment': 'Розважальні',
+      'documentary': 'Документальні',
+      'education': 'Пізнавальні',
+      'lifestyle': 'Стиль життя',
+      'comedy': 'Комедія',
+      'religious': 'Релігія',
+      'business': 'Бізнес',
+      'family': 'Сімейні',
+      'culture': 'Культура',
+      'science': 'Наука',
+      'auto': 'Авто',
+      'outdoor': 'Подорожі',
+      'shop': 'Магазин',
+      'legislative': 'Політика',
+      'animation': 'Анімація',
+      'classic': 'Класика',
+      'cooking': 'Кулінарія',
+      'series': 'Серіали',
+      'relax': 'Релакс',
+      'weather': 'Погода',
+      'xxx': 'Дорослі',
+      'general': 'Загальнонаціональні'
+    };
+
+    const regionNames = new Intl.DisplayNames(['uk'], { type: 'region' });
+
     for (const ch of channelsRes) {
       const channelStreams = activeStreams[ch.id];
       if (channelStreams && channelStreams.length > 0) {
         const stream = channelStreams[0];
-        const category = (ch.categories && ch.categories.length > 0) ? ch.categories[0] : 'General';
-        const country = ch.country || 'Unknown';
+        const rawCategory = (ch.categories && ch.categories.length > 0) ? ch.categories[0].toLowerCase() : 'general';
+        const category = categoryMap[rawCategory] || (rawCategory.charAt(0).toUpperCase() + rawCategory.slice(1));
+        
+        let countryName = ch.country || 'Unknown';
+        if (ch.country && ch.country.length === 2) {
+          try {
+            countryName = regionNames.of(ch.country.toUpperCase());
+          } catch(e) {
+            countryName = ch.country;
+          }
+        }
         
         const item = {
           id: ch.id,
           name: ch.name || 'Unknown',
-          country: country,
-          countryCode: country, // we might need real code for flag
+          country: countryName,
+          countryCode: ch.country || 'Unknown', // Keep raw code for flags
           category: category,
           url: stream.url,
           logo: ch.logo || '',
-          flag: getCountryFlag(country) || ''
+          flag: getCountryFlag(ch.country || '') || '🌐'
         };
         data.push(item);
 
-        if (category.toLowerCase() === 'music') {
+        if (rawCategory === 'music') {
           music.push(item);
         }
       }
