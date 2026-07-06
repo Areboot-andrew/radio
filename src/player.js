@@ -110,10 +110,19 @@ export function initPlayer(onStateChange) {
   });
 
   if (videoEl) {
-    videoEl.addEventListener('playing', () => {
-      isPlaying = true;
-      updatePlayBtn();
-      onStateChangeCb?.('playing', currentStation);
+    const onVideoPlay = () => {
+      if (!isPlaying) {
+        isPlaying = true;
+        updatePlayBtn();
+        onStateChangeCb?.('playing', currentStation);
+      }
+    };
+    videoEl.addEventListener('play', onVideoPlay);
+    videoEl.addEventListener('playing', onVideoPlay);
+    videoEl.addEventListener('timeupdate', () => {
+      if (videoEl.currentTime > 0 && !isPlaying) {
+        onVideoPlay();
+      }
     });
     videoEl.addEventListener('pause', () => {
       isPlaying = false;

@@ -875,8 +875,10 @@ function handlePlayerStateChange(event, station) {
     const subEl = document.getElementById('tvMetaSubtitle');
     const overlay = document.getElementById('tvErrorOverlay');
     const loadOverlay = document.getElementById('tvLoadingOverlay');
+    const loadText = document.getElementById('tvLoadingText');
     if (overlay) overlay.style.display = 'none';
     if (loadOverlay) loadOverlay.style.display = 'flex';
+    if (loadText) loadText.textContent = 'З\'єднання...';
     if (titleEl) titleEl.textContent = station ? station.name : 'Оберіть відео';
     if (subEl) {
        subEl.textContent = '';
