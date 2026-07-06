@@ -111,17 +111,18 @@ export function initPlayer(onStateChange) {
 
   if (videoEl) {
     const onVideoPlay = () => {
-      if (!isPlaying) {
-        isPlaying = true;
-        updatePlayBtn();
-        onStateChangeCb?.('playing', currentStation);
-      }
+      isPlaying = true;
+      updatePlayBtn();
+      onStateChangeCb?.('playing', currentStation);
     };
     videoEl.addEventListener('play', onVideoPlay);
     videoEl.addEventListener('playing', onVideoPlay);
     videoEl.addEventListener('timeupdate', () => {
-      if (videoEl.currentTime > 0 && !isPlaying) {
-        onVideoPlay();
+      if (videoEl.currentTime > 0) {
+        const loadOverlay = document.getElementById('tvLoadingOverlay');
+        if (loadOverlay && loadOverlay.style.display !== 'none') {
+           onVideoPlay();
+        }
       }
     });
     videoEl.addEventListener('pause', () => {
@@ -459,8 +460,6 @@ export async function playTVChannel(channel) {
     } else if (videoEl) {
       videoEl.src = url;
       videoEl.play().catch(() => {});
-      isPlaying = true;
-      updatePlayBtn();
     }
   } catch (err) {
     console.error('TV playback error:', err);
