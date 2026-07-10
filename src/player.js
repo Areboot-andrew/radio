@@ -5,6 +5,7 @@
 import { isFav, toggleFav } from './favorites.js';
 import { setMiniGlobeLocation, clearMiniGlobe } from './miniGlobe.js';
 import { formatBitrate, sanitizeName } from './utils.js';
+import { markStreamBroken, markStreamAlive } from './streamHealth.js';
 
 let audioEl = null;
 let videoEl = null;
@@ -100,6 +101,7 @@ export function initPlayer(onStateChange) {
   audioEl.addEventListener('playing', () => {
     isPlaying = true;
     updatePlayBtn();
+    if (currentStation) markStreamAlive(currentStation);
     onStateChangeCb?.('playing', currentStation);
   });
 
@@ -113,6 +115,7 @@ export function initPlayer(onStateChange) {
     const onVideoPlay = () => {
       isPlaying = true;
       updatePlayBtn();
+      if (currentStation) markStreamAlive(currentStation);
       onStateChangeCb?.('playing', currentStation);
     };
     videoEl.addEventListener('play', onVideoPlay);
@@ -214,7 +217,7 @@ export async function playStation(station) {
           if (!finalUrl) {
             isPlaying = false;
             updatePlayBtn();
-            onStateChangeCb?.('error', currentStation);
+            reportPlaybackDead(currentStation, 'radio_hls_exhausted');
             return;
           }
           
@@ -242,10 +245,12 @@ export async function playStation(station) {
             if (data.fatal) {
               if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
                 initAudioHls(streamUrl, pIdx + 1);
+              } else if (pIdx + 1 < CORS_PROXIES.length) {
+                initAudioHls(streamUrl, pIdx + 1);
               } else {
                 isPlaying = false;
                 updatePlayBtn();
-                onStateChangeCb?.('error', currentStation);
+                reportPlaybackDead(currentStation, 'radio_hls_fatal');
               }
             }
           });
@@ -279,7 +284,7 @@ async function tryPlayAudio(originalUrl, attempt, reqId) {
     if (reqId === currentAudioRequestId) {
       isPlaying = false;
       updatePlayBtn();
-      onStateChangeCb?.('error', currentStation);
+      reportPlaybackDead(currentStation, 'radio_proxy_exhausted');
     }
     return;
   }
@@ -427,10 +432,10 @@ export async function playTVChannel(channel) {
           }
           const finalUrl = proxyUrl(streamUrl, pIdx);
           if (!finalUrl) {
-            // All proxies exhausted
+            // All proxies exhausted — truly unreachable for this client
             isPlaying = false;
             updatePlayBtn();
-            onStateChangeCb?.('tvError', currentStation);
+            reportPlaybackDead(currentStation, 'tv_proxy_exhausted');
             return;
           }
           console.log(`TV: trying proxy #${pIdx} (${CORS_PROXIES[pIdx].name}): ${finalUrl.substring(0, 80)}...`);
@@ -478,7 +483,7 @@ export async function playTVChannel(channel) {
                 hls = null;
                 isPlaying = false;
                 updatePlayBtn();
-                onStateChangeCb?.('tvError', currentStation);
+                reportPlaybackDead(currentStation, 'tv_hls_exhausted');
               }
             }
           });
@@ -498,10 +503,31 @@ export async function playTVChannel(channel) {
     }
   } catch (err) {
     console.error('TV playback error:', err);
-    onStateChangeCb?.('tvError', currentStation);
+    reportPlaybackDead(currentStation, 'tv_exception');
   }
 
   onStateChangeCb?.('tvChange', currentStation);
+}
+
+/** Full fail only — hide from lists; never call after a single CORS/proxy hop. */
+function reportPlaybackDead(station, reason) {
+  if (!station) {
+    onStateChangeCb?.('error', station);
+    return;
+  }
+  const kind = station.type === 'tv' || station.type === 'video' ? 'tv' : (station.type || 'radio');
+  markStreamBroken(station, {
+    reason,
+    kind,
+    id: station.stationuuid || station.id,
+    name: station.name,
+  });
+  if (kind === 'tv' || station.type === 'video') {
+    onStateChangeCb?.('tvError', station);
+  } else {
+    onStateChangeCb?.('error', station);
+  }
+  onStateChangeCb?.('streamBroken', station);
 }
 
 export function stopPlayback() {

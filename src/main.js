@@ -11,6 +11,7 @@ import {
   getCountries,
   getGenres,
   getStationByUuid,
+  removeStationByUrl,
 } from './radioData.js';
 
 import {
@@ -21,6 +22,7 @@ import {
   getTVCategories,
   getMusicTVChannels,
   getTotalChannelCount,
+  removeTVChannelByUrl,
 } from './tvData.js';
 
 import { getPodcasts } from './podcastsData.js';
@@ -42,6 +44,11 @@ import {
 import { isFav, toggleFav } from './favorites.js';
 import { startTimer, stopTimer, isRunning, formatTime } from './sleepTimer.js';
 import { getCountryFlag, escapeHtml, debounce } from './utils.js';
+import {
+  getBrokenCount,
+  softProbeBatch,
+  purgeExpired,
+} from './streamHealth.js';
 
 // ========================================
 // State
@@ -224,9 +231,16 @@ async function init() {
     // Init Podcasts
     initPodcasts();
 
+    // Soft health probe for a small visible batch (never 40k — safe + slow)
+    scheduleVisibleHealthProbes();
+
     // Hide loading
     setTimeout(() => {
       loadingScreen.classList.add('hidden');
+      const hidden = getBrokenCount();
+      if (hidden > 0) {
+        showHealthToast(`Приховано ${hidden} недоступних потоків (кеш)`);
+      }
     }, 400);
   } catch (err) {
     console.error('Failed to init:', err);
@@ -670,7 +684,10 @@ function applyFilters() {
   }
 
   // Update station count
-  stationTotalEl.textContent = `${filteredStations.length} станцій`;
+  const brokenN = getBrokenCount();
+  stationTotalEl.textContent = brokenN > 0
+    ? `${filteredStations.length} станцій · −${brokenN} битих`
+    : `${filteredStations.length} станцій`;
   const sidebarCountEl = document.getElementById('sidebarStationCount');
   if (sidebarCountEl) sidebarCountEl.textContent = filteredStations.length;
 
@@ -912,7 +929,7 @@ function handlePlayerStateChange(event, station) {
     const loadOverlay = document.getElementById('tvLoadingOverlay');
     if (loadOverlay) loadOverlay.style.display = 'none';
     if (subEl) {
-       subEl.textContent = '⚠️ Помилка відтворення потоку (CORS/Мережа)';
+       subEl.textContent = '⚠️ Потік недоступний — приховано зі списку';
        subEl.style.display = 'block';
     }
     if (overlay) overlay.style.display = 'flex';
@@ -924,8 +941,22 @@ function handlePlayerStateChange(event, station) {
     if (rdsLabel) rdsLabel.classList.remove('active');
     if (rdsText) {
       rdsText.classList.add('active');
-      rdsText.textContent = '⚠️ Помилка відтворення';
+      rdsText.textContent = '⚠️ Потік недоступний — приховано';
     }
+  }
+  if (event === 'streamBroken') {
+    const url = station?.url_resolved || station?.url;
+    const name = station?.name || 'Потік';
+    if (url) {
+      removeStationByUrl(url);
+      removeTVChannelByUrl(url);
+    }
+    // Refresh all lists so dead stream disappears
+    allStations = getAllStations();
+    applyFilters();
+    applyTVFilters();
+    initPodcasts();
+    showHealthToast(`🚫 ${name} — приховано (недоступний)`);
   }
 }
 
@@ -978,8 +1009,7 @@ async function initTVGuide() {
   tvGuideCount.textContent = 'Завантаження каналів...';
   await fetchTVPlaylists();
   
-  const count = getTotalChannelCount();
-  tvGuideCount.textContent = `${count} каналів`;
+  updateTVCountLabel();
 
   populateTVFilters();
   
@@ -995,6 +1025,15 @@ async function initTVGuide() {
   
   // Re-init podcasts so they get the newly loaded music channels
   initPodcasts();
+}
+
+function updateTVCountLabel() {
+  if (!tvGuideCount) return;
+  const count = getTotalChannelCount();
+  const brokenN = getBrokenCount();
+  tvGuideCount.textContent = brokenN > 0
+    ? `${count} каналів · −${brokenN} битих`
+    : `${count} каналів`;
 }
 
 function populateTVFilters() {
@@ -1015,7 +1054,11 @@ function populateTVFilters() {
 function applyTVFilters() {
   const channels = getFilteredTVChannels(tvCountryFilter, tvCategoryFilter, tvSearchQuery);
   channels.sort((a, b) => a.name.localeCompare(b.name, 'uk'));
-  renderTVGuide(channels.slice(0, 150)); // Limit to 150 to keep UI fast
+  const visible = channels.slice(0, 150); // Limit to 150 to keep UI fast
+  renderTVGuide(visible);
+  updateTVCountLabel();
+  // Soft-probe only what the user can see (safe; never full 40k)
+  scheduleTVVisibleProbe(visible);
 }
 
 function renderTVGuide(channels) {

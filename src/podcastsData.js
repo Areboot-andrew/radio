@@ -2,6 +2,8 @@
 // Video Clips & Music Data
 // ========================================
 
+import { filterHealthy } from './streamHealth.js';
+
 const PODCASTS = [
   {
     id: "vid-8nvxm4x",
@@ -8236,5 +8238,6 @@ const PODCASTS = [
 ];
 
 export function getPodcasts() {
-  return PODCASTS;
+  // Hide streams that failed full playback / hard soft-probe (TTL cache)
+  return filterHealthy(PODCASTS);
 }

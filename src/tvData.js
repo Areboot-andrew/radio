@@ -1,4 +1,5 @@
 import { getCountryFlag } from './utils.js';
+import { filterHealthy, isStreamBroken } from './streamHealth.js';
 
 let CHANNELS = [];
 let MUSIC_CHANNELS = [];
@@ -15,7 +16,10 @@ export async function fetchTVPlaylists() {
 
     const activeStreams = {};
     for (const s of streamsRes) {
-      if (s.status === 'online' || s.status === undefined) {
+      // Skip streams iptv-org already knows are offline; keep unknown status
+      if (s.status === 'offline' || s.status === 'error' || s.status === 'timeout') continue;
+      if (s.status === 'online' || s.status === undefined || s.status === null) {
+        if (!s.url || isStreamBroken(s.url)) continue;
         if (!activeStreams[s.channel]) activeStreams[s.channel] = [];
         activeStreams[s.channel].push(s);
       }
@@ -91,8 +95,8 @@ export async function fetchTVPlaylists() {
       }
     }
 
-    CHANNELS = data;
-    MUSIC_CHANNELS = music;
+    CHANNELS = filterHealthy(data);
+    MUSIC_CHANNELS = filterHealthy(music);
     isLoaded = true;
     return CHANNELS;
   } catch (err) {
@@ -102,16 +106,23 @@ export async function fetchTVPlaylists() {
 }
 
 export function getAllTVChannels() {
-  return CHANNELS;
+  return filterHealthy(CHANNELS);
 }
 
 export function getFilteredTVChannels(countryFilter, categoryFilter, search) {
-  return CHANNELS.filter(ch => {
+  return filterHealthy(CHANNELS).filter(ch => {
     if (countryFilter && ch.country !== countryFilter) return false;
     if (categoryFilter && ch.category !== categoryFilter) return false;
     if (search && !ch.name.toLowerCase().includes(search.toLowerCase())) return false;
     return true;
   });
+}
+
+/** Drop channel(s) with this stream URL from in-memory TV lists */
+export function removeTVChannelByUrl(url) {
+  if (!url) return;
+  CHANNELS = CHANNELS.filter(ch => ch.url !== url && !isStreamBroken(ch));
+  MUSIC_CHANNELS = MUSIC_CHANNELS.filter(ch => ch.url !== url && !isStreamBroken(ch));
 }
 
 export function getTVCountries() {
@@ -133,11 +144,11 @@ export function getTVCategories() {
 }
 
 export function getMusicTVChannels() {
-  return MUSIC_CHANNELS;
+  return filterHealthy(MUSIC_CHANNELS);
 }
 
 export function getTotalChannelCount() {
-  return CHANNELS.length;
+  return filterHealthy(CHANNELS).length;
 }
 
 export function getTVPlaylists() {
