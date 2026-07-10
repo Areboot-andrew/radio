@@ -410,12 +410,32 @@ function setupEventListeners() {
     showFavoritesOnly = !showFavoritesOnly;
     localStorage.setItem('texnoplus_show_favs', showFavoritesOnly);
     document.getElementById('favoritesBtn').style.color = showFavoritesOnly ? '#ef4444' : '';
+    
+    // Sync the chip in the UI so the user clearly sees they are in favorites mode
+    const chipFavs = document.getElementById('chipFavs');
+    if (chipFavs) {
+      if (showFavoritesOnly) {
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chipFavs.classList.add('active');
+        genreFilter = '';
+        if (genreFilterEl) genreFilterEl.value = '';
+      } else {
+        chipFavs.classList.remove('active');
+        const allChip = document.querySelector('.chip[data-genre=""]');
+        if (allChip) allChip.classList.add('active');
+      }
+    }
     applyFilters();
   });
 
   // Initial Render for Favorites
   if (showFavoritesOnly) {
     document.getElementById('favoritesBtn').style.color = '#ef4444';
+    const chipFavs = document.getElementById('chipFavs');
+    if (chipFavs) {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      chipFavs.classList.add('active');
+    }
   }
   
   // Shift+T: toggle radio/tv
