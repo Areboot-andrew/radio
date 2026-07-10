@@ -239,14 +239,27 @@ async function init() {
       loadingScreen.classList.add('hidden');
       const hidden = getBrokenCount();
       if (hidden > 0) {
-        showHealthToast(`Приховано ${hidden} недоступних потоків (кеш)`);
+        showHealthToast(`Приховано ${hidden} неробочих станцій (📻)`);
       }
     }, 400);
   } catch (err) {
     console.error('Failed to init:', err);
     loadingBar.style.width = '100%';
     loadingBar.style.background = '#ef4444';
-    document.querySelector('.loading-text').textContent = 'Помилка завантаження. Спробуйте оновити сторінку.';
+    const loadingText = document.querySelector('.loading-text');
+    if (loadingText) loadingText.textContent = 'Помилка. Спробуйте оновити сторінку.';
+  }
+}
+
+function scheduleVisibleHealthProbes() {
+  if (typeof softProbeBatch === 'function' && filteredStations) {
+    softProbeBatch(filteredStations.slice(0, 30));
+  }
+}
+
+function scheduleTVVisibleProbe(visible) {
+  if (typeof softProbeBatch === 'function' && visible) {
+    softProbeBatch(visible.slice(0, 30));
   }
 }
 
