@@ -1,5 +1,6 @@
 import { fetchWithRetries, isHealthyStation, getGenreColor } from './utils.js';
 import { getPremiumStations } from './premiumStations.js';
+import { filterHealthy, isStreamBroken } from './streamHealth.js';
 
 const API_BASE = 'https://de1.api.radio-browser.info/json';
 const FALLBACK_API = 'https://nl1.api.radio-browser.info/json';
@@ -107,11 +108,15 @@ export async function fetchStations(onProgress) {
   // 4. Filter healthy stations (relaxed geo) and bitrate < 128 only if known
   const blockedCountries = ['CN', 'JP', 'KR', 'KP', 'IN', 'PK', 'BD', 'SA', 'AE', 'QA', 'KW', 'BH', 'OM', 'YE', 'IR', 'IQ', 'SY', 'LB', 'JO', 'EG', 'MA', 'DZ', 'TN', 'LY', 'TH', 'VN', 'MY', 'ID', 'PH', 'MM', 'KH', 'LA', 'SG', 'LK', 'NP', 'AF', 'TW', 'HK', 'SA', 'AE', 'TR', 'AZ', 'AM', 'GE'];
   const healthy = unique.filter(s => {
+    // Radio Browser already checked the stream; 0 = known dead
+    if (s.lastcheckok === 0 || s.lastcheckok === '0') return false;
     if (!isHealthyStation(s, { requireGeo: false })) return false;
     const br = parseInt(s.bitrate);
     if (br > 0 && br < 128) return false;
     const cc = (s.countrycode || '').toUpperCase();
     if (blockedCountries.includes(cc)) return false;
+    // Client-side broken cache (failed play / hard probe)
+    if (isStreamBroken(s.url_resolved || s.url)) return false;
     return true;
   });
 
@@ -150,10 +155,10 @@ export async function fetchStations(onProgress) {
     .slice(0, 3000);
 
   // 6. Prepend premium stations (curated, high-bitrate, licensed)
-  const premium = getPremiumStations();
+  const premium = filterHealthy(getPremiumStations());
   const premiumUuids = new Set(premium.map(s => s.stationuuid));
   const apiOnly = allStations.filter(s => !premiumUuids.has(s.stationuuid));
-  allStations = [...premium, ...apiOnly];
+  allStations = filterHealthy([...premium, ...apiOnly]);
 
   // 7. Build lookup map
   stationMap.clear();
@@ -305,7 +310,7 @@ function normalizeCountry(country) {
 }
 
 export function getAllStations() {
-  return allStations;
+  return filterHealthy(allStations);
 }
 
 export function getStationByUuid(uuid) {
@@ -313,7 +318,8 @@ export function getStationByUuid(uuid) {
 }
 
 export function getFilteredStations(country, genre, query, premiumOnly = false) {
-  let result = allStations;
+  // Re-apply health filter so mid-session marks hide stations immediately
+  let result = filterHealthy(allStations);
 
   if (premiumOnly) {
     result = result.filter(s => s.premium === true);
@@ -327,14 +333,25 @@ export function getFilteredStations(country, genre, query, premiumOnly = false) 
   if (query) {
     const q = query.toLowerCase();
     result = result.filter(s =>
-      s.name.toLowerCase().includes(q) ||
-      s.country.toLowerCase().includes(q) ||
-      s.genre.toLowerCase().includes(q) ||
-      s.tags.toLowerCase().includes(q)
+      (s.name || '').toLowerCase().includes(q) ||
+      (s.country || '').toLowerCase().includes(q) ||
+      (s.genre || '').toLowerCase().includes(q) ||
+      (s.tags || '').toLowerCase().includes(q)
     );
   }
 
   return result;
+}
+
+/** Drop a station from in-memory list after it is marked broken */
+export function removeStationByUrl(url) {
+  if (!url) return;
+  allStations = allStations.filter(s => {
+    const u = s.url_resolved || s.url;
+    return u !== url && !isStreamBroken(s);
+  });
+  stationMap.clear();
+  allStations.forEach(s => stationMap.set(s.stationuuid, s));
 }
 
 export function getCountries() {
